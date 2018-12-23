@@ -1,5 +1,5 @@
 //
-// Created by yael on 12/13/18.
+//
 //
 
 #include <vector>
@@ -8,7 +8,6 @@
 #include <iostream>
 #include "Lexer.h"
 #include <regex>
-#define TXT "txt"
 
 using namespace std;
 
@@ -44,15 +43,24 @@ vector<string> Lexer::split_from_file(string fileName) {
 
 vector<string> Lexer::split_from_command_line() {
     bool keep=true;
-    string tmp,line;
+    string tmp,line,nline="";
     char c;
     while(keep) {
         cout << "Please enter new command line"<<endl;
         cin >> ws;
         getline(cin, line);
         stringstream ss(line);
-        while(ss.good()){
-            ss>>tmp;
+        while (ss.good()) {
+            ss >> tmp;
+            nline="";
+            for (int i = 0; i < tmp.size(); i++) {
+                c = tmp[i];
+                if (c>=0&&c<=127) {
+                    nline += c;
+                } else {
+                    continue;
+                }
+            }
             cur_lex.push_back(tmp);
         }
         cout<<"Command added successfully."<<endl;
