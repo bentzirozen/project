@@ -1,0 +1,3 @@
+/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir

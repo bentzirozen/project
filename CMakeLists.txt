@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.9)
+project(project)
+
+set(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_FLAGS -pthread)
+
+add_executable(project main.cpp Command.h Command.cpp OpenServerCommand.h OpenServerCommand.cpp Lexer.h Lexer.cpp Parser.h Parser.cpp ConnectCommand.h ConnectCommand.cpp DataReaderServer.h DataReaderServer.cpp DefineVarCommand.h DefineVarCommand.cpp MapDB.h MapDB.cpp ConditionParser.h ConditionParser.cpp IfCommand.h IfCommand.cpp LoopCommand.h LoopCommand.cpp)
