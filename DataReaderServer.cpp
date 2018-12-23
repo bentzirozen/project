@@ -3,17 +3,52 @@
 //
 
 #include "DataReaderServer.h"
-
-DataReaderServer::DataReaderServer(map<string, double > &vars){
-    this->sym_tbl = vars;
+pthread_mutex_t mutex;
+bool DataReaderServer::isOpen = false;
+std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
+    std::vector<std::string> vec;
+    std::string tmp;
+    while (*buffer != '\n') {
+        while (*buffer != ',' && *buffer != '\n') {
+            tmp += *buffer;
+            ++buffer;
+        }
+        vec.emplace_back(tmp);
+        tmp = "";
+        if (*buffer != '\n') ++buffer;
+    }
+    return vec;
 }
-void DataReaderServer::operator()(vector<string>parameters) {
-    int port = stoi(parameters[0].c_str());
-    int freq = stoi(parameters[1].c_str());
+
+void DataReaderServer::updatePathsTable(vector<std::string> vec) {
+    pthread_mutex_init(&mutex, nullptr);
+    for (int i = 0; i < PARAMETERS_SIZE; ++i) {
+        pthread_mutex_lock(&mutex);
+        db.updatePath(pathsVec[i],stod(vec[i].c_str()));
+        pthread_mutex_unlock(&mutex);
+    }
+}
+
+void DataReaderServer::updateSymbolTable() {
+    for (auto iter = SymbolTable::instance()->getFirst(); iter != SymbolTable::instance()->getEnd(); ++iter) {
+        // means the var is binned to a var
+        globalMutex.lock();
+        if (*BindingTable::instance()->getValue(iter->first).c_str() != '/') {
+            SymbolTable::instance()->setValue(iter->first, SymbolTable::instance()->getValue(BindingTable::instance()->
+                    getValue(iter->first)));
+        } else {
+            SymbolTable::instance()->setValue(iter->first, PathsTable::instance()->getValue(BindingTable::instance()->
+                    getValue(iter->first)));
+        }
+        globalMutex.unlock();
+    }
+}
+void DataReaderServer::openServer(vector<string>parameters) {
+    int port = stoi(parameters[0]);
+    int freq = stoi(parameters[1]);
     int sockfd, newsockfd, clilen;
-    char buffer[256];
     struct sockaddr_in serv_addr, cli_addr;
-    int  n;
+    int n;
 
     /* First call to socket() function */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -25,6 +60,7 @@ void DataReaderServer::operator()(vector<string>parameters) {
 
     /* Initialize socket structure */
     bzero((char *) &serv_addr, sizeof(serv_addr));
+
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons(port);
@@ -39,38 +75,63 @@ void DataReaderServer::operator()(vector<string>parameters) {
        * go in sleep mode and will wait for the incoming connection
     */
 
-    listen(sockfd,5);
+    listen(sockfd, 5);
     clilen = sizeof(cli_addr);
 
     /* Accept actual connection from the client */
-    newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t*)&clilen);
+    newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
 
     if (newsockfd < 0) {
         perror("ERROR on accept");
         exit(1);
     }
-    /* If connection is established then start communicating */
+    isOpen = true;
+    char buffer[BUFFER_SIZE];
+    std::string values;
+    std::string leftovers;
+    char* pointer;
+    bzero(buffer, BUFFER_SIZE);
     while (true) {
-        bzero(buffer, 256);
-        n = read(newsockfd, buffer, 255);
-
+        // to know where to put data:
+        unsigned long start = leftovers.length() ? values.length() : 0;
+        n = read(newsockfd, buffer + start, BUFFER_SIZE - start);
+        std::cout << buffer +'\n';
+        // points to the buffer
+        pointer = buffer;
+        values = "";
         if (n < 0) {
             perror("ERROR reading from socket");
-            break;
+            exit(1);
         }
-        //sleep(1000/(unsigned)freq);
+        // creating values:
+        while (*pointer != '\n'){
+            values += *pointer;
+            ++pointer;
+        }
+        ++pointer;
+        values += '\n';
+        // update:
+        updatePathsTable(splitByComma(values.c_str()));
+        updateSymbolTable();
+        leftovers = "";
+        // if we have unread chars:
+        if (*pointer) {
+            // add to leftovers:
+            for (int i = 0; i < BUFFER_SIZE - values.length(); ++i) {
+                leftovers += *pointer;
+                ++pointer;
+            }
+            bzero(buffer, BUFFER_SIZE);
+            // add to buffer:
+            for (int j = 0; j < BUFFER_SIZE - values.length(); ++j) {
+                buffer[j] = leftovers[j];
+            }
+        } else {
+            bzero(buffer, BUFFER_SIZE);
+        }
+        if (n < 0) {
+            perror("ERROR writing to socket");
+            exit(1);
+        }
     }
-
 }
-
-bool DataReaderServer::is_number(string x) {
-    std::string s;
-    std::regex e ("^-?\\d+");
-    std::stringstream ss;
-    ss << x;
-    ss >>s;
-    if (std::regex_match (s,e)) return true;
-    else return false;}
-
-
-
