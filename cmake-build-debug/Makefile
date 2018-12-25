@@ -231,6 +231,33 @@ DataReaderServer.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataReaderServer.cpp.s
 .PHONY : DataReaderServer.cpp.s
 
+DataWriterClient.o: DataWriterClient.cpp.o
+
+.PHONY : DataWriterClient.o
+
+# target to build an object file
+DataWriterClient.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.o
+.PHONY : DataWriterClient.cpp.o
+
+DataWriterClient.i: DataWriterClient.cpp.i
+
+.PHONY : DataWriterClient.i
+
+# target to preprocess a source file
+DataWriterClient.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.i
+.PHONY : DataWriterClient.cpp.i
+
+DataWriterClient.s: DataWriterClient.cpp.s
+
+.PHONY : DataWriterClient.s
+
+# target to generate assembly for a file
+DataWriterClient.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.s
+.PHONY : DataWriterClient.cpp.s
+
 DefineVarCommand.o: DefineVarCommand.cpp.o
 
 .PHONY : DefineVarCommand.o
@@ -468,6 +495,9 @@ help:
 	@echo "... DataReaderServer.o"
 	@echo "... DataReaderServer.i"
 	@echo "... DataReaderServer.s"
+	@echo "... DataWriterClient.o"
+	@echo "... DataWriterClient.i"
+	@echo "... DataWriterClient.s"
 	@echo "... DefineVarCommand.o"
 	@echo "... DefineVarCommand.i"
 	@echo "... DefineVarCommand.s"

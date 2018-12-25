@@ -25,7 +25,7 @@ int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
             if (this->dataBase.atTable(dataBase.getPathTable(), val)) {
                 // if the path is in paths table
                 this->dataBase.updateBind(key, val);
-                this->dataBase.updateVar(key, this->dataBase.getFromTable(this->dataBase.getVarTable(), val));
+                this->dataBase.updateVar(key, this->dataBase.getValueFromTable(val));
             } else {
                 this->dataBase.updateBind(key, val);
                 this->dataBase.updateVar(key, 0);
@@ -34,7 +34,7 @@ int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
         } else {
             globalMutex.lock();
             this->dataBase.updateBind(key, val);
-            this->dataBase.updateVar(key, this->dataBase.getFromTable(this->dataBase.getVarTable(), val));
+            this->dataBase.updateVar(key, this->dataBase.getValueFromTable(val));
             this->dataBase.updateBind(val, key);
             globalMutex.unlock();
         }

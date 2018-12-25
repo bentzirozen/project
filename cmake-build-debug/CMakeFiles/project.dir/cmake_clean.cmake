@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/ConditionParser.cpp.o"
   "CMakeFiles/project.dir/IfCommand.cpp.o"
   "CMakeFiles/project.dir/LoopCommand.cpp.o"
+  "CMakeFiles/project.dir/DataWriterClient.cpp.o"
   "project.pdb"
   "project"
 )

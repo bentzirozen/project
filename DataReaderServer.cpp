@@ -33,7 +33,7 @@ void DataReaderServer::updateSymbolTable() {
     for (auto iter = db.getVarTable().begin(); iter != db.getVarTable().end(); ++iter) {
         // means the var is binned to a var
         globalMutex.lock();
-        if (*BindingTable::instance()->getValue(iter->first).c_str() != '/') {
+        if (db.getFromTable(db.getBindTable(),iter->first).c_str() != '/') {
             SymbolTable::instance()->setValue(iter->first, SymbolTable::instance()->getValue(BindingTable::instance()->
                     getValue(iter->first)));
         } else {

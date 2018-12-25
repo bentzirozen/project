@@ -63,4 +63,11 @@ void MapDB::updateBind(string &key, string &varName) {
     this->bindTable[key] = varName;
 }
 
+string MapDB::getBindFromTable(const string &key) {
+    if(this->bindTable.count(key) ==  1)
+        return this->bindTable[key];
+    else
+        throw runtime_error("bind: " + key + "not exists");
+}
+
 

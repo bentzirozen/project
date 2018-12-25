@@ -6,25 +6,28 @@
 #define PROJECT_DATAWRITERCLIENT_H
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <netdb.h>
 #include <sys/socket.h>
 #include <unistd.h>
 #include <netinet/in.h>
+#include "Command.h"
 
-#include <string>
+#include <string.h>
 using namespace std;
 
 
 class DataWriterClient {
-     string message;
-     int sockFd;
+     static string message;
+     static int socketFd;
 public:
-    void setMessage(const string &message1);
+    //static because its depend on state
+    static void setMessage(const string &message1);
 
-    void createConnection(int port, string address);
+    static void createConnection(int port, string address);
 
-     int getSocketFD();
+     inline static int getSocketFD(){
+         return socketFd;
+     }
 
 };
 

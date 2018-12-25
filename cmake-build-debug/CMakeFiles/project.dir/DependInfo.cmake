@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bentzirozen/Desktop/project/ConditionParser.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/ConditionParser.cpp.o"
   "/home/bentzirozen/Desktop/project/ConnectCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/ConnectCommand.cpp.o"
   "/home/bentzirozen/Desktop/project/DataReaderServer.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/DataReaderServer.cpp.o"
+  "/home/bentzirozen/Desktop/project/DataWriterClient.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/DataWriterClient.cpp.o"
   "/home/bentzirozen/Desktop/project/DefineVarCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/DefineVarCommand.cpp.o"
   "/home/bentzirozen/Desktop/project/IfCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/IfCommand.cpp.o"
   "/home/bentzirozen/Desktop/project/Lexer.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/Lexer.cpp.o"
