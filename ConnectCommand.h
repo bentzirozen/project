@@ -14,6 +14,9 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <sys/socket.h>
+#include "thread"
+#include "DataReaderServer.h"
+#include "DataWriterClient.h"
 
 class ConnectCommand:public Command{
 public:

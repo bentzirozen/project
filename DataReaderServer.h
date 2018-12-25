@@ -52,6 +52,9 @@ public:
     std::vector<std::string> splitByComma(const char *buffer);
     void openServer(vector<string>parameters);
     DataReaderServer(MapDB& db):db(db){};
+    inline static bool serverIsOpen(){
+        return isOpen;
+    }
 
 
 };

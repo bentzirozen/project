@@ -3,7 +3,6 @@
 //
 
 #include "DataReaderServer.h"
-mutex globalMutex;
 bool DataReaderServer::isOpen = false;
 std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
     std::vector<std::string> vec;
