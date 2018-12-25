@@ -3,7 +3,7 @@
 //
 
 #include "DataReaderServer.h"
-pthread_mutex_t mutex;
+mutex globalMutex;
 bool DataReaderServer::isOpen = false;
 std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
     std::vector<std::string> vec;
@@ -21,16 +21,16 @@ std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
 }
 
 void DataReaderServer::updatePathsTable(vector<std::string> vec) {
-    pthread_mutex_init(&mutex, nullptr);
+    globalMutex.lock();
     for (int i = 0; i < PARAMETERS_SIZE; ++i) {
-        pthread_mutex_lock(&mutex);
-        db.updatePath(pathsVec[i],stod(vec[i].c_str()));
-        pthread_mutex_unlock(&mutex);
+        db.updatePath(pathsVec[i],vec[i]);
     }
+    globalMutex.unlock();
 }
 
 void DataReaderServer::updateSymbolTable() {
-    for (auto iter = SymbolTable::instance()->getFirst(); iter != SymbolTable::instance()->getEnd(); ++iter) {
+    globalMutex.lock();
+    for (auto iter = db.getVarTable().begin(); iter != db.getVarTable().end(); ++iter) {
         // means the var is binned to a var
         globalMutex.lock();
         if (*BindingTable::instance()->getValue(iter->first).c_str() != '/') {
