@@ -108,6 +108,9 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/DataReaderServer.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/DataWriterClient.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/DefineVarCommand.cpp">
 			<Option target="project"/>
 		</Unit>
