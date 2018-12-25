@@ -46,7 +46,6 @@ public:
     inline static bool serverIsOpen(){
         return isOpen;
     }
-    DataReaderServer();
 };
 
 

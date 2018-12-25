@@ -19,7 +19,7 @@ class OpenServerCommand:public Command{
     MapDB& db;
 public:
     int execute(const vector<string>&cur_lex,int index);
-    OpenServerCommand():db(db){};
+    OpenServerCommand(MapDB& db):db(db){};
 
 };
 
