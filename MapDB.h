@@ -44,7 +44,7 @@ public:
 
     //get values from tables
     template <class T,class T2>
-    inline bool atTable(map<T,T2>map,string& val){
+    inline bool atTable(map<T,T2>map,const string& val){
         return map.find(val) != map.end();
     }
 };

@@ -3,11 +3,20 @@
 //
 #include "OpenServerCommand.h"
 #include "DataReaderServer.h"
+struct MyParams
+{
+    int port;
+    int freq;
+};
 
 int OpenServerCommand::execute(const vector<string>&cur_lex,int index) {
-    // new thread that opens a server.
-    thread t1(&OpenServerCommand::openServer, this, stoi(cur_lex[index+1].c_str()), stoi(cur_lex[index+2].c_str()));
-    t1.join();
+    struct MyParams* params=new MyParams();
+    params->port = stoi(cur_lex[index+1]);
+    params->freq = stoi(cur_lex[index+2]);
+    DataReaderServer dataReaderServer;
+
+    std::thread t1(&DataReaderServer::openServer,dataReaderServer, stoi(cur_lex[index + 1]), stoi(cur_lex[index + 2]));
+  // t1.join();
     return 3;
 
 }

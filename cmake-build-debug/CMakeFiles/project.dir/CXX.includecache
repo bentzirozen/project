@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/bentzirozen/Desktop/project/Command.cpp
-Command.h
-/home/bentzirozen/Desktop/project/Command.h
-sstream
--
-fstream
--
-vector
--
-
 /home/bentzirozen/Desktop/project/Command.h
 iostream
 -
@@ -33,14 +23,24 @@ ConditionParser.h
 /home/bentzirozen/Desktop/project/ConditionParser.h
 Lexer.h
 /home/bentzirozen/Desktop/project/Lexer.h
+ConditionParser.h
+/home/bentzirozen/Desktop/project/ConditionParser.h
+Parser.h
+/home/bentzirozen/Desktop/project/Parser.h
 
 /home/bentzirozen/Desktop/project/ConditionParser.h
 Command.h
 /home/bentzirozen/Desktop/project/Command.h
+MapDB.h
+/home/bentzirozen/Desktop/project/MapDB.h
 
 /home/bentzirozen/Desktop/project/ConnectCommand.cpp
 ConnectCommand.h
 /home/bentzirozen/Desktop/project/ConnectCommand.h
+thread
+/home/bentzirozen/Desktop/project/thread
+DataReaderServer.h
+/home/bentzirozen/Desktop/project/DataReaderServer.h
 
 /home/bentzirozen/Desktop/project/ConnectCommand.h
 Command.h
@@ -61,48 +61,46 @@ string.h
 -
 sys/socket.h
 -
+thread
+/home/bentzirozen/Desktop/project/thread
+DataReaderServer.h
+/home/bentzirozen/Desktop/project/DataReaderServer.h
+DataWriterClient.h
+/home/bentzirozen/Desktop/project/DataWriterClient.h
+
+/home/bentzirozen/Desktop/project/DataReaderServer.cpp
+DataReaderServer.h
+/home/bentzirozen/Desktop/project/DataReaderServer.h
 
 /home/bentzirozen/Desktop/project/DataReaderServer.h
-unistd.h
--
-regex
--
-iostream
--
-sys/socket.h
+OpenServerCommand.h
+/home/bentzirozen/Desktop/project/OpenServerCommand.h
+MapDB.h
+/home/bentzirozen/Desktop/project/MapDB.h
+
+/home/bentzirozen/Desktop/project/DataWriterClient.h
+stdio.h
 -
 stdlib.h
 -
+netdb.h
+-
+sys/socket.h
+-
+unistd.h
+-
 netinet/in.h
 -
+Command.h
+/home/bentzirozen/Desktop/project/Command.h
 string.h
 -
-vector
--
-map
--
-
-/home/bentzirozen/Desktop/project/DefineVarCommand.cpp
-DefineVarCommand.h
-/home/bentzirozen/Desktop/project/DefineVarCommand.h
-utility
--
-cstring
--
-DefineVarCommand.h
-/home/bentzirozen/Desktop/project/DefineVarCommand.h
-MapDB.h
-/home/bentzirozen/Desktop/project/MapDB.h
 
 /home/bentzirozen/Desktop/project/DefineVarCommand.h
 Command.h
 /home/bentzirozen/Desktop/project/Command.h
 MapDB.h
 /home/bentzirozen/Desktop/project/MapDB.h
-
-/home/bentzirozen/Desktop/project/IfCommand.cpp
-IfCommand.h
-/home/bentzirozen/Desktop/project/IfCommand.h
 
 /home/bentzirozen/Desktop/project/IfCommand.h
 ConditionParser.h
@@ -118,17 +116,9 @@ fstream
 iostream
 -
 
-/home/bentzirozen/Desktop/project/LoopCommand.cpp
-LoopCommand.h
-/home/bentzirozen/Desktop/project/LoopCommand.h
-
 /home/bentzirozen/Desktop/project/LoopCommand.h
 ConditionParser.h
 /home/bentzirozen/Desktop/project/ConditionParser.h
-
-/home/bentzirozen/Desktop/project/MapDB.cpp
-MapDB.h
-/home/bentzirozen/Desktop/project/MapDB.h
 
 /home/bentzirozen/Desktop/project/MapDB.h
 map
@@ -148,6 +138,8 @@ DataReaderServer.h
 Command.h
 /home/bentzirozen/Desktop/project/Command.h
 thread
+-
+pthread.h
 -
 unistd.h
 -

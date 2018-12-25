@@ -5,18 +5,9 @@
 #ifndef PROJECT_DATAREADERSERVER_H
 #define PROJECT_DATAREADERSERVER_H
 
-#include <unistd.h>
-#include <regex>
-#include <iostream>
-#include <sys/socket.h>
-#include <stdlib.h>
-#include <netinet/in.h>
-#include <string.h>
-#include <vector>
-#include <map>
+#include "OpenServerCommand.h"
 #include "MapDB.h"
-#include <mutex>
-#include <pthread.h>
+
 using namespace std;
 #define PARAMETERS_SIZE 23
 #define BUFFER_SIZE 2048
@@ -47,16 +38,15 @@ class DataReaderServer {
     static bool isOpen;
     MapDB &db;
 public:
-    void updatePathsTable(std::vector<std::string> vec);
-    void updateSymbolTable();
-    std::vector<std::string> splitByComma(const char *buffer);
-    void openServer(vector<string>parameters);
-    DataReaderServer(MapDB& db):db(db){};
+     void updatePathsTable(std::vector<std::string> vec);
+     void updateSymbolTable();
+     std::vector<std::string> splitByComma(const char *buffer);
+     void openServer(int port, int freq);
+   DataReaderServer(MapDB& db):db(db){};
     inline static bool serverIsOpen(){
         return isOpen;
     }
-
-
+    DataReaderServer();
 };
 
 

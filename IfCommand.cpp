@@ -3,13 +3,10 @@
 //
 #include "IfCommand.h"
 int IfCommand::execute(const vector<string> &lexer, int index){
-    // execute all the commands in the if loop just once.
-    if (checkCondition()) {
-        for (auto &command: this->myCommands) {
-            command->execute(lexer,index);
-        }
+    ConditionParser conditionParser;
+    if (!conditionParser.execute(lexer,index)) {
+        while(lexer[index] != "}")
+            index++;
     }
-    // return how many read.
-    return this->endOfLoopIndex;
 }
 

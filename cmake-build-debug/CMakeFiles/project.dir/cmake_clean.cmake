@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/project.dir/main.cpp.o"
-  "CMakeFiles/project.dir/Command.cpp.o"
   "CMakeFiles/project.dir/OpenServerCommand.cpp.o"
   "CMakeFiles/project.dir/Lexer.cpp.o"
   "CMakeFiles/project.dir/Parser.cpp.o"

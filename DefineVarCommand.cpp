@@ -5,12 +5,9 @@
 
 #include <utility>
 #include <cstring>
-
-
-#include "DefineVarCommand.h"
 #include "MapDB.h"
 
-
+//mutex globalMutex;
 int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
     ++index; // skip 'Var'
     string key = cur_lex[index];
@@ -19,7 +16,7 @@ int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
         ++index;
         string val = cur_lex[index];
         if (val[1] == '/') { // start of a path
-            globalMutex.lock();
+            //globalMutex.lock();
             // set value in the table
             val = val.substr(1, val.length() - 2);
             if (this->dataBase.atTable(dataBase.getPathTable(), val)) {
@@ -30,27 +27,26 @@ int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
                 this->dataBase.updateBind(key, val);
                 this->dataBase.updateVar(key, 0);
             }
-            globalMutex.unlock();
+            //globalMutex.unlock();
         } else {
-            globalMutex.lock();
+            //globalMutex.lock();
             this->dataBase.updateBind(key, val);
             this->dataBase.updateVar(key, this->dataBase.getValueFromTable(val));
             this->dataBase.updateBind(val, key);
-            globalMutex.unlock();
+            //globalMutex.unlock();
         }
 
     }
 }
-    /*
-    else {
-        string val = cur_lex[index];
-        globalMutex.lock();
+    //else {
+      //  string val = cur_lex[index];
+     //   //globalMutex.lock();
         // calculate  and update
-        SymbolTable::instance()->setValue(key,
-                                          ExpressionsParser::shuntingYardAlg(ExpressionsParser::varsExtrication(val)));
-        globalMutex.unlock();
-    }
-    ++index;
-}
+    //    SymbolTable::instance()->setValue(key,
+                                      //    ExpressionsParser::shuntingYardAlg(ExpressionsParser::varsExtrication(val)));
+       // //globalMutex.unlock();
+ //   }
+ //   ++index;
+//}
 
 

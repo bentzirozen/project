@@ -3,6 +3,7 @@
 //
 
 #include "DataReaderServer.h"
+//mutex //globalMutex1;
 bool DataReaderServer::isOpen = false;
 std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
     std::vector<std::string> vec;
@@ -20,31 +21,25 @@ std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
 }
 
 void DataReaderServer::updatePathsTable(vector<std::string> vec) {
-    globalMutex.lock();
+    //////globalMutex1.lock();
     for (int i = 0; i < PARAMETERS_SIZE; ++i) {
         db.updatePath(pathsVec[i],vec[i]);
     }
-    globalMutex.unlock();
+    //globalMutex1.unlock();
 }
 
 void DataReaderServer::updateSymbolTable() {
-    globalMutex.lock();
+    //globalMutex1.lock();
     for (auto iter = db.getVarTable().begin(); iter != db.getVarTable().end(); ++iter) {
-        // means the var is binned to a var
-        globalMutex.lock();
-        if (db.getFromTable(db.getBindTable(),iter->first).c_str() != '/') {
-            SymbolTable::instance()->setValue(iter->first, SymbolTable::instance()->getValue(BindingTable::instance()->
-                    getValue(iter->first)));
-        } else {
-            SymbolTable::instance()->setValue(iter->first, PathsTable::instance()->getValue(BindingTable::instance()->
-                    getValue(iter->first)));
+        {
+            if(db.atTable(db.getBindTable(),db.getBindFromTable(iter->first))) {
+                db.updateVar(iter->first, db.getValueFromTable(db.getBindFromTable(iter->first)));
+            }
         }
-        globalMutex.unlock();
     }
-}
-void DataReaderServer::openServer(vector<string>parameters) {
-    int port = stoi(parameters[0]);
-    int freq = stoi(parameters[1]);
+    //globalMutex1.unlock();
+    }
+    void DataReaderServer::openServer(int port,int freq) {
     int sockfd, newsockfd, clilen;
     struct sockaddr_in serv_addr, cli_addr;
     int n;
@@ -134,3 +129,4 @@ void DataReaderServer::openServer(vector<string>parameters) {
         }
     }
 }
+

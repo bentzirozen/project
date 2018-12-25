@@ -123,33 +123,6 @@ project/fast:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
-Command.o: Command.cpp.o
-
-.PHONY : Command.o
-
-# target to build an object file
-Command.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Command.cpp.o
-.PHONY : Command.cpp.o
-
-Command.i: Command.cpp.i
-
-.PHONY : Command.i
-
-# target to preprocess a source file
-Command.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Command.cpp.i
-.PHONY : Command.cpp.i
-
-Command.s: Command.cpp.s
-
-.PHONY : Command.s
-
-# target to generate assembly for a file
-Command.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Command.cpp.s
-.PHONY : Command.cpp.s
-
 ConditionParser.o: ConditionParser.cpp.o
 
 .PHONY : ConditionParser.o
@@ -483,9 +456,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... project"
-	@echo "... Command.o"
-	@echo "... Command.i"
-	@echo "... Command.s"
 	@echo "... ConditionParser.o"
 	@echo "... ConditionParser.i"
 	@echo "... ConditionParser.s"

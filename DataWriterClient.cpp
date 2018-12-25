@@ -3,11 +3,13 @@
 //
 
 #include "DataWriterClient.h"
+std::string DataWriterClient::message = "";
+//mutex globalMutex2;
 int DataWriterClient::socketFd=0;
 void DataWriterClient::setMessage(const string &message1) {
-    globalMutex.lock();
+    //globalMutex22.lock();
     message = message1;
-    globalMutex.unlock();
+    //globalMutex22.unlock();
 }
 
 void DataWriterClient::createConnection(int port, string address) {
@@ -42,19 +44,17 @@ void DataWriterClient::createConnection(int port, string address) {
 
     while (true) {
         if(!message.empty()) {
-            globalMutex.lock();
+            //globalMutex22.lock();
             /* Send message to the server */
             n = write(sockfd, message.c_str(), message.length());
             message = "";
-            globalMutex.unlock();
+            //globalMutex22.unlock();
             if (n < 0) {
                 perror("ERROR writing to socket");
                 exit(1);
             }
         }
     }
-}
-
 }
 
 

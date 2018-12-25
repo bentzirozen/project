@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bentzirozen/Desktop/project/Command.cpp">
-			<Option target="project"/>
-		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Command.h">
 			<Option target="project"/>
 		</Unit>

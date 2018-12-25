@@ -6,10 +6,7 @@
 #include <list>
 #include <map>
 #include <vector>
-#include <mutex>
 using namespace std;
-
-mutex globalMutex;
 
 using namespace std;
 class Command {
