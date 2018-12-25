@@ -18,6 +18,7 @@ using namespace std;
 class MapDB {
     map<string, double> symbolTable;
     map<string, string> pathTable;
+    map<string,string> bindTable;
     map<string, Command*> commandTable;
 
 public:
@@ -35,6 +36,13 @@ public:
     map<string, Command*> &getCommandTable();
     void addCommand(string varName, Command* command);
     Command* getCommand(const string &CommandName);
+
+
+    //get values from tables
+    template <class T>
+    inline bool atTable(map<T,T>map,string& str){
+        return map.find(str) != map.end();
+    }
 };
 
 
