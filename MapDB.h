@@ -37,11 +37,18 @@ public:
     void addCommand(string varName, Command* command);
     Command* getCommand(const string &CommandName);
 
+    map<string,string>&getBindTable();
+    void updateBind(string& key,string&varName);
+
 
     //get values from tables
-    template <class T>
-    inline bool atTable(map<T,T>map,string& str){
-        return map.find(str) != map.end();
+    template <class T,class T2>
+    inline bool atTable(map<T,T2>map,string& val){
+        return map.find(val) != map.end();
+    }
+    template <class T,class T2>
+    inline T2 getFromTable(map<T,T2>map,string&val){
+        return map[val];
     }
 };
 

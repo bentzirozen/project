@@ -55,3 +55,12 @@ Command* MapDB::getCommand(const string &CommandName) {
         return nullptr;
 }
 
+map<string, string> &MapDB::getBindTable() {
+    return this->bindTable;
+}
+
+void MapDB::updateBind(string &key, string &varName) {
+    this->bindTable[key] = varName;
+}
+
+

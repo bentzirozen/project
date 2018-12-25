@@ -22,25 +22,28 @@ int DefineVarCommand::execute(const vector<string> &cur_lex,int index) {
             globalMutex.lock();
             // set value in the table
             val = val.substr(1, val.length() - 2);
-            if (this->dataBase.atTable(dataBase.getPathTable(),val)){
+            if (this->dataBase.atTable(dataBase.getPathTable(), val)) {
                 // if the path is in paths table
-                BindingTable::instance()->setValue(key, val);
-                SymbolTable::instance()->setValue(key,PathsTable::instance()->getValue(val));
+                this->dataBase.updateBind(key, val);
+                this->dataBase.updateVar(key, this->dataBase.getFromTable(this->dataBase.getVarTable(), val));
             } else {
-                BindingTable::instance()->setValue(key, val);
-                SymbolTable::instance()->setValue(key,0);
+                this->dataBase.updateBind(key, val);
+                this->dataBase.updateVar(key, 0);
             }
             globalMutex.unlock();
         } else {
             globalMutex.lock();
-            BindingTable::instance()->setValue(key, val);
-            SymbolTable::instance()->setValue(key,
-                                              SymbolTable::instance()->getValue(val));
-            BindingTable::instance()->setValue(val, key);
+            this->dataBase.updateBind(key, val);
+            this->dataBase.updateVar(key, this->dataBase.getFromTable(this->dataBase.getVarTable(), val));
+            this->dataBase.updateBind(val, key);
             globalMutex.unlock();
         }
-    } else {
-        string val = line[index];
+
+    }
+}
+    /*
+    else {
+        string val = cur_lex[index];
         globalMutex.lock();
         // calculate  and update
         SymbolTable::instance()->setValue(key,
