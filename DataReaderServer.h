@@ -38,9 +38,9 @@ class DataReaderServer {
     static bool isOpen;
     MapDB &db;
 public:
-     void updatePathsTable(std::vector<std::string> vec);
-     void updateSymbolTable();
-     std::vector<std::string> splitByComma(const char *buffer);
+    void initializeBindValues();
+    void constantRead(int newsockfd);
+    void updateBindValues(vector<string> values);
      void openServer(int port, int freq);
    DataReaderServer(MapDB& db):db(db){};
     inline static bool serverIsOpen(){

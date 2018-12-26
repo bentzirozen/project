@@ -18,11 +18,17 @@ map
 vector
 -
 
+/home/bentzirozen/Desktop/project/DataReaderServer.cpp
+DataReaderServer.h
+/home/bentzirozen/Desktop/project/DataReaderServer.h
+
 /home/bentzirozen/Desktop/project/DataReaderServer.h
 OpenServerCommand.h
 /home/bentzirozen/Desktop/project/OpenServerCommand.h
 MapDB.h
 /home/bentzirozen/Desktop/project/MapDB.h
+mutex
+/home/bentzirozen/Desktop/project/mutex
 
 /home/bentzirozen/Desktop/project/MapDB.h
 map
@@ -31,12 +37,6 @@ string
 -
 Command.h
 /home/bentzirozen/Desktop/project/Command.h
-
-/home/bentzirozen/Desktop/project/OpenServerCommand.cpp
-OpenServerCommand.h
-/home/bentzirozen/Desktop/project/OpenServerCommand.h
-DataReaderServer.h
-/home/bentzirozen/Desktop/project/DataReaderServer.h
 
 /home/bentzirozen/Desktop/project/OpenServerCommand.h
 Command.h

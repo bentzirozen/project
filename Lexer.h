@@ -19,12 +19,16 @@
 using namespace std;
 
 class Lexer{
+    string toCut;
     vector<string> cur_lex;
 
 public:
     vector<string>split_from_file(string fileName);
     vector<string>split_from_command_line();
+    vector<string>splitIt(string str, string token);
     vector<string> get_lexer();
+
+    Lexer();
 };
 
 #endif //PROJECT_LEXER_H

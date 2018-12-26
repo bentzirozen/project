@@ -16,37 +16,21 @@ using namespace std;
  * class created in order to store var and their current values.
  */
 class MapDB {
-    map<string, double> symbolTable;
-    map<string, string> pathTable;
+    map<string,Command*> commandTable;
+    map<string,double> valuesTable;
     map<string,string> bindTable;
-    map<string, Command*> commandTable;
-
+    map<string,double> bindValuesTable;
 public:
-    // get varTable.
-    map<string, double> &getVarTable();
-    void updateVar(string varName, double value);
-    double getValueFromTable(const string &varName);
+    MapDB() {}
 
-    // getVarPath
-    map<string, string> &getPathTable();
-    void updatePath(string varName, string path);
-    string getPathFromTable(const string &varName);
+    map<string, Command *> &getCommandTable() { return commandTable; }
 
-    // getCommand
-    map<string, Command*> &getCommandTable();
-    void addCommand(string varName, Command* command);
-    Command* getCommand(const string &CommandName);
+    map<string, double> &getValuesTable() { return valuesTable; }
 
-    map<string,string>&getBindTable();
-    void updateBind(string& key,string&varName);
-    string getBindFromTable(const string&key);
+    map<string, string> &getBindTable() { return bindTable; }
 
+    map<string, double> &getBindValuesTable() { return bindValuesTable; }
 
-    //get values from tables
-    template <class T,class T2>
-    inline bool atTable(map<T,T2>map,const string& val){
-        return map.find(val) != map.end();
-    }
 };
 
 
