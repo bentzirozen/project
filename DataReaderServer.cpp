@@ -3,7 +3,7 @@
 //
 
 #include "DataReaderServer.h"
-//mutex //globalMutex1;
+mutex globalMutex1;
 bool DataReaderServer::isOpen = false;
 std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
     std::vector<std::string> vec;
@@ -21,11 +21,11 @@ std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
 }
 
 void DataReaderServer::updatePathsTable(vector<std::string> vec) {
-    //////globalMutex1.lock();
+    globalMutex1.lock();
     for (int i = 0; i < PARAMETERS_SIZE; ++i) {
         db.updatePath(pathsVec[i],vec[i]);
     }
-    //globalMutex1.unlock();
+    globalMutex1.unlock();
 }
 
 void DataReaderServer::updateSymbolTable() {
@@ -105,9 +105,16 @@ void DataReaderServer::updateSymbolTable() {
         ++pointer;
         values += '\n';
         // update:
-        updatePathsTable(splitByComma(values.c_str()));
-        updateSymbolTable();
-        leftovers = "";
+        vector<string>check = splitByComma(values.c_str());
+        int size = check.size();
+        if(size>=23) {
+            updatePathsTable(splitByComma(values.c_str()));
+            updateSymbolTable();
+            sleep(freq / 1000);
+            leftovers = "";
+        }else{
+            break;
+        }
         // if we have unread chars:
         if (*pointer) {
             // add to leftovers:
