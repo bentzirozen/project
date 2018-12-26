@@ -1,5 +1,9 @@
-#ifndef SECONDYEARPROJECT_BIU_DATAREADERSERVER_H
-#define SECONDYEARPROJECT_BIU_DATAREADERSERVER_H
+//
+// Created by bentzirozen on 12/18/18.
+//
+
+#ifndef PROJECT_DATAREADERSERVER_H
+#define PROJECT_DATAREADERSERVER_H
 
 #include "thread"
 #include "map"

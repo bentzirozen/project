@@ -1,3 +1,7 @@
+//
+// Created by bentzirozen on 12/18/18.
+//
+
 #include <iostream>
 #include "OpenServerCommand.h"
 #include <thread>
