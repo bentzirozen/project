@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/BindingTable.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Command.h">
 			<Option target="project"/>
 		</Unit>
@@ -117,6 +123,18 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/DefineVarCommand.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Div.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Div.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/ExtractExpressions.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/IfCommand.cpp">
 			<Option target="project"/>
 		</Unit>
@@ -141,6 +159,18 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/MapDB.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Minus.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Minus.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Mul.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Mul.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/OpenServerCommand.cpp">
 			<Option target="project"/>
 		</Unit>
@@ -151,6 +181,18 @@
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Parser.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/PathsTable.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Plus.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Plus.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/SymbolTable.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/main.cpp">

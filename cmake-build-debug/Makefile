@@ -258,6 +258,33 @@ DefineVarCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DefineVarCommand.cpp.s
 .PHONY : DefineVarCommand.cpp.s
 
+Div.o: Div.cpp.o
+
+.PHONY : Div.o
+
+# target to build an object file
+Div.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.o
+.PHONY : Div.cpp.o
+
+Div.i: Div.cpp.i
+
+.PHONY : Div.i
+
+# target to preprocess a source file
+Div.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.i
+.PHONY : Div.cpp.i
+
+Div.s: Div.cpp.s
+
+.PHONY : Div.s
+
+# target to generate assembly for a file
+Div.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.s
+.PHONY : Div.cpp.s
+
 IfCommand.o: IfCommand.cpp.o
 
 .PHONY : IfCommand.o
@@ -366,6 +393,60 @@ MapDB.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/MapDB.cpp.s
 .PHONY : MapDB.cpp.s
 
+Minus.o: Minus.cpp.o
+
+.PHONY : Minus.o
+
+# target to build an object file
+Minus.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.o
+.PHONY : Minus.cpp.o
+
+Minus.i: Minus.cpp.i
+
+.PHONY : Minus.i
+
+# target to preprocess a source file
+Minus.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.i
+.PHONY : Minus.cpp.i
+
+Minus.s: Minus.cpp.s
+
+.PHONY : Minus.s
+
+# target to generate assembly for a file
+Minus.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.s
+.PHONY : Minus.cpp.s
+
+Mul.o: Mul.cpp.o
+
+.PHONY : Mul.o
+
+# target to build an object file
+Mul.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.o
+.PHONY : Mul.cpp.o
+
+Mul.i: Mul.cpp.i
+
+.PHONY : Mul.i
+
+# target to preprocess a source file
+Mul.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.i
+.PHONY : Mul.cpp.i
+
+Mul.s: Mul.cpp.s
+
+.PHONY : Mul.s
+
+# target to generate assembly for a file
+Mul.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.s
+.PHONY : Mul.cpp.s
+
 OpenServerCommand.o: OpenServerCommand.cpp.o
 
 .PHONY : OpenServerCommand.o
@@ -420,6 +501,33 @@ Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
+Plus.o: Plus.cpp.o
+
+.PHONY : Plus.o
+
+# target to build an object file
+Plus.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.o
+.PHONY : Plus.cpp.o
+
+Plus.i: Plus.cpp.i
+
+.PHONY : Plus.i
+
+# target to preprocess a source file
+Plus.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.i
+.PHONY : Plus.cpp.i
+
+Plus.s: Plus.cpp.s
+
+.PHONY : Plus.s
+
+# target to generate assembly for a file
+Plus.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.s
+.PHONY : Plus.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -471,6 +579,9 @@ help:
 	@echo "... DefineVarCommand.o"
 	@echo "... DefineVarCommand.i"
 	@echo "... DefineVarCommand.s"
+	@echo "... Div.o"
+	@echo "... Div.i"
+	@echo "... Div.s"
 	@echo "... IfCommand.o"
 	@echo "... IfCommand.i"
 	@echo "... IfCommand.s"
@@ -483,12 +594,21 @@ help:
 	@echo "... MapDB.o"
 	@echo "... MapDB.i"
 	@echo "... MapDB.s"
+	@echo "... Minus.o"
+	@echo "... Minus.i"
+	@echo "... Minus.s"
+	@echo "... Mul.o"
+	@echo "... Mul.i"
+	@echo "... Mul.s"
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"
+	@echo "... Plus.o"
+	@echo "... Plus.i"
+	@echo "... Plus.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,18 +1,24 @@
-//
-// Created by bentzirozen on 12/17/18.
-//
+#include <iostream>
 #include "OpenServerCommand.h"
-#include "DataReaderServer.h"
-struct MyParams
-{
-    int port;
-    int freq;
-};
+#include <thread>
+//#include "ExpressionsParser.h"
 
-int OpenServerCommand::execute(const vector<string>&cur_lex,int index) {
-    DataReaderServer dataReaderServer(this->db);
-    std::thread t1(&DataReaderServer::openServer,dataReaderServer, stoi(cur_lex[index + 1]), stoi(cur_lex[index + 2]));
-    t1.join();
+
+
+int OpenServerCommand::execute(const vector<string> &words,int index) {
+    int port, hz;
+    try {
+        port = stoi(words[index+1]);
+        hz = stoi(words[index+2]);
+        index += 3;
+    } catch (...) {
+        cerr << "Syntax/Parameter Error!" << endl;
+        exit(1);
+    }
+    thread t(&DataReaderServer::openServer, port, hz);
+    while (!DataReaderServer::isOpen()){
+        // wait...
+    }
+    t.detach();
     return 3;
-
 }

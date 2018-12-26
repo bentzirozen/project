@@ -1,16 +1,15 @@
-//
-// Created by bentzirozen on 12/18/18.
-//
+#ifndef SECONDYEARPROJECT_BIU_DATAREADERSERVER_H
+#define SECONDYEARPROJECT_BIU_DATAREADERSERVER_H
 
-#ifndef PROJECT_DATAREADERSERVER_H
-#define PROJECT_DATAREADERSERVER_H
+#include "thread"
+#include "map"
+#include "vector"
+#include "PathsTable.h"
+#include "SymbolTable.h"
+#include "BindingTable.h"
 
-#include "OpenServerCommand.h"
-#include "MapDB.h"
-#include "mutex"
-using namespace std;
 #define PARAMETERS_SIZE 23
-#define BUFFER_SIZE 2048
+#define BUFFER_SIZE 1024
 static std::vector<std::string> pathsVec{"/instrumentation/airspeed-indicator/indicated-speed-kt",
                                          "/instrumentation/altimeter/indicated-altitude-ft",
                                          "/instrumentation/altimeter/pressure-alt-ft",
@@ -32,21 +31,48 @@ static std::vector<std::string> pathsVec{"/instrumentation/airspeed-indicator/in
                                          "/controls/flight/elevator",
                                          "/controls/flight/rudder",
                                          "/controls/flight/flaps",
-                                         "/controls/engines/engine/throttle",
+                                         "/controls/engines/current-engine/throttle",
                                          "/engines/engine/rpm"};
 class DataReaderServer {
-    static bool isOpen;
-    MapDB &db;
+
+    static bool open;
+
+    static int sockFd;
+
+    /**
+     * Updates the Paths table
+     * @param vector vector
+     */
+    static void updatePathsTable(std::vector<std::string> vec);
+
+    /**
+     * Updates symbol table
+     */
+    static void updateSymbolTable();
+
+    /**
+     * split by ,
+     * @param buffer buffer
+     * @return vector of values
+     */
+    static std::vector<std::string> splitByComma(const char *buffer);
+
+
 public:
-    void initializeBindValues();
-    void constantRead(int newsockfd);
-    void updateBindValues(vector<string> values);
-     void openServer(int port, int freq);
-   DataReaderServer(MapDB& db):db(db){};
-    inline static bool serverIsOpen(){
-        return isOpen;
-    }
+    /**
+     * Opens the server
+     * @param port port
+     * @param hz hz
+     */
+    static void openServer(int port, int hz);
+
+    /**
+         * @return true if server is open, else false
+     */
+    inline static bool isOpen(){ return open;}
+
+    inline static int getSocketFD(){ return sockFd;}
 };
 
 
-#endif //PROJECT_DATAREADERSERVER_H
+#endif //SECONDYEARPROJECT_BIU_DATAREADERSERVER_H

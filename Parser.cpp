@@ -6,9 +6,9 @@
 
 Parser::Parser(const vector<string> &parser, MapDB& database):db(database) {
     this->parser = parser;
-    this->db.addCommand("openDataServer",new OpenServerCommand(database));
+    this->db.addCommand("openDataServer",new OpenServerCommand);
     this->db.addCommand("connect",new ConnectCommand);
-    this->db.addCommand("var",new DefineVarCommand);
+    this->db.addCommand("var",new DefineVarCommand());
     this->db.addCommand("if",new IfCommand());
     this->db.addCommand("while",new LoopCommand());
 

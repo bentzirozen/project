@@ -15,9 +15,7 @@ int ConnectCommand::execute(const vector<string> &cur_lex,int index) {
         cerr << "Syntax/Parameter Error!" << endl;
         exit(1);
     }
-    while (!DataReaderServer::serverIsOpen()){
-        // wait until simulator is connected
-    }
+
     thread t(&DataWriterClient::createConnection, port, adr);
     t.join();
     return 3;

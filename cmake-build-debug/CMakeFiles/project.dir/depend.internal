@@ -9,6 +9,7 @@ CMakeFiles/project.dir/ConditionParser.cpp.o
  /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DataWriterClient.h
  /home/bentzirozen/Desktop/project/DefineVarCommand.h
+ /home/bentzirozen/Desktop/project/Expression.h
  /home/bentzirozen/Desktop/project/IfCommand.h
  /home/bentzirozen/Desktop/project/Lexer.h
  /home/bentzirozen/Desktop/project/LoopCommand.h
@@ -37,6 +38,7 @@ CMakeFiles/project.dir/DefineVarCommand.cpp.o
  /home/bentzirozen/Desktop/project/Command.h
  /home/bentzirozen/Desktop/project/DefineVarCommand.cpp
  /home/bentzirozen/Desktop/project/DefineVarCommand.h
+ /home/bentzirozen/Desktop/project/Expression.h
  /home/bentzirozen/Desktop/project/MapDB.h
 CMakeFiles/project.dir/IfCommand.cpp.o
  /home/bentzirozen/Desktop/project/Command.h
@@ -70,6 +72,7 @@ CMakeFiles/project.dir/Parser.cpp.o
  /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DataWriterClient.h
  /home/bentzirozen/Desktop/project/DefineVarCommand.h
+ /home/bentzirozen/Desktop/project/Expression.h
  /home/bentzirozen/Desktop/project/IfCommand.h
  /home/bentzirozen/Desktop/project/LoopCommand.h
  /home/bentzirozen/Desktop/project/MapDB.h
@@ -83,6 +86,7 @@ CMakeFiles/project.dir/main.cpp.o
  /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DataWriterClient.h
  /home/bentzirozen/Desktop/project/DefineVarCommand.h
+ /home/bentzirozen/Desktop/project/Expression.h
  /home/bentzirozen/Desktop/project/IfCommand.h
  /home/bentzirozen/Desktop/project/Lexer.h
  /home/bentzirozen/Desktop/project/LoopCommand.h

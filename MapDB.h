@@ -30,7 +30,8 @@ public:
     map<string, string> &getBindTable() { return bindTable; }
 
     map<string, double> &getBindValuesTable() { return bindValuesTable; }
-
+    void addCommand(string varName, Command* command);
+    Command* getCommand(const string &CommandName);
 };
 
 

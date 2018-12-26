@@ -8,6 +8,7 @@ CMakeFiles/project.dir/ConditionParser.cpp.o: ../ConnectCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../DefineVarCommand.h
+CMakeFiles/project.dir/ConditionParser.cpp.o: ../Expression.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Lexer.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../LoopCommand.h
@@ -36,6 +37,7 @@ CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.cpp
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Expression.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../MapDB.h
 
 CMakeFiles/project.dir/IfCommand.cpp.o: ../Command.h
@@ -69,6 +71,7 @@ CMakeFiles/project.dir/Parser.cpp.o: ../ConnectCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/Parser.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/Parser.cpp.o: ../DefineVarCommand.h
+CMakeFiles/project.dir/Parser.cpp.o: ../Expression.h
 CMakeFiles/project.dir/Parser.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../LoopCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../MapDB.h
@@ -82,6 +85,7 @@ CMakeFiles/project.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/main.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/main.cpp.o: ../DefineVarCommand.h
+CMakeFiles/project.dir/main.cpp.o: ../Expression.h
 CMakeFiles/project.dir/main.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/project.dir/main.cpp.o: ../LoopCommand.h

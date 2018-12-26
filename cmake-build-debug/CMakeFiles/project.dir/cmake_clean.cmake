@@ -11,6 +11,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/IfCommand.cpp.o"
   "CMakeFiles/project.dir/LoopCommand.cpp.o"
   "CMakeFiles/project.dir/DataWriterClient.cpp.o"
+  "CMakeFiles/project.dir/Div.cpp.o"
+  "CMakeFiles/project.dir/Plus.cpp.o"
+  "CMakeFiles/project.dir/Minus.cpp.o"
+  "CMakeFiles/project.dir/Mul.cpp.o"
   "project.pdb"
   "project"
 )
