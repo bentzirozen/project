@@ -132,6 +132,12 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/Expression.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/ExpressionCommand.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/ExpressionCommand.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/ExtractExpressions.h">
 			<Option target="project"/>
 		</Unit>
@@ -190,6 +196,18 @@
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Plus.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/PrintCommand.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/PrintCommand.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/SleepCommand.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/SleepCommand.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/SymbolTable.h">

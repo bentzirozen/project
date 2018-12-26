@@ -15,6 +15,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/Plus.cpp.o"
   "CMakeFiles/project.dir/Minus.cpp.o"
   "CMakeFiles/project.dir/Mul.cpp.o"
+  "CMakeFiles/project.dir/SleepCommand.cpp.o"
+  "CMakeFiles/project.dir/PrintCommand.cpp.o"
+  "CMakeFiles/project.dir/ExpressionCommand.cpp.o"
   "project.pdb"
   "project"
 )

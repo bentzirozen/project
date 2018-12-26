@@ -285,6 +285,33 @@ Div.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.s
 .PHONY : Div.cpp.s
 
+ExpressionCommand.o: ExpressionCommand.cpp.o
+
+.PHONY : ExpressionCommand.o
+
+# target to build an object file
+ExpressionCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.o
+.PHONY : ExpressionCommand.cpp.o
+
+ExpressionCommand.i: ExpressionCommand.cpp.i
+
+.PHONY : ExpressionCommand.i
+
+# target to preprocess a source file
+ExpressionCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.i
+.PHONY : ExpressionCommand.cpp.i
+
+ExpressionCommand.s: ExpressionCommand.cpp.s
+
+.PHONY : ExpressionCommand.s
+
+# target to generate assembly for a file
+ExpressionCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.s
+.PHONY : ExpressionCommand.cpp.s
+
 IfCommand.o: IfCommand.cpp.o
 
 .PHONY : IfCommand.o
@@ -528,6 +555,60 @@ Plus.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.s
 .PHONY : Plus.cpp.s
 
+PrintCommand.o: PrintCommand.cpp.o
+
+.PHONY : PrintCommand.o
+
+# target to build an object file
+PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.o
+.PHONY : PrintCommand.cpp.o
+
+PrintCommand.i: PrintCommand.cpp.i
+
+.PHONY : PrintCommand.i
+
+# target to preprocess a source file
+PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.i
+.PHONY : PrintCommand.cpp.i
+
+PrintCommand.s: PrintCommand.cpp.s
+
+.PHONY : PrintCommand.s
+
+# target to generate assembly for a file
+PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.s
+.PHONY : PrintCommand.cpp.s
+
+SleepCommand.o: SleepCommand.cpp.o
+
+.PHONY : SleepCommand.o
+
+# target to build an object file
+SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.o
+.PHONY : SleepCommand.cpp.o
+
+SleepCommand.i: SleepCommand.cpp.i
+
+.PHONY : SleepCommand.i
+
+# target to preprocess a source file
+SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.i
+.PHONY : SleepCommand.cpp.i
+
+SleepCommand.s: SleepCommand.cpp.s
+
+.PHONY : SleepCommand.s
+
+# target to generate assembly for a file
+SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.s
+.PHONY : SleepCommand.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -582,6 +663,9 @@ help:
 	@echo "... Div.o"
 	@echo "... Div.i"
 	@echo "... Div.s"
+	@echo "... ExpressionCommand.o"
+	@echo "... ExpressionCommand.i"
+	@echo "... ExpressionCommand.s"
 	@echo "... IfCommand.o"
 	@echo "... IfCommand.i"
 	@echo "... IfCommand.s"
@@ -609,6 +693,12 @@ help:
 	@echo "... Plus.o"
 	@echo "... Plus.i"
 	@echo "... Plus.s"
+	@echo "... PrintCommand.o"
+	@echo "... PrintCommand.i"
+	@echo "... PrintCommand.s"
+	@echo "... SleepCommand.o"
+	@echo "... SleepCommand.i"
+	@echo "... SleepCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
