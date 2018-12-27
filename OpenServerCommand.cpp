@@ -23,6 +23,10 @@ int OpenServerCommand::execute(const vector<string> &words,int index) {
     while (!DataReaderServer::isOpen()){
         // wait...
     }
-    t.detach();
+    t.join();
     return 3;
+}
+
+OpenServerCommand::OpenServerCommand(int &index):index(index) {
+
 }

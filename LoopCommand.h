@@ -7,8 +7,9 @@
 
 #include "ConditionParser.h"
 
-class LoopCommand:public ConditionParser{
+class LoopCommand:public Command{
     int index;
+    ConditionParser conditionParser;
 public:
     LoopCommand(int &index);
     int execute(const vector<string>&lexer);

@@ -7,7 +7,7 @@
 
 #include "ConditionParser.h"
 
-class IfCommand:public ConditionParser{
+class IfCommand:public Command{
     int &index;
     ConditionParser conditionParser;
 public:

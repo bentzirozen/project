@@ -13,8 +13,7 @@ class ConditionParser: public Command {
 public:
     int execute(const vector<string>&cur_lex);
     bool isOperator(const string &charOperator);
-    explicit ConditionParser(int &index); 
-    ConditionParser();
+    explicit ConditionParser(int &index);
 };
 
 

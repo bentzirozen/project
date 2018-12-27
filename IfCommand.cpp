@@ -14,4 +14,4 @@ int IfCommand::execute(const vector<string> &lexer, int index){
     return ret;
 }
 
-IfCommand::IfCommand(int &index) : index(index),conditionParser(this->index){}
+IfCommand::IfCommand(int &index):index(index),conditionParser(this->index){}

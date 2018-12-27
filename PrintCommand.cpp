@@ -6,7 +6,7 @@
 #include "SymbolTable.h"
 
 
-int PrintCommand::execute(const vector<string> &cur_lex, int index) {
+int PrintCommand::execute(const vector<string> &cur_lex) {
     int ret = 0;
     // Checks if output is in symbol map. if so, prints his value. else, prints output
     globalMutex.lock();
@@ -27,4 +27,8 @@ int PrintCommand::execute(const vector<string> &cur_lex, int index) {
     cout << "\n";
 
     return ret;
+}
+
+PrintCommand::PrintCommand(int &index):index(index) {
+
 }

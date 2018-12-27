@@ -6,8 +6,12 @@
 #include "ExtractExpressions.h"
 
 
-int SleepCommand::execute(const vector<string> &cur_lex, int index) {
+int SleepCommand::execute(const vector<string> &cur_lex) {
     this_thread::sleep_for(std::chrono::milliseconds(
             (int)ExtractExpressions::shuntingYardAlg(ExtractExpressions::varsExtrication(cur_lex[index]))));
     return 2;
+}
+
+SleepCommand::SleepCommand(int &index):index(index) {
+
 }

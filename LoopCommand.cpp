@@ -6,7 +6,10 @@
 
 #include "LoopCommand.h"
 
-int LoopCommand::execute(const vector<string> &lexer, int index) {
+int LoopCommand::execute(const vector<string> &lexer) {
     return 2;
 }
 
+LoopCommand::LoopCommand(int &index) : index(index),conditionParser(this->index) {
+
+}

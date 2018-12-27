@@ -8,15 +8,16 @@
 
 #include <mutex>
 #include "map"
+#include <iostream>
+using namespace std;
 static std::mutex globalMutex;
 
 /**
  * A tables which hold our vars values
  */
+class SymbolTable{
 
-
-class SymbolTable {
-    std::map<std::string, double> symTable;
+    map<string,double>symTable;
     static SymbolTable *s_instance;
 public:
     static inline SymbolTable *instance() {
