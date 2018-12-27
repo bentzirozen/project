@@ -13,6 +13,7 @@
 #include "Expression.h"
 
 class DefineVarCommand : public Command {
+    int &index;
     string name;
     string bindPath;
     Expression* expression = nullptr;
@@ -36,7 +37,8 @@ public:
         this->bindPath = bindPath1;
         this->expression = nullptr;
     }
-    int execute(const vector<string>&cur_lex,int index);
+    int execute(const vector<string>&cur_lex);
+    DefineVarCommand(int &index);
 };
 
 #endif //PROJECT_DEFINEVARCOMMAND_H

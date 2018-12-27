@@ -8,9 +8,11 @@
 #include "Command.h"
 
 class PrintCommand:public Command{
+    int &index;
     string str;
 public:
-    int execute(const vector<string>&cur_lex,int index);
+    int execute(const vector<string>&cur_lex);
+    PrintCommand(int &index);
 };
 
 #endif //PROJECT_PRINTCOMMAND_H

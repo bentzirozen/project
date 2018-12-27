@@ -19,8 +19,10 @@
 #include "DataWriterClient.h"
 
 class ConnectCommand:public Command{
+    int &index;
 public:
-    int execute(const vector<string>&cur_lex,int index);
+    int execute(const vector<string>&cur_lex);
+    ConnectCommand(int &index);
 };
 
 

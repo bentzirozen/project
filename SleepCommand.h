@@ -8,7 +8,10 @@
 #include "Command.h"
 
 class SleepCommand:public Command{
-    int execute(const vector<string>&cur_lex,int index);
+    int &index;
+public:
+    int execute(const vector<string>&cur_lex);
+    SleepCommand(int &index);
 };
 
 #endif //PROJECT_SLEEPCOMMAND_H

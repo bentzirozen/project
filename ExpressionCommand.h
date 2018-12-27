@@ -14,7 +14,7 @@ protected:
     vector<string> lexer;
     int index;
 public:
-    ExpressionCommand(Command *command, const vector<string> &words,int index);
+    ExpressionCommand(Command *command, const vector<string> &words);
 
     virtual double calculate();
 };

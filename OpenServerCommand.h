@@ -15,16 +15,11 @@
  */
 // TODO: finish class
 class OpenServerCommand : public Command {
+    int &index;
 
 public:
-    /**
-     * @param index the index of the array
-     */
-    /**
-     * @param words the array of words
-     * get the port and the hz, and create a thread that run the DataReaderServer.
-     */
-    int execute(const vector<string> &words,int index);
+    int execute(const vector<string> &cur_lex);
+    OpenServerCommand(int &index);
 };
 
 

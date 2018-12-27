@@ -5,7 +5,7 @@
 #include "thread"
 #include "DataReaderServer.h"
 
-int ConnectCommand::execute(const vector<string> &cur_lex,int index) {
+int ConnectCommand::execute(const vector<string> &cur_lex) {
     int port;
     std::string adr;
     try {
@@ -19,4 +19,7 @@ int ConnectCommand::execute(const vector<string> &cur_lex,int index) {
     thread t(&DataWriterClient::createConnection, port, adr);
     t.join();
     return 3;
+}
+
+ConnectCommand::ConnectCommand(int &index):index(index) {
 }

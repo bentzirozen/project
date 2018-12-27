@@ -7,6 +7,6 @@
 #include "LoopCommand.h"
 
 int LoopCommand::execute(const vector<string> &lexer, int index) {
-    return 1;
+    return 2;
 }
 

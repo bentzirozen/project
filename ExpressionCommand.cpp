@@ -9,7 +9,7 @@
  * @return the command execution value.
  */
 double ExpressionCommand::calculate() {
-    command->execute(lexer,index);
+    command->execute(lexer);
     return 0;
 
 }
@@ -18,7 +18,7 @@ double ExpressionCommand::calculate() {
  * @param command the command
  * @param words the array of orders.
  */
-ExpressionCommand::ExpressionCommand(Command *command, const vector<string> &cur_lex,int index) : command(
-        command), lexer(cur_lex),index(index) {}
+ExpressionCommand::ExpressionCommand(Command *command, const vector<string> &cur_lex) : command(
+        command), lexer(cur_lex){}
 
 

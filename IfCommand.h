@@ -8,9 +8,11 @@
 #include "ConditionParser.h"
 
 class IfCommand:public ConditionParser{
+    int &index;
+    ConditionParser conditionParser;
 public:
-     int execute(const vector<string>&lexer,int index);
-     IfCommand(){};
+     int execute(const vector<string>&lexer);
+     IfCommand(int &index);
 };
 
 

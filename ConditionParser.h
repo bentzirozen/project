@@ -9,9 +9,12 @@
 #include "MapDB.h"
 
 class ConditionParser: public Command {
+    int &index;
 public:
-    int execute(const vector<string>&cur_lex,int index);
-    bool checkOperator(const string &charOPerator);
+    int execute(const vector<string>&cur_lex);
+    bool isOperator(const string &charOperator);
+    explicit ConditionParser(int &index); 
+    ConditionParser();
 };
 
 
