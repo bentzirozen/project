@@ -63,11 +63,6 @@ class DataReaderServer {
 
 
 public:
-    /**
-     * Opens the server
-     * @param port port
-     * @param hz hz
-     */
     static void openServer(int port, int hz);
 
     /**

@@ -18,7 +18,7 @@ class OpenServerCommand : public Command {
     int &index;
 
 public:
-    int execute(const vector<string> &cur_lex);
+    void execute(const vector<string> &cur_lex);
     OpenServerCommand(int &index);
 };
 

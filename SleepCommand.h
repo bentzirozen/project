@@ -10,7 +10,7 @@
 class SleepCommand:public Command{
     int &index;
 public:
-    int execute(const vector<string>&cur_lex);
+    void execute(const vector<string>&cur_lex);
     SleepCommand(int &index);
 };
 

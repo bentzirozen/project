@@ -12,11 +12,9 @@ using namespace std;
 using namespace std;
 class Command {
 public:
-    virtual int execute(const vector<string>&lexer)=0;
+    virtual void execute(const vector<string>&lexer)=0;
     ~Command(){};
 };
-vector<string> lexer(string lexer);
-list<string> lexer();
 
 
 

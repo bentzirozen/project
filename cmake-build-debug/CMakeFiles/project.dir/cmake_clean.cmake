@@ -18,6 +18,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/SleepCommand.cpp.o"
   "CMakeFiles/project.dir/PrintCommand.cpp.o"
   "CMakeFiles/project.dir/ExpressionCommand.cpp.o"
+  "CMakeFiles/project.dir/Shuntingyard.cpp.o"
+  "CMakeFiles/project.dir/Number.cpp.o"
+  "CMakeFiles/project.dir/AssignCommand.cpp.o"
   "project.pdb"
   "project"
 )

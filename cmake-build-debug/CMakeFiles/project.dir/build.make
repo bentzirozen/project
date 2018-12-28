@@ -304,6 +304,45 @@ CMakeFiles/project.dir/ExpressionCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/ExpressionCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/ExpressionCommand.cpp -o CMakeFiles/project.dir/ExpressionCommand.cpp.s
 
+CMakeFiles/project.dir/Shuntingyard.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Shuntingyard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project.dir/Shuntingyard.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Shuntingyard.cpp.o -c /home/bentzirozen/Desktop/project/Shuntingyard.cpp
+
+CMakeFiles/project.dir/Shuntingyard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/Shuntingyard.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bentzirozen/Desktop/project/Shuntingyard.cpp > CMakeFiles/project.dir/Shuntingyard.cpp.i
+
+CMakeFiles/project.dir/Shuntingyard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/Shuntingyard.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/Shuntingyard.cpp -o CMakeFiles/project.dir/Shuntingyard.cpp.s
+
+CMakeFiles/project.dir/Number.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/Number.cpp.o: ../Number.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project.dir/Number.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Number.cpp.o -c /home/bentzirozen/Desktop/project/Number.cpp
+
+CMakeFiles/project.dir/Number.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/Number.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bentzirozen/Desktop/project/Number.cpp > CMakeFiles/project.dir/Number.cpp.i
+
+CMakeFiles/project.dir/Number.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/Number.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/Number.cpp -o CMakeFiles/project.dir/Number.cpp.s
+
+CMakeFiles/project.dir/AssignCommand.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project.dir/AssignCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/AssignCommand.cpp.o -c /home/bentzirozen/Desktop/project/AssignCommand.cpp
+
+CMakeFiles/project.dir/AssignCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/AssignCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bentzirozen/Desktop/project/AssignCommand.cpp > CMakeFiles/project.dir/AssignCommand.cpp.i
+
+CMakeFiles/project.dir/AssignCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/AssignCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/AssignCommand.cpp -o CMakeFiles/project.dir/AssignCommand.cpp.s
+
 # Object files for target project
 project_OBJECTS = \
 "CMakeFiles/project.dir/main.cpp.o" \
@@ -324,7 +363,10 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/Mul.cpp.o" \
 "CMakeFiles/project.dir/SleepCommand.cpp.o" \
 "CMakeFiles/project.dir/PrintCommand.cpp.o" \
-"CMakeFiles/project.dir/ExpressionCommand.cpp.o"
+"CMakeFiles/project.dir/ExpressionCommand.cpp.o" \
+"CMakeFiles/project.dir/Shuntingyard.cpp.o" \
+"CMakeFiles/project.dir/Number.cpp.o" \
+"CMakeFiles/project.dir/AssignCommand.cpp.o"
 
 # External object files for target project
 project_EXTERNAL_OBJECTS =
@@ -348,9 +390,12 @@ project: CMakeFiles/project.dir/Mul.cpp.o
 project: CMakeFiles/project.dir/SleepCommand.cpp.o
 project: CMakeFiles/project.dir/PrintCommand.cpp.o
 project: CMakeFiles/project.dir/ExpressionCommand.cpp.o
+project: CMakeFiles/project.dir/Shuntingyard.cpp.o
+project: CMakeFiles/project.dir/Number.cpp.o
+project: CMakeFiles/project.dir/AssignCommand.cpp.o
 project: CMakeFiles/project.dir/build.make
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

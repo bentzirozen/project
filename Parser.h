@@ -15,15 +15,18 @@
 #include "MapDB.h"
 #include "IfCommand.h"
 #include "LoopCommand.h"
-using namespace std;
+#include "PrintCommand.h"
+#include "SleepCommand.h"
+#include "AssignCommand.h"
+
 
 class Parser{
-    MapDB &db;
-    vector<string> parser;
+    map<string, Expression *> commandsTable;
+    int &index;
 public:
-    Parser(const vector<string>&parser,MapDB& db);
-    vector<string>get_parser();
-    MapDB getDB();
+    Parser(const vector<string>&cur_lex,int& index);
+    void run(const vector<string> &cur_lex);
+
 };
 
 #endif //PROJECT_PARSER_H

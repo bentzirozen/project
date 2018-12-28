@@ -123,6 +123,33 @@ project/fast:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
+AssignCommand.o: AssignCommand.cpp.o
+
+.PHONY : AssignCommand.o
+
+# target to build an object file
+AssignCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.o
+.PHONY : AssignCommand.cpp.o
+
+AssignCommand.i: AssignCommand.cpp.i
+
+.PHONY : AssignCommand.i
+
+# target to preprocess a source file
+AssignCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.i
+.PHONY : AssignCommand.cpp.i
+
+AssignCommand.s: AssignCommand.cpp.s
+
+.PHONY : AssignCommand.s
+
+# target to generate assembly for a file
+AssignCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.s
+.PHONY : AssignCommand.cpp.s
+
 ConditionParser.o: ConditionParser.cpp.o
 
 .PHONY : ConditionParser.o
@@ -474,6 +501,33 @@ Mul.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.s
 .PHONY : Mul.cpp.s
 
+Number.o: Number.cpp.o
+
+.PHONY : Number.o
+
+# target to build an object file
+Number.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.o
+.PHONY : Number.cpp.o
+
+Number.i: Number.cpp.i
+
+.PHONY : Number.i
+
+# target to preprocess a source file
+Number.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.i
+.PHONY : Number.cpp.i
+
+Number.s: Number.cpp.s
+
+.PHONY : Number.s
+
+# target to generate assembly for a file
+Number.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.s
+.PHONY : Number.cpp.s
+
 OpenServerCommand.o: OpenServerCommand.cpp.o
 
 .PHONY : OpenServerCommand.o
@@ -582,6 +636,33 @@ PrintCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.s
 .PHONY : PrintCommand.cpp.s
 
+Shuntingyard.o: Shuntingyard.cpp.o
+
+.PHONY : Shuntingyard.o
+
+# target to build an object file
+Shuntingyard.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.o
+.PHONY : Shuntingyard.cpp.o
+
+Shuntingyard.i: Shuntingyard.cpp.i
+
+.PHONY : Shuntingyard.i
+
+# target to preprocess a source file
+Shuntingyard.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.i
+.PHONY : Shuntingyard.cpp.i
+
+Shuntingyard.s: Shuntingyard.cpp.s
+
+.PHONY : Shuntingyard.s
+
+# target to generate assembly for a file
+Shuntingyard.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.s
+.PHONY : Shuntingyard.cpp.s
+
 SleepCommand.o: SleepCommand.cpp.o
 
 .PHONY : SleepCommand.o
@@ -645,6 +726,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... project"
+	@echo "... AssignCommand.o"
+	@echo "... AssignCommand.i"
+	@echo "... AssignCommand.s"
 	@echo "... ConditionParser.o"
 	@echo "... ConditionParser.i"
 	@echo "... ConditionParser.s"
@@ -684,6 +768,9 @@ help:
 	@echo "... Mul.o"
 	@echo "... Mul.i"
 	@echo "... Mul.s"
+	@echo "... Number.o"
+	@echo "... Number.i"
+	@echo "... Number.s"
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"
@@ -696,6 +783,9 @@ help:
 	@echo "... PrintCommand.o"
 	@echo "... PrintCommand.i"
 	@echo "... PrintCommand.s"
+	@echo "... Shuntingyard.o"
+	@echo "... Shuntingyard.i"
+	@echo "... Shuntingyard.s"
 	@echo "... SleepCommand.o"
 	@echo "... SleepCommand.i"
 	@echo "... SleepCommand.s"

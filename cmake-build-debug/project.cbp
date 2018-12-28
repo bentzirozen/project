@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bentzirozen/Desktop/project/AssignCommand.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/AssignCommand.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.h">
 			<Option target="project"/>
 		</Unit>
@@ -138,9 +144,6 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/ExpressionCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ExtractExpressions.h">
-			<Option target="project"/>
-		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/IfCommand.cpp">
 			<Option target="project"/>
 		</Unit>
@@ -177,6 +180,12 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/Mul.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Number.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Number.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/OpenServerCommand.cpp">
 			<Option target="project"/>
 		</Unit>
@@ -202,6 +211,12 @@
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/PrintCommand.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Shuntingyard.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/Shuntingyard.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/SleepCommand.cpp">

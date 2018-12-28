@@ -5,7 +5,7 @@
 #ifndef UNTITLED8_EXPRESSION_H
 #define UNTITLED8_EXPRESSION_H
 
-#endif //UNTITLED8_EXPRESSION_H
+
 #include <map>
 #include <list>
 #include <string>
@@ -22,3 +22,4 @@ public:
     virtual double calculate() =0;
 
 };
+#endif //UNTITLED8_EXPRESSION_H

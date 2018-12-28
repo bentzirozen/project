@@ -12,7 +12,7 @@ class LoopCommand:public Command{
     ConditionParser conditionParser;
 public:
     LoopCommand(int &index);
-    int execute(const vector<string>&lexer);
+    void execute(const vector<string>&lexer);
 };
 
 

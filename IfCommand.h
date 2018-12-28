@@ -11,7 +11,7 @@ class IfCommand:public Command{
     int &index;
     ConditionParser conditionParser;
 public:
-     int execute(const vector<string>&lexer);
+     void execute(const vector<string>&lexer);
      IfCommand(int &index);
 };
 

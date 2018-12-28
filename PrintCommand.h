@@ -11,7 +11,7 @@ class PrintCommand:public Command{
     int &index;
     string str;
 public:
-    int execute(const vector<string>&cur_lex);
+    void execute(const vector<string>&cur_lex);
     PrintCommand(int &index);
 };
 
