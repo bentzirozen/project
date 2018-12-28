@@ -8,7 +8,7 @@
 #include "MapDB.h"
 
 //mutex globalMutex;
-int DefineVarCommand::execute(const vector<string> &cur_lex) {
+void DefineVarCommand::execute(const vector<string> &cur_lex) {
     if (expression != nullptr) {
         if (db->getValuesTable().find(name) != db->getValuesTable().end()) {
             db->getValuesTable().find(name)->second = expression->calculate();
@@ -28,7 +28,7 @@ int DefineVarCommand::execute(const vector<string> &cur_lex) {
             db->getValuesTable().erase(name);
         }
     }
-    return 5;
+    index+=5;
 }
 
 

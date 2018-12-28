@@ -24,7 +24,7 @@ unsigned int Shuntingyard::precedence(char op) {
     }
 }
 
-bool Shuntingyard::isdigit(char c){ //checks if the char is a digit
+bool Shuntingyard::isDigit(char c){ //checks if the char is a digit
     if((c >= 48) && (c <= 57)){
         return true;
     }else {
@@ -32,7 +32,7 @@ bool Shuntingyard::isdigit(char c){ //checks if the char is a digit
     }
 }
 
-bool Shuntingyard::isoperator(char c){ //checks if the char is an operator
+bool Shuntingyard::isOperator(char c){ //checks if the char is an operator
     if((c = '+') || (c = '-') || (c = '/') || (c = '*')) {
         return true;
     }else {
@@ -43,7 +43,7 @@ bool Shuntingyard::isoperator(char c){ //checks if the char is an operator
 
 
 
-void Shuntingyard:: algorithm(string exp){
+string Shuntingyard:: algorithm(string exp){
     string output;
     stack<string> operators;
 
@@ -54,7 +54,7 @@ void Shuntingyard:: algorithm(string exp){
 
         string token;
         token +=c;
-        if(isdigit(c)) {//the character is a digit.
+        if(isDigit(c)) {//the character is a digit.
             output.append(token); //add the digit to the queue.
         }else if(c == '(') { //the character is a (
             operators.push(token);
@@ -71,11 +71,11 @@ void Shuntingyard:: algorithm(string exp){
                 operators.pop();
             }
 
-        } else if(isoperator(c)){ //the character c is an operator.
+        } else if(isOperator(c)){ //the character c is an operator.
             if(operators.empty()){
                 operators.push(token);
             }else {
-                while (isoperator(operators.top()[0])) { //while we have an operator in the stack, check precedence.
+                while (isOperator(operators.top()[0])) { //while we have an operator in the stack, check precedence.
                     if ((precedence(operators.top()[0])) >
                         (precedence(c))) { //there is an operator in the stack with precedence.
                         string op;
@@ -103,10 +103,37 @@ void Shuntingyard:: algorithm(string exp){
         }
     }
 
-    cout << output << endl; //the new string
+    return output;//the new string
 
 }
 
 Shuntingyard::~Shuntingyard() {
 
+}
+
+string Shuntingyard::extract_string(const string &str) {
+    const char *pExp = str.c_str();
+    string newExp;
+    string var;
+    while (*pExp) {
+        if (*pExp == '(' || *pExp == ')' || isDigit(*pExp) || isOperator(*pExp) || *pExp == ' ') {
+            newExp += *pExp;
+            ++pExp;
+        } else {
+            while (!(*pExp == '(' || *pExp == ')' || isOperator(*pExp) || *pExp == ' ') && *pExp) {
+                var += *pExp;
+                ++pExp;
+            }
+            globalMutex.lock();
+            var = to_string(SymbolTable::instance()->getValue(var));
+            var.erase ( var.find_last_not_of('0') + 1, std::string::npos ); // erase trailing zeros
+            if(var.find('.') == var.length() - 1) var = var.substr(0, var.length() - 1);
+            if (newExp.length() > 0 && newExp[newExp.length() - 1] == '-' && var[0] == '-')
+                var = var.substr(1, var.length() - 1);
+            newExp += var;
+            globalMutex.unlock();
+            var = "";
+        }
+    }
+    return newExp;
 }

@@ -10,11 +10,12 @@
 /**
  * @param line the words
  */
-int ConditionParser::execute(const vector<string> &cur_lex) {
+void ConditionParser::execute(const vector<string> &cur_lex) {
+    this->cur_lex = cur_lex;
     if(index>5){
-        return 1;
+        index++;
     }else{
-        return 0;
+        index--;
     }
 }
 
@@ -30,4 +31,7 @@ bool ConditionParser::isOperator(const string &charOperator) {
             charOperator == "<" || charOperator == "<=");
 }
 
-ConditionParser::ConditionParser() {}
+bool ConditionParser::checkCondition(const vector<string>&cur_lex) {
+    return stoi(cur_lex[index])>= 50;
+}
+

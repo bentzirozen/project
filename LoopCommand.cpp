@@ -6,8 +6,8 @@
 
 #include "LoopCommand.h"
 
-int LoopCommand::execute(const vector<string> &lexer) {
-    return 2;
+void LoopCommand::execute(const vector<string> &lexer) {
+   index+=2;
 }
 
 LoopCommand::LoopCommand(int &index) : index(index),conditionParser(this->index) {

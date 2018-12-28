@@ -4,21 +4,22 @@
 #include "ConnectCommand.h"
 #include "thread"
 #include "DataReaderServer.h"
+#include "Shuntingyard.h"
 
-int ConnectCommand::execute(const vector<string> &cur_lex) {
+void ConnectCommand::execute(const vector<string> &cur_lex) {
+    Shuntingyard shuntingYard;
     int port;
-    std::string adr;
+    string adress;
     try {
-        adr = cur_lex[index + 1];
-        port = stoi(cur_lex[index+2]);
+        adress = cur_lex[index + 1];
+        port = stoi(shuntingYard.algorithm(cur_lex[index + 2]));
+        index+=3;
     } catch (...) {
-        cerr << "Syntax/Parameter Error!" << endl;
+        cerr << "ERROR : WRONG PASSING PARAMETERS"<< endl;
         exit(1);
     }
 
-    thread t(&DataWriterClient::createConnection, port, adr);
-    t.join();
-    return 3;
+    DataWriterClient::createConnection(port, adress);
 }
 
 ConnectCommand::ConnectCommand(int &index):index(index) {

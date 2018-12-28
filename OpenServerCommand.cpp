@@ -5,26 +5,26 @@
 #include <iostream>
 #include "OpenServerCommand.h"
 #include <thread>
-//#include "ExpressionsParser.h"
+#include "Shuntingyard.h"
 
 
 
-int OpenServerCommand::execute(const vector<string> &words,int index) {
-    int port, hz;
+void OpenServerCommand::execute(const vector<string>&cur_lex) {
+    Shuntingyard shuntingyard;
+    int port, freq;
     try {
-        port = stoi(words[index+1]);
-        hz = stoi(words[index+2]);
+        port = stoi(shuntingyard.algorithm(cur_lex[index + 1]));
+        freq = stoi(shuntingyard.algorithm(cur_lex[index + 2]));
         index += 3;
     } catch (...) {
-        cerr << "Syntax/Parameter Error!" << endl;
+        cerr << "ERROR : WRONG PASSING PARAMETERS" << endl;
         exit(1);
     }
-    thread t(&DataReaderServer::openServer, port, hz);
+    thread t(&DataReaderServer::openServer, port, freq);
     while (!DataReaderServer::isOpen()){
-        // wait...
+        //wait..
     }
-    t.join();
-    return 3;
+    t.detach();
 }
 
 OpenServerCommand::OpenServerCommand(int &index):index(index) {

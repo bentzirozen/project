@@ -11,7 +11,6 @@
 double ExpressionCommand::calculate() {
     command->execute(lexer);
     return 0;
-
 }
 
 /**

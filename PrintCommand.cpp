@@ -6,16 +6,13 @@
 #include "SymbolTable.h"
 
 
-int PrintCommand::execute(const vector<string> &cur_lex) {
-    int ret = 0;
+void PrintCommand::execute(const vector<string> &cur_lex) {
     // Checks if output is in symbol map. if so, prints his value. else, prints output
     globalMutex.lock();
-    ret++;
     index++;
     while(cur_lex[index][cur_lex[index].length() - 1] != '"' && !SymbolTable::instance()->atTable(cur_lex[index])){
         str += cur_lex[index];
         str += " ";
-        ret++;
         ++index;
     }
     str += cur_lex[index];
@@ -25,8 +22,6 @@ int PrintCommand::execute(const vector<string> &cur_lex) {
     str = "";
     globalMutex.unlock();
     cout << "\n";
-
-    return ret;
 }
 
 PrintCommand::PrintCommand(int &index):index(index) {

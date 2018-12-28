@@ -3,13 +3,14 @@
 //
 
 #include "SleepCommand.h"
-#include "ExtractExpressions.h"
+#include "Shuntingyard.h"
 
 
-int SleepCommand::execute(const vector<string> &cur_lex) {
-    this_thread::sleep_for(std::chrono::milliseconds(
-            (int)ExtractExpressions::shuntingYardAlg(ExtractExpressions::varsExtrication(cur_lex[index]))));
-    return 2;
+void SleepCommand::execute(const vector<string> &cur_lex) {
+    Shuntingyard shuntingyard;
+    this_thread::sleep_for(std::chrono::milliseconds
+    (stoi(shuntingyard.algorithm(shuntingyard.extract_string(cur_lex[index])))));
+    index+=2;
 }
 
 SleepCommand::SleepCommand(int &index):index(index) {

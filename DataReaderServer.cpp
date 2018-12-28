@@ -104,6 +104,7 @@ void DataReaderServer::openServer(int port, int hz) {
             exit(1);
         }
         open = true;
+        sleep(2);
         values = "";
         char *pt = buffer;
         while (*pt != '\n') {
