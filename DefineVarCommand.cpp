@@ -7,7 +7,6 @@
 #include <cstring>
 #include "MapDB.h"
 
-//mutex globalMutex;
 void DefineVarCommand::execute(const vector<string> &cur_lex) {
     if (expression != nullptr) {
         if (db->getValuesTable().find(name) != db->getValuesTable().end()) {

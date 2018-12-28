@@ -10,7 +10,7 @@
 #include "map"
 #include <iostream>
 using namespace std;
-static std::mutex globalMutex;
+
 
 /**
  * A tables which hold our vars values

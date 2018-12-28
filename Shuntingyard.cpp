@@ -5,6 +5,7 @@
 #include <stack>
 #include <iostream>
 #include "Shuntingyard.h"
+#include "DataReaderServer.h"
 
 using namespace std;
 

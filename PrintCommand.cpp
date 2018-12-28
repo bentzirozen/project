@@ -4,6 +4,7 @@
 
 #include "PrintCommand.h"
 #include "SymbolTable.h"
+#include "DataReaderServer.h"
 
 
 void PrintCommand::execute(const vector<string> &cur_lex) {
