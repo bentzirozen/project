@@ -13,8 +13,9 @@ void OpenServerCommand::execute(const vector<string>&cur_lex) {
     Shuntingyard shuntingyard;
     int port, freq;
     try {
-        port = stoi(shuntingyard.algorithm(cur_lex[index + 1]));
-        freq = stoi(shuntingyard.algorithm(cur_lex[index + 2]));
+        //shunting yard algorithm returns double..
+        port = (int)shuntingyard.algorithm(cur_lex[index + 1]);
+        freq = (int)shuntingyard.algorithm(cur_lex[index + 2]);
         index += 3;
     } catch (...) {
         cerr << "ERROR : WRONG PASSING PARAMETERS" << endl;

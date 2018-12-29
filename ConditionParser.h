@@ -14,7 +14,9 @@ class ConditionParser: public Command {
 public:
     void execute(const vector<string>&cur_lex);
     bool checkCondition(const vector<string>&cur_lex);
-    bool isOperator(const string &charOperator);
+    bool isBigger(double left,double right);
+    bool isEqual(double left,double right);
+    bool isOperator(const string &oper);
     explicit ConditionParser(int &index);
 };
 

@@ -5,7 +5,9 @@ CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.cpp
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../BindingTable.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../Command.h
+CMakeFiles/project.dir/AssignCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../DataWriterClient.h
+CMakeFiles/project.dir/AssignCommand.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../Shuntingyard.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../SymbolTable.h
 
@@ -48,16 +50,25 @@ CMakeFiles/project.dir/DataReaderServer.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../SymbolTable.h
 
+CMakeFiles/project.dir/DataWriterClient.cpp.o: ../BindingTable.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../Command.h
+CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataWriterClient.cpp
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataWriterClient.h
+CMakeFiles/project.dir/DataWriterClient.cpp.o: ../PathsTable.h
+CMakeFiles/project.dir/DataWriterClient.cpp.o: ../SymbolTable.h
 
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../BindingTable.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Command.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.cpp
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Expression.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../MapDB.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../PathsTable.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Shuntingyard.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/Div.cpp.o: ../BinaryExpression.h
 CMakeFiles/project.dir/Div.cpp.o: ../Div.cpp
@@ -149,11 +160,17 @@ CMakeFiles/project.dir/Plus.cpp.o: ../Number.h
 CMakeFiles/project.dir/Plus.cpp.o: ../Plus.cpp
 CMakeFiles/project.dir/Plus.cpp.o: ../Plus.h
 
+CMakeFiles/project.dir/PrintCommand.cpp.o: ../BindingTable.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../Command.h
+CMakeFiles/project.dir/PrintCommand.cpp.o: ../DataReaderServer.h
+CMakeFiles/project.dir/PrintCommand.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../PrintCommand.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../SymbolTable.h
 
+CMakeFiles/project.dir/Shuntingyard.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/Shuntingyard.cpp.o: ../DataReaderServer.h
+CMakeFiles/project.dir/Shuntingyard.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Shuntingyard.cpp
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Shuntingyard.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../SymbolTable.h

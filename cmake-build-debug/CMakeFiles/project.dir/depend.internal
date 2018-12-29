@@ -6,7 +6,9 @@ CMakeFiles/project.dir/AssignCommand.cpp.o
  /home/bentzirozen/Desktop/project/AssignCommand.h
  /home/bentzirozen/Desktop/project/BindingTable.h
  /home/bentzirozen/Desktop/project/Command.h
+ /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DataWriterClient.h
+ /home/bentzirozen/Desktop/project/PathsTable.h
  /home/bentzirozen/Desktop/project/Shuntingyard.h
  /home/bentzirozen/Desktop/project/SymbolTable.h
 CMakeFiles/project.dir/ConditionParser.cpp.o
@@ -49,16 +51,25 @@ CMakeFiles/project.dir/DataReaderServer.cpp.o
  /home/bentzirozen/Desktop/project/PathsTable.h
  /home/bentzirozen/Desktop/project/SymbolTable.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o
+ /home/bentzirozen/Desktop/project/BindingTable.h
  /home/bentzirozen/Desktop/project/Command.h
+ /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DataWriterClient.cpp
  /home/bentzirozen/Desktop/project/DataWriterClient.h
+ /home/bentzirozen/Desktop/project/PathsTable.h
+ /home/bentzirozen/Desktop/project/SymbolTable.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o
+ /home/bentzirozen/Desktop/project/BindingTable.h
  /home/bentzirozen/Desktop/project/Command.h
+ /home/bentzirozen/Desktop/project/DataReaderServer.h
  /home/bentzirozen/Desktop/project/DefineVarCommand.cpp
  /home/bentzirozen/Desktop/project/DefineVarCommand.h
  /home/bentzirozen/Desktop/project/Expression.h
  /home/bentzirozen/Desktop/project/ExpressionCommand.h
  /home/bentzirozen/Desktop/project/MapDB.h
+ /home/bentzirozen/Desktop/project/PathsTable.h
+ /home/bentzirozen/Desktop/project/Shuntingyard.h
+ /home/bentzirozen/Desktop/project/SymbolTable.h
 CMakeFiles/project.dir/Div.cpp.o
  /home/bentzirozen/Desktop/project/BinaryExpression.h
  /home/bentzirozen/Desktop/project/Div.cpp
@@ -150,11 +161,17 @@ CMakeFiles/project.dir/Plus.cpp.o
  /home/bentzirozen/Desktop/project/Plus.cpp
  /home/bentzirozen/Desktop/project/Plus.h
 CMakeFiles/project.dir/PrintCommand.cpp.o
+ /home/bentzirozen/Desktop/project/BindingTable.h
  /home/bentzirozen/Desktop/project/Command.h
+ /home/bentzirozen/Desktop/project/DataReaderServer.h
+ /home/bentzirozen/Desktop/project/PathsTable.h
  /home/bentzirozen/Desktop/project/PrintCommand.cpp
  /home/bentzirozen/Desktop/project/PrintCommand.h
  /home/bentzirozen/Desktop/project/SymbolTable.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o
+ /home/bentzirozen/Desktop/project/BindingTable.h
+ /home/bentzirozen/Desktop/project/DataReaderServer.h
+ /home/bentzirozen/Desktop/project/PathsTable.h
  /home/bentzirozen/Desktop/project/Shuntingyard.cpp
  /home/bentzirozen/Desktop/project/Shuntingyard.h
  /home/bentzirozen/Desktop/project/SymbolTable.h

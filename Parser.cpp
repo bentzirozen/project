@@ -9,7 +9,7 @@ Parser::Parser(const vector<string> &cur_lex,int& index):index(index) {
     commandsTable["connect"]=new ExpressionCommand(new ConnectCommand(index),cur_lex);
     commandsTable["var"]=new ExpressionCommand(new DefineVarCommand(index),cur_lex);
     commandsTable["if"]= new ExpressionCommand(new IfCommand(index),cur_lex);
-    commandsTable["while"]=new ExpressionCommand(new LoopCommand(index),cur_lex);
+    commandsTable["while"]=new ExpressionCommand(new LoopCommand(commandsTable,index),cur_lex);
     commandsTable["print"]=new ExpressionCommand(new PrintCommand(index),cur_lex);
     commandsTable["sleep"]=new ExpressionCommand(new SleepCommand(index),cur_lex);
     commandsTable["assign"]=new ExpressionCommand(new AssignCommand(index),cur_lex);

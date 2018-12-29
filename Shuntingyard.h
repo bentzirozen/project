@@ -7,6 +7,7 @@
 
 #include <string>
 #include "SymbolTable.h"
+#include "Expression.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ using namespace std;
 class Shuntingyard {
 public:
     Shuntingyard();
-    string algorithm(string exp);
+    Expression* string_to_exp(string& shun_string);
+    double algorithm(string exp);
     bool isOperator(char c);
     bool isDigit(char c);
     unsigned int precedence(char op);

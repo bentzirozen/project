@@ -6,15 +6,26 @@
 #include "DataReaderServer.h"
 std::string DataWriterClient::message = "";
 
-int DataWriterClient::socketFd=0;
-void DataWriterClient::setMessage(const string &message1) {
+int DataWriterClient::socketFd = 0;
+/**
+ * @param message1 the message from the simulator
+ */
+void DataWriterClient::setMessage(const string &message1){
     globalMutex.lock();
-    message = message1;
+    /* Send message to the server */
+    int n = write(getSocketFD(), message1.c_str(), message1.length());
     globalMutex.unlock();
+    if (n < 0) {
+        perror("ERROR writing to socket");
+        exit(1);
+    }
 }
-
-void DataWriterClient::createConnection(int port, string address) {
-    int sockfd, n;
+/**
+ * @param port we create
+ * @param address the ip address.
+ */
+void DataWriterClient::createConnection(int port, string address){
+    int sockfd;
     struct sockaddr_in serv_addr;
     struct hostent *server;
 
@@ -42,20 +53,6 @@ void DataWriterClient::createConnection(int port, string address) {
     while (connect(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
         // keep trying...
     }
-
-    while (true) {
-        if(!message.empty()) {
-            globalMutex.lock();
-            /* Send message to the server */
-            n = write(sockfd, message.c_str(), message.length());
-            message = "";
-            globalMutex.unlock();
-            if (n < 0) {
-                perror("ERROR writing to socket");
-                exit(1);
-            }
-        }
-    }
+    // connected!
 }
-
 
