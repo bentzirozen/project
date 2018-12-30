@@ -47,7 +47,8 @@ bool Shuntingyard::isOperator(char c){ //checks if the char is an operator
 double Shuntingyard:: algorithm(string exp){
     string output;
     stack<string> operators;
-
+    if(check_if_neg(exp))
+        return atof(exp.c_str());
     //while there is something to read.
     while(!exp.empty()) {
         char c = exp[0];
@@ -142,6 +143,7 @@ string Shuntingyard::extract_string(const string &str) {
 }
 
 Expression *Shuntingyard::string_to_exp(string shunt_string) {
+    char oper;
     stack<Expression *> stack;
     Expression *newExp;
     for (int i=0;i<shunt_string.length();i++) {
@@ -150,11 +152,16 @@ Expression *Shuntingyard::string_to_exp(string shunt_string) {
             stack.push(newExp);
 
         } else {
+            if(isOperator(shunt_string[i])){
+                oper = shunt_string[i];
+            }else{
+                throw runtime_error(string("no legal operator"));
+            }
             Expression *right = stack.top();
             stack.pop();
             Expression *left = stack.top();
             stack.pop();
-            switch (shunt_string[i]) {
+            switch (oper) {
                 case '+':
                     newExp = new Plus(left, right);
                     stack.push(newExp);
@@ -177,4 +184,21 @@ Expression *Shuntingyard::string_to_exp(string shunt_string) {
     }
     Expression *result = stack.top();
     return result;
+}
+
+bool Shuntingyard::check_if_neg(const string &exp) {
+    bool check = false;
+    const char *c = exp.c_str();
+    // if there is no '-' in the number
+    if(c[0]!= '-') return false;
+    // while the end of the number
+    while(*c!= '\0' ){
+        // check if the sign '-' shows once.
+        if(*c == '-' && !check) check = true;
+        else
+            // if there is more things in the string, return false.
+        if(isOperator(*c) && check) return false;
+        c++;
+    }
+    return true;
 }

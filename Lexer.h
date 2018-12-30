@@ -5,7 +5,7 @@
 #ifndef PROJECT_LEXER_H
 #define PROJECT_LEXER_H
 
-#define SPACE " "
+
 
 #define SPECIAL_OPERATOR {"+","-","*","/", "\"","<",">","<=",">=","=="}
 
@@ -13,6 +13,8 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#define SEPARATOR " "
+#define ASSERTSEPAR "="
 
 
 
@@ -24,10 +26,10 @@ class Lexer{
 
 public:
     Lexer(){};
-    Lexer(const string &toCut);
+    bool isOperator(string & c);
     vector<string>split_from_file(string fileName);
     vector<string>split_from_command_line();
-    vector<string>splitIt(string str, string token);
+    vector<string>fromStringToExp(vector<string> commands);
     vector<string> get_lexer();
 };
 

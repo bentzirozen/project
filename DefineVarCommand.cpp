@@ -17,7 +17,7 @@ void DefineVarCommand::execute(const vector<string> &cur_lex) {
     index++;
     string key_word = cur_lex[index];
     index += 2; // skip '='
-    if (cur_lex[index].compare("bind")==0) {
+    if (cur_lex[index].compare("bind")==0||cur_lex[index].compare(" bind")==0) {
         ++index;
         string val = cur_lex[index];
         if (val[1] == '/') { // start of a path

@@ -23,6 +23,7 @@ void LoopCommand::execute(const vector<string> &cur_lex) {
 }
 
 void LoopCommand::commands_in_loop(const vector<string> cur_lex, int &index) {
+    commands.clear();
     //until while didnt ends
     while (cur_lex[index] != "}") {
         if(cur_lex[index] == "{") {
