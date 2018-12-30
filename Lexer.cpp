@@ -16,174 +16,99 @@ vector<string> Lexer::get_lexer() {
 }
 
 vector<string> Lexer::split_from_file(string fileName) {
+    vector<string> vector;
+    string tmp;
+    fstream file;
+    if (!file.is_open()) {
+        file.open(fileName, fstream::in | fstream::app);
+    }
+    while (getline(file,tmp)) {
+        vector.push_back(tmp);
+    }
+    file.close();
+    return fromStringToExp(vector);
+}
+/**
+ * @param the lines in the file.
+ * @return vector of words in the right order
+ */
+vector<string> Lexer::fromStringToExp(vector<string> commands) {
     vector<string> words;
-    string line;
-    ifstream myFile;
-    myFile.open(fileName);
-    if(myFile.is_open()) {
-        while (getline(myFile, line)) {
-            // skip tabs
-            while (line[0] == '\t') {
-                line = line.substr(1);
-            }
-            //skip spaces.
-            while (line[0] == ' ')
-                line = line.substr(1);
-            while (!line.empty()) {
-                //push string to back of the vector and check if not the last string in the line.
-                if (line.find(SEPARATOR) != string::npos) {
-                    string tmp;
-                    // make tmp string.
-                    tmp = (line.substr(0, line.find(SEPARATOR)));
-                    int len = tmp.length();
-                    // if the string includes '='
-                    if (tmp.find(ASSERTSEPAR) != string::npos) {
-                        // '=' is in the middle.
-                        if (tmp[0] != '=') {
-                            // string before.
-                            string name = tmp.substr(0, tmp.find(ASSERTSEPAR));
-                            words.emplace_back(name);
-                            // cut var name.
-                            tmp = tmp.substr(name.length());
-                            // take assert command.
-                            words.emplace_back("=");
-                            tmp = tmp.substr(1);
-                            if (tmp != "") {
-                                words.emplace_back(tmp);
-                            }
+    bool check;
+    string s;
+    // goes all the lines in the file.
+    for (auto const item:commands) {
+        // if there is a '=' in the line.
+        if (item.find('=') != std::string::npos) {
+            check = false;
+            std::stringstream ss(item);
+            // split by '='.
+            while (std::getline(ss, s, '=')) {
+                std::stringstream sd(s);
+                // split by space.
+                if(!check) {
+                    while (std::getline(sd, s, ' ')) {
+                        if(!s.empty() && s.at(0) == '\t') {
+                            s.erase(std::remove(s.begin(),s.end(), '\t'), s.end());
                         }
-                            // '=' is the first token.
-                        else if (tmp[0] == '=') {
-                            // enter '='.
-                            words.emplace_back("=");
-                            // delete '='.
-                            tmp = tmp.substr(1);
-                            if (len > 1)
-                                words.emplace_back(tmp);
+                        words.push_back(s);
+                    }
 
-                        }
-                        line = line.substr(len + 1);
-                    }
-                        // no assertion inside.
-                    else {
-                        // enter the string
-                        words.emplace_back(line.substr(0, line.find(SEPARATOR)));
-                        // next string in the line.
-                        line = line.substr(words.back().length() + 1);
-                    }
                 }
-                    // no spaces between var name to assertion command.
-                else if (line.find(ASSERTSEPAR) != string::npos) {
-                    // take var name.
-                    string var = line.substr(0, line.find(ASSERTSEPAR));
-                    if (var != "") {
-                        words.emplace_back(var);
+                else{
+                    string sb= s.substr(0,5);
+                    if(s.substr(0,5) == " bind") {
+                        words.push_back(s.substr(0,5));
+                        words.push_back(s.substr(6,s.length()-1));
                     }
-                    // skip name and '='
-                    line = line.substr(var.length() + 1);
-                    // enter '='
-                    words.emplace_back("=");
-                    words.emplace_back(line);
-                    // delete all
-                    words.emplace_back("lineEnd");
-                    line = "";
+                    else words.push_back(s);
                 }
-                    // last string in the line.
-                else {
-                    words.push_back(line);
-                    // indicate no more strings in input line.
-                    words.emplace_back("lineEnd");
-                    line = "";
+                if (!check) {
+                    check = true;
+                    // if there is no '=' in the vector of words, put it.
+                    words.push_back("=");
                 }
+            }
+            // if there is no '=' in line but there is ,
+        } //else if(item.find('=') != std::string::npos) {
+            //std::stringstream ss;
+            //}
+        else {
+            std::stringstream ss(item);
+            string help;
+            // split by space.
+            while (std::getline(ss, s, ' ')) {
+                if(!s.empty() && s.at(0) == '\t') {
+                    s.erase(std::remove(s.begin(),s.end(), '\t'), s.end());
+                }
+                // if help isn't empty and s isn't empty and s is a number and the last index of help is also a number
+                if(!s.empty() && isdigit(s.at(0)) && !help.empty()) {
+                    // push the help
+                    words.push_back(help);
+                    // empty the string help.
+                    help = "";
+                    // push the string.
+                    words.push_back(s);
+                }
+                    // if s is not a space, and it's number and we didn't reach the  final of the line
+                    //else if(!s.empty() && isdigit(s.at(0)) && !ss.eof()) {
+                    //help += s;
+                    //}
+                    // if help isn't empty and it isn't operator , just concatenating the string to help.
+                else if(!help.empty() && isOperator(s))
+                    help+=s;
+                else
+                if(help.empty()) words.push_back(s);
             }
         }
-    } else {
-        // keep getting input until "exit"
-        while (getline(cin, line) && line != "exit") {
-            // skip tabs
-            while (line[0] == '\t') {
-                line = line.substr(1);
-            }
-            //skip spaces.
-            while (line[0] == ' ')
-                line = line.substr(1);
-            while (!line.empty()) {
-                //push string to back of the vector and check if not the last string in the line.
-                if (line.find(SEPARATOR) != string::npos) {
-                    string tmp;
-                    // make tmp string.
-                    tmp = (line.substr(0, line.find(SEPARATOR)));
-                    int len = tmp.length();
-                    // if the string includes '='
-                    if (tmp.find(ASSERTSEPAR) != string::npos) {
-                        // '=' is in the middle.
-                        if (tmp[0] != '=') {
-                            // string before.
-                            string name = tmp.substr(0, tmp.find(ASSERTSEPAR));
-                            words.emplace_back(name);
-                            // cut var name.
-                            tmp = tmp.substr(name.length());
-                            // take assert command.
-                            words.emplace_back("=");
-                            tmp = tmp.substr(1);
-                            if (tmp != "") {
-                                words.emplace_back(tmp);
-                            }
-                        }
-                            // '=' is the first token.
-                        else if (tmp[0] == '=') {
-                            // enter '='.
-                            words.emplace_back("=");
-                            // delete '='.
-                            tmp = tmp.substr(1);
-                            if (len > 1)
-                                words.emplace_back(tmp);
-
-                        }
-                        line = line.substr(len + 1);
-                    }
-                        // no assertion inside.
-                    else {
-                        // enter the string
-                        words.emplace_back(line.substr(0, line.find(SEPARATOR)));
-                        // next string in the line.
-                        line = line.substr(words.back().length() + 1);
-                    }
-                }
-                    // no spaces between var name to assertion command.
-                else if (line.find(ASSERTSEPAR) != string::npos) {
-                    // take var name.
-                    string var = line.substr(0, line.find(ASSERTSEPAR));
-                    if (var != "") {
-                        words.emplace_back(var);
-                    }
-                    // skip name and '='
-                    line = line.substr(var.length() + 1);
-                    // enter '='
-                    words.emplace_back("=");
-                    words.emplace_back(line);
-                    // delete all
-                    words.emplace_back("lineEnd");
-                    line = "";
-                }
-                    // last string in the line.
-                else {
-                    words.push_back(line);
-                    // indicate no more strings in input line.
-                    words.emplace_back("lineEnd");
-                    line = "";
-                }
-            }
-        }
-        // return vector of strings separated line by line with the string "lineEnd"
     }
-    // erase all spaces.
-    vector<string> realOne;
-    for(auto & string: words){
-        if((!string.empty())&&(string != "\t"))
-            realOne.emplace_back(string);
+    vector<string> final;
+    for (auto const &item:words) {
+        if(item == "") continue;
+        final.push_back(item);
     }
-    return realOne;
+    // return the vector of string.
+    return final;
 }
 /**
  * @param c the expression.
