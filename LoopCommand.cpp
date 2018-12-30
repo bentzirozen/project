@@ -7,6 +7,7 @@
 #include "LoopCommand.h"
 
 void LoopCommand::execute(const vector<string> &cur_lex) {
+    first_iteration = true;
      int firstIndex= index;
      int startprogram;
     while(conditionParser.checkCondition(cur_lex)) {
@@ -53,7 +54,8 @@ void LoopCommand::commands_in_loop(const vector<string> cur_lex, int &index) {
 
 }
 
-LoopCommand::LoopCommand(map<string,Expression*>&commands,int &index) : command_map(command_map),
+LoopCommand::LoopCommand(map<string,Expression*>&command_map,int &index) : command_map(command_map),
                                                                 index(index),conditionParser(this->index) {
+
 
 }

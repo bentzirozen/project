@@ -27,6 +27,7 @@ bool ConditionParser::isOperator(const string &oper) {
 }
 
 bool ConditionParser::checkCondition(const vector<string>&cur_lex) {
+    ++index;
     Shuntingyard shuntingyard;
     double left = shuntingyard.algorithm(shuntingyard.extract_string(cur_lex[index]));
     ++index;
@@ -37,6 +38,7 @@ bool ConditionParser::checkCondition(const vector<string>&cur_lex) {
     }
     ++index;
     double  right = shuntingyard.algorithm(shuntingyard.extract_string(cur_lex[index]));
+    ++index;
     if(oper==">"){
         return isBigger(left,right);
     }else if(oper=="<"){

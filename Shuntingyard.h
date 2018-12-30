@@ -8,6 +8,13 @@
 #include <string>
 #include "SymbolTable.h"
 #include "Expression.h"
+#include "Number.h"
+#include "Mul.h"
+#include "Plus.h"
+#include "Minus.h"
+#include "Div.h"
+#include <algorithm>
+#include <stack>
 
 using namespace std;
 
@@ -15,14 +22,13 @@ using namespace std;
 class Shuntingyard {
 public:
     Shuntingyard();
-    Expression* string_to_exp(string& shun_string);
     double algorithm(string exp);
     bool isOperator(char c);
     bool isDigit(char c);
     unsigned int precedence(char op);
     string extract_string(const string& str);
     ~Shuntingyard();
-
+    Expression *string_to_exp(string shunt_string);
 };
 
 

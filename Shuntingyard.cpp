@@ -57,7 +57,10 @@ double Shuntingyard:: algorithm(string exp){
         token +=c;
         if(isDigit(c)) {//the character is a digit.
             output.append(token); //add the digit to the queue.
-        }else if(c == '(') { //the character is a (
+        }else if(c=='.'){
+            output.append(token);
+        }
+        else if(c == '(') { //the character is a (
             operators.push(token);
         } else if(c == ')') { //the character is a )
             string lastop = operators.top();
@@ -103,7 +106,6 @@ double Shuntingyard:: algorithm(string exp){
             operators.pop();
         }
     }
-
     return string_to_exp(output)->calculate();//the new expression
 
 }
@@ -139,80 +141,40 @@ string Shuntingyard::extract_string(const string &str) {
     return newExp;
 }
 
-Expression *Shuntingyard::string_to_exp(string &shun_string) {
-    stack<tuple<double, unsigned int>> numStack;
-    stack<tuple<Expression *, unsigned int> > expStack;
-    unsigned int time = 0;
-    unsigned long index = 0;
-    while (exp[index]) {
-        // add new Number:
-        if (!isOperator(exp[index])) {
-            numStack.push(tuple<double,unsigned int>(calculateFirstNum(exp,index),time));
-            ++index;
-            ++time;
-            // take two expressions and create one with them:
-        } else if ((expStack.size() > 2 || (expStack.size()==2 && numStack.empty())) &&
-                   ((numStack.empty() || ((time - get<1>(expStack.top()) == 1) &&
-                                          (time - get<1>(numStack.top()) > 2))))) {
-            Expression *ex2 = get<0>(expStack.top());
-            expStack.pop();
-            Expression *ex1 = get<0>(expStack.top());
-            expStack.pop();
-            expStack.push(tuple<Expression *, unsigned int>(createExpression(exp[index], ex1, ex2), time));
-            ++index;
-            ++time;
+Expression *Shuntingyard::string_to_exp(string shunt_string) {
+    stack<Expression *> stack;
+    Expression *newExp;
+    for (int i=0;i<shunt_string.length();i++) {
+        if (!isOperator(shunt_string[i]) || (isOperator(shunt_string[i]) && shunt_string.size() != 1)) {
+            newExp = new Number(stof(shunt_string));
+            stack.push(newExp);
+
         } else {
-            // take first two numbers and push new Expression:
-            if ((expStack.empty() || time - get<1>(expStack.top()) > 2) && !numStack.empty()) {
-                double v2 = get<0>(numStack.top());
-                numStack.pop();
-                double v1 = get<0>(numStack.top());
-                numStack.pop();
-                expStack.push(tuple<Expression *, unsigned int>(createExpression(exp[index], new Number(v1),
-                                                                                 new Number(v2)), time));
-                ++index;
-                ++time;
-            } else {
-                tuple<double, unsigned int> numberTup = numStack.top();
-                double val = get<0>(numberTup); // value
-                numStack.pop();
-                tuple<Expression *, unsigned int> expressionTup = expStack.top();
-                Expression *expression = get<0>(expressionTup); // expression
-                expStack.pop();
-                // check who came first, if number, number will be on left side of the new operator. else right side
-                if (get<1>(numberTup) > get<1>(expressionTup)) {
-                    expStack.push(tuple<Expression *, unsigned int>(createExpression(exp[index], expression,
-                                                                                     new Number(val)), time));
-                } else {
-                    expStack.push(tuple<Expression *, unsigned int>(createExpression(exp[index], new Number(val),
-                                                                                     expression), time));
-                }
-                ++index;
-                ++time;
+            Expression *right = stack.top();
+            stack.pop();
+            Expression *left = stack.top();
+            stack.pop();
+            switch (shunt_string[i]) {
+                case '+':
+                    newExp = new Plus(left, right);
+                    stack.push(newExp);
+                    break;
+                case '-':
+                    newExp = new Minus(left, right);
+                    stack.push(newExp);
+                    break;
+                case '/':
+                    newExp = new Div(left, right);
+                    stack.push(newExp);
+                    break;
+                case '*':
+                    newExp = new Mul(left, right);
+                    stack.push(newExp);
+                    break;
             }
+
         }
     }
-    while(!numStack.empty()) {
-        tuple<double, unsigned int> numberTup = numStack.top();
-        double val = get<0>(numberTup); // value
-        numStack.pop();
-        Expression *expression;
-        if(!expStack.empty()) {
-            tuple<Expression *, unsigned int> expressionTup = expStack.top();
-            expression = get<0>(expressionTup);
-            expStack.pop();
-            char sign = '-';
-            if(val < 0 ) sign= '+';
-            expStack.push(tuple<Expression *, unsigned int>(createExpression(sign, expression,
-                                                                             new Number(val)), time));
-        }// expression
-        else {
-            double val2 = get<0>(numStack.top());
-            numStack.pop();
-            expression = new Number(val2);
-            expStack.push(tuple<Expression *, unsigned int>(createExpression('+', expression,
-                                                                             new Number(val)), time));
-        }
-    }
-    return get<0>(expStack.top()); // the full exp is at the top of the stack
+    Expression *result = stack.top();
+    return result;
 }
