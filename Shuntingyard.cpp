@@ -26,7 +26,7 @@ unsigned int Shuntingyard::precedence(char op) {
 }
 
 bool Shuntingyard::isDigit(char c){ //checks if the char is a digit
-    if((c >= 48) && (c <= 57)){
+    if(((c >= 48) && (c <= 57)) || (c == '.')){
         return true;
     }else {
         return false;
@@ -47,8 +47,8 @@ bool Shuntingyard::isOperator(char c){ //checks if the char is an operator
 double Shuntingyard:: algorithm(string exp){
     string output;
     stack<string> operators;
-    if(check_if_neg(exp))
-        return atof(exp.c_str());
+    char last= '$';
+    
     //while there is something to read.
     while(!exp.empty()) {
         char c = exp[0];
@@ -76,27 +76,31 @@ double Shuntingyard:: algorithm(string exp){
                 operators.pop();
             }
 
-        } else if(isOperator(c)){ //the character c is an operator.
-            if(operators.empty()){
-                operators.push(token);
-            }else {
-                while (isOperator(operators.top()[0])) { //while we have an operator in the stack, check precedence.
-                    if ((precedence(operators.top()[0])) >
-                        (precedence(c))) { //there is an operator in the stack with precedence.
-                        string op;
-                        op += operators.top()[0];
-                        output.append(op); //push to the queue.
-                        operators.pop(); //pop the operator.
-                    } else {
-                        break;
-                    }
+        }  else if(isOperator(c)){ //the character c is an operator.
+            if(c == '-'){//check if an operator or negative.
+                if((last == '$') || (isOperator(last)) || (last == '(')){
+                    output.append(token); //push the negative into the queue
                 }
-                operators.push(token); //push the new operator to the stack.
+            }else {
+                if (operators.empty()) {
+                    operators.push(token);
+                } else {
+                    while (isOperator(operators.top()[0])) { //while we have an operator in the stack, check precedence.
+                        if ((precedence(operators.top()[0])) >
+                            (precedence(c))) { //there is an operator in the stack with precedence.
+                            string op;
+                            op += operators.top()[0];
+                            output.append(op); //push to the queue.
+                            operators.pop(); //pop the operator.
+                        } else {
+                            break;
+                        }
+                    }
+                    operators.push(token); //push the new operator to the stack.
+                }
             }
         }
-
-
-
+        last = c;//remember the last char.
     }
     //there is nothing else in the string.
     while(!operators.empty()) {//while the stack is not empty.
