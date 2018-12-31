@@ -45,7 +45,7 @@ bool Shuntingyard::isOperator(char c){ //checks if the char is an operator
 
 
 double Shuntingyard:: algorithm(string exp){
-    string output = "";
+   string output = "";
     vector<string>nums;
     vector<string>str_vec;
     stack<string> operators;
@@ -60,12 +60,14 @@ double Shuntingyard:: algorithm(string exp){
         token +=c;
         if(isDigit(c)) {//the character is a digit.
             output.append(token); //add the digit to the queue.
-        }else if(c=='.'){
-            output.append(token);
         }
         else if(c == '(') { //the character is a (
             operators.push(token);
+            if((!last == '$')){//there was something before the (
+                nums.push_back(output);
+            }
         } else if(c == ')') { //the character is a )
+            nums.push_back(output);
             string lastop = operators.top();
             char lastoperator = lastop[0];
             while(lastoperator != '('){
@@ -97,6 +99,8 @@ double Shuntingyard:: algorithm(string exp){
                             nums.push_back(output);
                             output="";
                             output.append(op); //push to the queue.
+                            nums.push_back(op); //push the operator to the queue.
+                            output="";
                             operators.pop(); //pop the operator.
                         } else {
                             break;
