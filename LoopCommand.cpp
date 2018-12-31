@@ -5,22 +5,23 @@
 
 
 #include "LoopCommand.h"
+#include "SymbolTable.h"
 
 void LoopCommand::execute(const vector<string> &cur_lex) {
     first_iteration = true;
      int firstIndex= index;
      int startprogram;
     while(conditionParser.checkCondition(cur_lex)) {
-        startprogram = index;
-        if(first_iteration) {
-            commands_in_loop(cur_lex, index);
-            index= startprogram;
-            first_iteration = false;
+            startprogram = index;
+            if (first_iteration) {
+                commands_in_loop(cur_lex, index);
+                index = startprogram;
+                first_iteration = false;
+            }
+            for (auto const &command:commands) command->calculate();
+            index = firstIndex;
         }
-        for(auto const & command:commands) command->calculate();
-        index = firstIndex;
     }
-}
 
 void LoopCommand::commands_in_loop(const vector<string> cur_lex, int &index) {
     commands.clear();

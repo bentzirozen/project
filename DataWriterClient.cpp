@@ -14,7 +14,6 @@ void DataWriterClient::setMessage(const string &message1){
     globalMutex.lock();
     /* Send message to the server */
     int n = static_cast<int>(write(getSocketFD(), message1.c_str(), message1.length()));
-    cout<<"this is the n : "<<n<<endl;
     globalMutex.unlock();
     if (n < 0) {
         perror("ERROR writing to socket");

@@ -45,10 +45,12 @@ bool Shuntingyard::isOperator(char c){ //checks if the char is an operator
 
 
 double Shuntingyard:: algorithm(string exp){
-    string output;
+    string output = "";
+    vector<string>nums;
+    vector<string>str_vec;
     stack<string> operators;
     char last= '$';
-    
+
     //while there is something to read.
     while(!exp.empty()) {
         char c = exp[0];
@@ -84,12 +86,16 @@ double Shuntingyard:: algorithm(string exp){
             }else {
                 if (operators.empty()) {
                     operators.push(token);
+                    nums.push_back(output);
+                    output="";
                 } else {
                     while ((!operators.empty()) && (isOperator(operators.top()[0]))) { //while we have an operator in the stack, check precedence.
                         if ((precedence(operators.top()[0])) >
                             (precedence(c))) { //there is an operator in the stack with precedence.
                             string op;
                             op += operators.top()[0];
+                            nums.push_back(output);
+                            output="";
                             output.append(op); //push to the queue.
                             operators.pop(); //pop the operator.
                         } else {
@@ -107,11 +113,16 @@ double Shuntingyard:: algorithm(string exp){
         if(operators.top() == "(" || operators.top() == ")")
             throw invalid_argument("invalid_arg");
         else {
-            output.append(operators.top());
+            nums.push_back(output);
+            output="";
+            for(auto str:nums){
+                str_vec.push_back(str);
+            }
+            str_vec.push_back(operators.top());
             operators.pop();
         }
     }
-    return string_to_exp(output)->calculate();//the new expression
+    return string_to_exp(str_vec)->calculate();//the new expression
 
 }
 
@@ -146,26 +157,21 @@ string Shuntingyard::extract_string(const string &str) {
     return newExp;
 }
 
-Expression *Shuntingyard::string_to_exp(string shunt_string) {
+Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
     char oper;
     stack<Expression *> stack;
     Expression *newExp;
-    for (int i=0;i<shunt_string.length();i++) {
-        if (!isOperator(shunt_string[i]) || (isOperator(shunt_string[i]) && shunt_string.size() != 1)) {
-            newExp = new Number(stof(shunt_string));
+    for (auto str :shunt_vec) {
+        if (!isOperator(str[0]) || (isOperator(str[0]) && str.size() != 1)) {
+            newExp = new Number(stof(str));
             stack.push(newExp);
 
         } else {
-            if(isOperator(shunt_string[i])){
-                oper = shunt_string[i];
-            }else{
-                throw runtime_error(string("no legal operator"));
-            }
             Expression *right = stack.top();
             stack.pop();
             Expression *left = stack.top();
             stack.pop();
-            switch (oper) {
+            switch (str[0]) {
                 case '+':
                     newExp = new Plus(left, right);
                     stack.push(newExp);

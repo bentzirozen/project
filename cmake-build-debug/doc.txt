@@ -1,4 +1,4 @@
-openDataServer 5400 10
+openDataServer -500+5900 5*2
 connect 192.168.1.12 5402
 var breaks = bind "/controls/flight/speedbrake"
 var throttle = bind "/controls/engines/current-engine/throttle"
@@ -12,7 +12,7 @@ var elevator = bind "/controls/flight/elevator"
 var alt = bind "/instrumentation/altimeter/indicated-altitude-ft"
 var rpm = bind "/engines/engine/rpm"
 print "wait engine to start"
-while rpm < 750 {
+while rpm <= 750 {
     sleep 1000
 }
 sleep 5000

@@ -126,6 +126,7 @@ CMakeFiles/project.dir/LoopCommand.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../LoopCommand.cpp
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../LoopCommand.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../MapDB.h
+CMakeFiles/project.dir/LoopCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/MapDB.cpp.o: ../Command.h
 CMakeFiles/project.dir/MapDB.cpp.o: ../Expression.h

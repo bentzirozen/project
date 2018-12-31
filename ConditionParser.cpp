@@ -7,6 +7,7 @@
 #include "Shuntingyard.h"
 #include "ConditionParser.h"
 #include "Parser.h"
+#include "SymbolTable.h"
 /**
  * @param line the words
  */
@@ -32,6 +33,9 @@ bool ConditionParser::checkCondition(const vector<string>&cur_lex) {
     double left = shuntingyard.algorithm(shuntingyard.extract_string(cur_lex[index]));
     ++index;
     string oper = cur_lex[index];
+    if(cur_lex[index+1][0]=='='){
+        oper+='=';
+    }
     if(!isOperator(oper)){
         perror("this is not an operator");
         exit(1);

@@ -29,7 +29,7 @@ public:
     string extract_string(const string& str);
     ~Shuntingyard();
     bool check_if_neg(const string &exp);
-    Expression *string_to_exp(string shunt_string);
+    Expression *string_to_exp(vector<string> shunt_string);
 };
 
 
