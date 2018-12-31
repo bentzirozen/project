@@ -85,7 +85,7 @@ double Shuntingyard:: algorithm(string exp){
                 if (operators.empty()) {
                     operators.push(token);
                 } else {
-                    while (isOperator(operators.top()[0])) { //while we have an operator in the stack, check precedence.
+                    while ((!operators.empty()) && (isOperator(operators.top()[0]))) { //while we have an operator in the stack, check precedence.
                         if ((precedence(operators.top()[0])) >
                             (precedence(c))) { //there is an operator in the stack with precedence.
                             string op;
