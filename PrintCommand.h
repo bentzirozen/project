@@ -9,7 +9,6 @@
 
 class PrintCommand:public Command{
     int &index;
-    string str;
 public:
     void execute(const vector<string>&cur_lex);
 

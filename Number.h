@@ -14,9 +14,8 @@ private:
     double value;
 public:
     Number(double val);
-    Number(char c1,double val);
     double calculate();
-    ~Number();
+    virtual ~Number();
 };
 
 

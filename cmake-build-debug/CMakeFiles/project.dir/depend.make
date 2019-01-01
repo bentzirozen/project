@@ -18,6 +18,11 @@ CMakeFiles/project.dir/AssignCommand.cpp.o: ../Plus.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../Shuntingyard.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../SymbolTable.h
 
+CMakeFiles/project.dir/BinaryExpression.cpp.o: ../BinaryExpression.cpp
+CMakeFiles/project.dir/BinaryExpression.cpp.o: ../BinaryExpression.h
+CMakeFiles/project.dir/BinaryExpression.cpp.o: ../Expression.h
+CMakeFiles/project.dir/BinaryExpression.cpp.o: ../Number.h
+
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../BinaryExpression.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../BindTable.h

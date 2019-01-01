@@ -8,6 +8,7 @@
 
 
 void PrintCommand::execute(const vector<string> &cur_lex) {
+    string str;
     // Checks if output is in symbol map. if so, prints his value. else, prints output
     globalMutex.lock();
     index++;
@@ -25,6 +26,7 @@ void PrintCommand::execute(const vector<string> &cur_lex) {
     globalMutex.unlock();
     //assume it with /n in the end
     cout << "\n";
+
 }
 
 PrintCommand::PrintCommand(int &index):index(index) {

@@ -15,9 +15,12 @@ protected:
     Expression* right;
     Expression* left;
 public:
-    virtual double calculate()=0;
+    BinaryExpression(Expression *left, Expression *right);
+    virtual ~BinaryExpression(){};
 
 };
+
+
 
 
 #endif //UNTITLED8_BINARYEXPRESSION_H

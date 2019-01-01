@@ -139,10 +139,6 @@ double Shuntingyard:: algorithm(string exp){
 }
 
 Shuntingyard::~Shuntingyard() {
-    for(auto exp:will_delete){
-        delete exp;
-    }
-
 }
 //extract values from string and it will send it to shunting yard algoritm to calculate in all the time
 string Shuntingyard::extract_string(const string &str) {
@@ -173,16 +169,17 @@ string Shuntingyard::extract_string(const string &str) {
 }
 
 Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
-    char oper;
+    //bool for see if the expresion was binary or unary , so in dtor to delete it.
+    bool bin;
     stack<Expression *> stack;
     Expression *newExp;
     for (auto str :shunt_vec) {
-        if (!isOperator(str[0]) || (isOperator(str[0]) && str.size() != 1)) {
+        if (!isOperator(str[0])||(isOperator(str[0]) && str.size() != 1)){
             newExp = new Number(stof(str));
             stack.push(newExp);
             will_delete.push_back(newExp);
-
         } else {
+            will_delete.clear();
             Expression *right = stack.top();
             stack.pop();
             Expression *left = stack.top();
@@ -209,5 +206,6 @@ Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
         }
     }
     Expression *result = stack.top();
+    will_delete.push_back(result);
     return result;
 }

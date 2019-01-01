@@ -90,6 +90,9 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/AssignCommand.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.cpp">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.h">
 			<Option target="project"/>
 		</Unit>

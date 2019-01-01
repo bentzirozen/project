@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/Shuntingyard.cpp.o"
   "CMakeFiles/project.dir/Number.cpp.o"
   "CMakeFiles/project.dir/AssignCommand.cpp.o"
+  "CMakeFiles/project.dir/BinaryExpression.cpp.o"
   "project.pdb"
   "project"
 )

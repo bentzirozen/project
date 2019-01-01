@@ -10,11 +10,9 @@ double Mul::calculate() {
     return result;
 
 }
-Mul:: Mul(Expression* val1,Expression* val2){
-    this->left = val1;
-    this->right = val2;
+Mul:: Mul(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
 Mul::~Mul() {
-    delete this->right;
-    delete this->left;
+    delete right;
+    delete left;
 }

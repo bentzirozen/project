@@ -150,6 +150,33 @@ AssignCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.s
 .PHONY : AssignCommand.cpp.s
 
+BinaryExpression.o: BinaryExpression.cpp.o
+
+.PHONY : BinaryExpression.o
+
+# target to build an object file
+BinaryExpression.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.o
+.PHONY : BinaryExpression.cpp.o
+
+BinaryExpression.i: BinaryExpression.cpp.i
+
+.PHONY : BinaryExpression.i
+
+# target to preprocess a source file
+BinaryExpression.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.i
+.PHONY : BinaryExpression.cpp.i
+
+BinaryExpression.s: BinaryExpression.cpp.s
+
+.PHONY : BinaryExpression.s
+
+# target to generate assembly for a file
+BinaryExpression.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.s
+.PHONY : BinaryExpression.cpp.s
+
 ConditionParser.o: ConditionParser.cpp.o
 
 .PHONY : ConditionParser.o
@@ -702,6 +729,9 @@ help:
 	@echo "... AssignCommand.o"
 	@echo "... AssignCommand.i"
 	@echo "... AssignCommand.s"
+	@echo "... BinaryExpression.o"
+	@echo "... BinaryExpression.i"
+	@echo "... BinaryExpression.s"
 	@echo "... ConditionParser.o"
 	@echo "... ConditionParser.i"
 	@echo "... ConditionParser.s"

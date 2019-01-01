@@ -9,13 +9,10 @@ double Plus::calculate() {
     double result = left->calculate()+right->calculate();
     return result;
 }
-Plus:: Plus(Expression* val1,Expression* val2){
-    this->right = val2;
-    this->left = val1;
-
+Plus:: Plus(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
 
 Plus::~Plus() {
-    delete this->right;
-    delete this->left;
+    delete right;
+    delete left;
 }

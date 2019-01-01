@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bentzirozen/Desktop/project/AssignCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/AssignCommand.cpp.o"
+  "/home/bentzirozen/Desktop/project/BinaryExpression.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/BinaryExpression.cpp.o"
   "/home/bentzirozen/Desktop/project/ConditionParser.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/ConditionParser.cpp.o"
   "/home/bentzirozen/Desktop/project/ConnectCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/ConnectCommand.cpp.o"
   "/home/bentzirozen/Desktop/project/DataReaderServer.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/DataReaderServer.cpp.o"

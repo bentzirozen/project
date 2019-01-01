@@ -15,7 +15,7 @@ class Div: public BinaryExpression {
 public:
     Div(Expression* val1,Expression* val2);
     double calculate();
-    ~Div();
+    virtual ~Div();
 
 };
 

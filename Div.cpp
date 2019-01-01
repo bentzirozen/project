@@ -10,13 +10,10 @@ double Div::calculate() {
     return result;
 }
 
-Div:: Div(Expression* val1,Expression* val2){
-    this->left = val1;
-    this->right = val2;
-
+Div:: Div(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
 
 Div::~Div() {
-    delete this->left;
-    delete this->right;
+    delete left;
+    delete right;
 }
