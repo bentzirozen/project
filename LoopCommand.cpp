@@ -32,17 +32,26 @@ void LoopCommand::commands_in_loop(const vector<string> cur_lex, int &index) {
         }
         else if (cur_lex[index] == "var") {
             commands.push_back(command_map["var"]);
-            if (cur_lex[index + 3] == " bind") index += 5;
-            else index += 4;
+            //if it bind to increase in 5 the index
+            if (cur_lex[index + 3] == " bind"){
+                index += 5;
+            }
+            //else increase in 4 the index
+            else{
+                index += 4;
+            }
         }
+        //if its an assignment increase index in 3
         else if (this->command_map.find(cur_lex[index]) == command_map.end()) {
             commands.push_back(command_map["assign"]);
             index += 3;
+            //increase index until if dont end
         } else if (cur_lex[index] == "if") {
             commands.push_back(command_map["if"]);
             while(cur_lex[index]!= "}") index++;
             index++;
         }
+        //until while didnt ends increase index
         else if (cur_lex[index] == "while") {
             commands.push_back(command_map["while"]);
             while(cur_lex[index]!= "}") index++;
@@ -55,7 +64,7 @@ void LoopCommand::commands_in_loop(const vector<string> cur_lex, int &index) {
     }
 
 }
-
+//all is initialized because its by reference
 LoopCommand::LoopCommand(map<string,Expression*>&command_map,int &index) : command_map(command_map),
                                                                 index(index),conditionParser(this->index) {
 

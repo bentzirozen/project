@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include <strings.h>
-#include "BindingTable.h"
+#include "BindTable.h"
 #include "SymbolTable.h"
 #include "PathsTable.h"
 #include "MapDB.h"

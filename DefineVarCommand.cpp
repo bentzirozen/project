@@ -6,7 +6,7 @@
 #include <utility>
 #include <cstring>
 #include "SymbolTable.h"
-#include "BindingTable.h"
+#include "BindTable.h"
 #include "PathsTable.h"
 #include "DataReaderServer.h"
 #include "Shuntingyard.h"

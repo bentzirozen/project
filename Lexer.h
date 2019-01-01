@@ -21,16 +21,14 @@
 using namespace std;
 
 class Lexer{
-    string toCut;
     vector<string> cur_lex;
 
 public:
     Lexer(){};
     bool isOperator(string & c);
     vector<string>split_from_file(string fileName);
-    vector<string>split_from_command_line();
-    vector<string>fromStringToExp(vector<string> commands);
-    vector<string> get_lexer();
+    vector<string>fromStringtoLex(vector<string> lines);
+    ~Lexer(){};
 };
 
 #endif //PROJECT_LEXER_H

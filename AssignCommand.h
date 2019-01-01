@@ -7,15 +7,15 @@
 
 #include "Command.h"
 #include "Shuntingyard.h"
-#include "BindingTable.h"
+#include "BindTable.h"
 #include "DataWriterClient.h"
 
 class AssignCommand : public Command {
     int &index;
 public:
     AssignCommand(int &index);
-
     void execute(const vector<string> &line);
+    ~AssignCommand(){}
 };
 
 #endif //PROJECT_ASSIGNCOMMAND_H

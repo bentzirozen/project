@@ -16,7 +16,7 @@
 bool DataReaderServer::open = false;
 int DataReaderServer::sockFd = 0;
 
-std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
+std::vector<std::string> DataReaderServer::split_buf(const char *buffer){
     std::vector<std::string> vec;
     std::string tmp;
     while (*buffer != '\n') {
@@ -34,7 +34,7 @@ std::vector<std::string> DataReaderServer::splitByComma(const char *buffer) {
 void DataReaderServer::updatePathsTable(std::vector<std::string> vec) {
     globalMutex.lock();
     for (int i = 0; i < PARAMETERS_SIZE; ++i) {
-        PathsTable::instance()->setValue(pathsVec[i], atof(vec[i].c_str()));
+        PathsTable::instance()->setValue(all_paths[i], atof(vec[i].c_str()));
     }
     globalMutex.unlock();
 }
@@ -42,8 +42,8 @@ void DataReaderServer::updatePathsTable(std::vector<std::string> vec) {
 void DataReaderServer::updateSymbolTable() {
     globalMutex.lock();
     for (auto iter = SymbolTable::instance()->getFirst(); iter != SymbolTable::instance()->getEnd(); ++iter) {
-        if (BindingTable::instance()->atTable(iter->first)) {
-            std::string bind = BindingTable::instance()->getValue(iter->first);
+        if (BindTable::instance()->atTable(iter->first)) {
+            std::string bind = BindTable::instance()->getValue(iter->first);
             if (PathsTable::instance()->atTable(bind)) {
                 SymbolTable::instance()->setValue(iter->first,PathsTable::instance()->getValue(bind));
             }

@@ -126,6 +126,9 @@ double Shuntingyard:: algorithm(string exp){
             operators.pop();
         }
     }
+    if(str_vec.empty()){
+        str_vec.push_back(output);
+    }
     return string_to_exp(str_vec)->calculate();//the new expression
 
 }

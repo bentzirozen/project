@@ -10,11 +10,11 @@
 #include "vector"
 #include "PathsTable.h"
 #include "SymbolTable.h"
-#include "BindingTable.h"
+#include "BindTable.h"
 static std::mutex globalMutex;
 #define PARAMETERS_SIZE 23
 #define BUFFER_SIZE 1024
-static std::vector<std::string> pathsVec{"/instrumentation/airspeed-indicator/indicated-speed-kt",
+static std::vector<std::string> all_paths{"/instrumentation/airspeed-indicator/indicated-speed-kt",
                                          "/instrumentation/altimeter/indicated-altitude-ft",
                                          "/instrumentation/altimeter/pressure-alt-ft",
                                          "/instrumentation/attitude-indicator/indicated-pitch-deg",
@@ -38,7 +38,7 @@ static std::vector<std::string> pathsVec{"/instrumentation/airspeed-indicator/in
                                          "/controls/engines/current-engine/throttle",
                                          "/engines/engine/rpm"};
 class DataReaderServer {
-
+    //stateful member and functions
     static bool open;
 
     static int sockFd;
@@ -50,7 +50,7 @@ class DataReaderServer {
     static void updatePathsTable(std::vector<std::string> vec);
 
     /**
-     * Updates symbol table
+     * Updates symbol table from the simulator in real time
      */
     static void updateSymbolTable();
 
@@ -59,7 +59,7 @@ class DataReaderServer {
      * @param buffer buffer
      * @return vector of values
      */
-    static std::vector<std::string> splitByComma(const char *buffer);
+    static std::vector<std::string> split_buf(const char *buffer);
 
 
 public:

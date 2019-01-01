@@ -8,11 +8,11 @@
 #include <map>
 
 /**
- * A table which hold a string which maps to its path in the simulator
+ *holds all the paths for the vars
  */
 
-class BindingTable {
-    std::map<std::string, std::string> bindTable;
+class BindTable {
+    std::map<string, string> bindTable;
     static BindingTable *s_instance;
 public:
     static inline BindingTable *instance() {
@@ -39,7 +39,7 @@ public:
     inline std::string getValue(const std::string &key) {
         return bindTable[key];
     }
-
+    //check if a key is in the bind table
     inline bool atTable(const std::string &key){
         return bindTable.find(key) != bindTable.end();
     }
