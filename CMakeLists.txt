@@ -1,7 +1,0 @@
-cmake_minimum_required(VERSION 3.9)
-project(project)
-
-set(CMAKE_CXX_STANDARD 14)
-SET(CMAKE_CXX_FLAGS -pthread)
-
-add_executable(project main.cpp Commands/Command.h Commands/OpenServerCommand.h Commands/OpenServerCommand.cpp Interpeter/Lexer.h Interpeter/Lexer.cpp Interpeter/Parser.h Interpeter/Parser.cpp Commands/ConnectCommand.h Commands/ConnectCommand.cpp "Server and Client/DataReaderServer.h" "Server and Client/DataReaderServer.cpp" Commands/DefineVarCommand.h Commands/DefineVarCommand.cpp Commands/ConditionParser.h Commands/ConditionParser.cpp Commands/IfCommand.h Commands/IfCommand.cpp Commands/LoopCommand.h Commands/LoopCommand.cpp "Server and Client/DataWriterClient.h" "Server and Client/DataWriterClient.cpp" Tables/BindTable.h Expression/BinaryExpression.h Expression/Expression.h Expression/Div.h Expression/Div.cpp Expression/Plus.cpp Expression/Plus.h Expression/Minus.h Expression/Minus.cpp Expression/Mul.h Expression/Mul.cpp Tables/SymbolTable.h Tables/PathsTable.h Commands/SleepCommand.h Commands/SleepCommand.cpp Commands/PrintCommand.h Commands/PrintCommand.cpp Commands/ExpressionCommand.h Commands/ExpressionCommand.cpp Expression/Shuntingyard.h Expression/Shuntingyard.cpp Expression/Number.h Expression/Number.cpp Commands/AssignCommand.h Commands/AssignCommand.cpp Expression/BinaryExpression.cpp)
