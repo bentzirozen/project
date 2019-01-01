@@ -1,14 +1,14 @@
 
 #include <iostream>
 #include <strings.h>
-#include "BindTable.h"
-#include "SymbolTable.h"
-#include "PathsTable.h"
+#include "Tables/BindTable.h"
+#include "Tables/SymbolTable.h"
+#include "Tables/PathsTable.h"
 #include "list"
-#include "Lexer.h"
-#include "ConnectCommand.h"
-#include "Parser.h"
-#include "OpenServerCommand.h"
+#include "Interpeter/Lexer.h"
+#include "Commands/ConnectCommand.h"
+#include "Interpeter/Parser.h"
+#include "Commands/OpenServerCommand.h"
 #include <stack>
 using namespace std;
 

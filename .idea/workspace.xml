@@ -5,34 +5,62 @@
       <config projectName="project" targetName="project" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="take care of all dtors">
+    <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="fix memory leaks caused in expression">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Div.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Div.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Div.h" beforeDir="false" afterPath="$PROJECT_DIR$/Div.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Minus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minus.h" beforeDir="false" afterPath="$PROJECT_DIR$/Minus.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mul.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Mul.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mul.h" beforeDir="false" afterPath="$PROJECT_DIR$/Mul.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Number.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Number.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Number.h" beforeDir="false" afterPath="$PROJECT_DIR$/Number.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plus.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plus.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plus.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shuntingyard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shuntingyard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Div.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Div.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Minus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Minus.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Mul.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Mul.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Number.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Number.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Plus.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Plus.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Shuntingyard.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/project.dir/Shuntingyard.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/doc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/doc.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/project" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryExpression.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinaryExpression.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BindTable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Command.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionParser.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionParser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataReaderServer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataReaderServer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataWriterClient.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataWriterClient.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefineVarCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DefineVarCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Div.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Div.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expression.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpressionCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExpressionCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IfCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IfCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lexer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoopCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoopCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minus.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mul.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mul.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Number.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Number.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenServerCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OpenServerCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PathsTable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shuntingyard.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shuntingyard.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SleepCommand.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SleepCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SymbolTable.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -67,7 +95,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cmake" value="2" />
-          <entry key="cpp" value="279" />
+          <entry key="cpp" value="283" />
           <entry key="functional" value="5" />
           <entry key="h" value="362" />
           <entry key="mutex" value="1" />
@@ -76,32 +104,32 @@
           <entry key="stack" value="1" />
           <entry key="tcc" value="4" />
           <entry key="thread" value="10" />
-          <entry key="txt" value="28" />
+          <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeCache.txt" value="1" />
-          <entry key="CMakeLists.txt" value="8" />
+          <entry key="CMakeLists.txt" value="9" />
           <entry key="Disassembly" value="65" />
-          <entry key="ObjectiveC" value="663" />
+          <entry key="ObjectiveC" value="667" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="15024" />
+          <entry key="cpp" value="15237" />
           <entry key="h" value="5714" />
           <entry key="mm" value="18" />
-          <entry key="txt" value="1088" />
+          <entry key="txt" value="1208" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="67" />
+          <entry key="CMakeLists.txt" value="145" />
           <entry key="Doxygen file" value="4" />
-          <entry key="ObjectiveC" value="20752" />
-          <entry key="PLAIN_TEXT" value="1021" />
+          <entry key="ObjectiveC" value="20965" />
+          <entry key="PLAIN_TEXT" value="1063" />
         </counts>
       </usages-collector>
     </session>
@@ -109,64 +137,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OpenServerCommand.cpp">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="105">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Commands/AssignCommand.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Interpeter/Lexer.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#46#65#0" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mul.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plus.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Div.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LoopCommand.cpp">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-              <folding>
-                <element signature="e#48#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shuntingyard.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
-              <folding>
-                <element signature="e#45#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="1167" lean-forward="true" selection-start-line="6" selection-start-column="1167" selection-end-line="6" selection-end-column="1167" />
             </state>
           </provider>
         </entry>
@@ -189,29 +188,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Number.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Expression.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>symbolTable-&gt;</find>
       <find>SymbolTable</find>
       <find>symbolTable</find>
       <find>getPathTable</find>
@@ -241,6 +221,7 @@
       <find>push_back</find>
       <find>final</find>
       <find>BindingTable</find>
+      <find>startprogram</find>
     </findStrings>
     <replaceStrings>
       <replace>MAPDB_H</replace>
@@ -265,6 +246,7 @@
       <replace>shunt_string</replace>
       <replace>last_iter</replace>
       <replace>BindTable</replace>
+      <replace>start_index</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -273,13 +255,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/SleepCommand.h" />
         <option value="$PROJECT_DIR$/IfCommand.cpp" />
         <option value="$PROJECT_DIR$/LoopCommand.h" />
         <option value="$PROJECT_DIR$/ConnectCommand.cpp" />
         <option value="$PROJECT_DIR$/ConditionParser.cpp" />
-        <option value="$PROJECT_DIR$/LoopCommand.cpp" />
         <option value="$PROJECT_DIR$/Lexer.h" />
         <option value="$PROJECT_DIR$/BindingTable.h" />
         <option value="$PROJECT_DIR$/DataReaderServer.h" />
@@ -303,7 +283,6 @@
         <option value="$PROJECT_DIR$/ExpressionCommand.h" />
         <option value="$PROJECT_DIR$/ExpressionCommand.cpp" />
         <option value="$PROJECT_DIR$/Parser.h" />
-        <option value="$PROJECT_DIR$/Parser.cpp" />
         <option value="$PROJECT_DIR$/Shuntingyard.h" />
         <option value="$PROJECT_DIR$/Expression.h" />
         <option value="$PROJECT_DIR$/BinaryExpression.h" />
@@ -312,7 +291,6 @@
         <option value="$PROJECT_DIR$/PrintCommand.h" />
         <option value="$PROJECT_DIR$/PrintCommand.cpp" />
         <option value="$PROJECT_DIR$/cmake-build-debug/doc.txt" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Plus.cpp" />
         <option value="$PROJECT_DIR$/Number.cpp" />
         <option value="$PROJECT_DIR$/Mul.cpp" />
@@ -324,6 +302,10 @@
         <option value="$PROJECT_DIR$/Plus.h" />
         <option value="$PROJECT_DIR$/Number.h" />
         <option value="$PROJECT_DIR$/Shuntingyard.cpp" />
+        <option value="$PROJECT_DIR$/LoopCommand.cpp" />
+        <option value="$PROJECT_DIR$/Parser.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -354,11 +336,6 @@
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -536,7 +513,7 @@
       <workItem from="1545927680510" duration="11548000" />
       <workItem from="1545984123805" duration="55854000" />
       <workItem from="1546258074066" duration="1000" />
-      <workItem from="1546258104719" duration="34069000" />
+      <workItem from="1546258104719" duration="35802000" />
     </task>
     <task id="LOCAL-00001" summary="final lexer">
       <created>1545551674541</created>
@@ -734,11 +711,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546347161797</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix memory leaks caused in expression">
+      <created>1546351595879</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1546351595879</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239355000" />
+    <option name="totallyTimeSpent" value="241088000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -751,20 +735,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17450199" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17450199" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47670808" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47670808" />
       <window_info anchor="bottom" x="0" y="242" width="1366" height="243" id="Debug" order="3" sideWeight="0.6900398" weight="0.39906833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32919255" />
-      <window_info anchor="bottom" id="CMake" order="8" />
+      <window_info anchor="bottom" id="CMake" order="8" visible="true" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30996016" side_tool="true" weight="0.39906833" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49721116" weight="0.3416149" />
@@ -850,41 +833,10 @@
     <MESSAGE value="change shunting yard" />
     <MESSAGE value="shunting yard is working , the plane is flying" />
     <MESSAGE value="take care of all dtors" />
-    <option name="LAST_COMMIT_MESSAGE" value="take care of all dtors" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/OpenServerCommand.cpp</url>
-          <line>16</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix memory leaks caused in expression" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix memory leaks caused in expression" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AssignCommand.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BindTable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConnectCommand.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataReaderServer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1009,16 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Parser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SleepCommand.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1106,16 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,16 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenServerCommand.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#46#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shuntingyard.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1239,11 +1161,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LoopCommand.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="-572">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding>
             <element signature="e#48#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenServerCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#46#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/AssignCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interpeter/Lexer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1167" lean-forward="true" selection-start-line="6" selection-start-column="1167" selection-end-line="6" selection-end-column="1167" />
         </state>
       </provider>
     </entry>
