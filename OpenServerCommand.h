@@ -19,7 +19,7 @@ class OpenServerCommand : public Command {
 
 public:
     void execute(const vector<string> &cur_lex);
-    OpenServerCommand(int &index);
+    explicit OpenServerCommand(int &index);
 };
 
 

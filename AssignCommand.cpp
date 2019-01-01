@@ -18,13 +18,13 @@ void AssignCommand::execute(const vector<string> &cur_lex) {
     double val = shuntingyard.algorithm(shuntingyard.extract_string(cur_lex[index]));
     globalMutex.lock();
     SymbolTable::instance()->setValue(key,val);
-    if (BindingTable::instance()->getValue(key)[0] == '/'){
-        const string msg = "set " + BindingTable::instance()->getValue(key) +
+    if (BindTable::instance()->getValue(key)[0] == '/'){
+        const string msg = "set " + BindTable::instance()->getValue(key) +
                            " " + to_string(val) + "\r\n";
         globalMutex.unlock();
         DataWriterClient::setMessage(msg);
     } else {
-        SymbolTable::instance()->setValue(BindingTable::instance()->getValue(key), val);
+        SymbolTable::instance()->setValue(BindTable::instance()->getValue(key), val);
         globalMutex.unlock();
     }
     ++index;

@@ -25,7 +25,7 @@ vector<string> Lexer::split_from_file(string fileName) {
  * @param the lines in the file.
  * @return vector of words in the right order
  */
-vector<string> Lexer::fromStringToExp(vector<string> lines) {
+vector<string> Lexer::fromStringtoLex(vector<string> lines) {
     vector<string> words;
     char oper;
     bool check;

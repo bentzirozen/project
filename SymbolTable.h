@@ -13,7 +13,7 @@ using namespace std;
 
 
 /**
- * A tables which hold our vars values
+ * holds all vars in our simulator
  */
 class SymbolTable{
 

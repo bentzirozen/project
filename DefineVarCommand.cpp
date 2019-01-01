@@ -26,25 +26,25 @@ void DefineVarCommand::execute(const vector<string> &cur_lex) {
             val = val.substr(1, val.length() - 2);
             if (PathsTable::instance()->atTable(val)){
                 // if the path is in paths table
-                BindingTable::instance()->setValue(key_word, val);
+                BindTable::instance()->setValue(key_word, val);
                 SymbolTable::instance()->setValue(key_word,PathsTable::instance()->getValue(val));
             } else {
-                BindingTable::instance()->setValue(key_word, val);
+                BindTable::instance()->setValue(key_word, val);
                 SymbolTable::instance()->setValue(key_word,0);
             }
             globalMutex.unlock();
         } else {
             globalMutex.lock();
-            BindingTable::instance()->setValue(key_word, val);
+            BindTable::instance()->setValue(key_word, val);
             SymbolTable::instance()->setValue(key_word,
                                               SymbolTable::instance()->getValue(val));
-            BindingTable::instance()->setValue(val, key_word);
+            BindTable::instance()->setValue(val, key_word);
             globalMutex.unlock();
         }
     } else {
         string val = cur_lex[index];
         globalMutex.lock();
-        //update symbol table
+        //update symbol table, extract values from shunting yard
         SymbolTable::instance()->setValue(key_word,shuntingyard.algorithm(shuntingyard.extract_string(val)));
         globalMutex.unlock();
     }

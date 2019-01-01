@@ -15,7 +15,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bentzirozen/Desktop/project/IfCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/IfCommand.cpp.o"
   "/home/bentzirozen/Desktop/project/Lexer.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/Lexer.cpp.o"
   "/home/bentzirozen/Desktop/project/LoopCommand.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/LoopCommand.cpp.o"
-  "/home/bentzirozen/Desktop/project/MapDB.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/MapDB.cpp.o"
   "/home/bentzirozen/Desktop/project/Minus.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/Minus.cpp.o"
   "/home/bentzirozen/Desktop/project/Mul.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/Mul.cpp.o"
   "/home/bentzirozen/Desktop/project/Number.cpp" "/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles/project.dir/Number.cpp.o"

@@ -12,12 +12,12 @@
  */
 
 class BindTable {
-    std::map<string, string> bindTable;
-    static BindingTable *s_instance;
+    std::map<std::string, std::string> bindTable;
+    static BindTable *s_instance;
 public:
-    static inline BindingTable *instance() {
+    static inline BindTable *instance() {
         if (!s_instance){
-            s_instance = new BindingTable();
+            s_instance = new BindTable();
         }
         return s_instance;
     }

@@ -129,14 +129,22 @@ double Shuntingyard:: algorithm(string exp){
     if(str_vec.empty()){
         str_vec.push_back(output);
     }
-    return string_to_exp(str_vec)->calculate();//the new expression
+    //the new expression
+    Expression* result = string_to_exp(str_vec);
+    double ret = result->calculate();
+    delete result;
+    return ret;
+
 
 }
 
 Shuntingyard::~Shuntingyard() {
+    for(auto exp:will_delete){
+        delete exp;
+    }
 
 }
-
+//extract values from string and it will send it to shunting yard algoritm to calculate in all the time
 string Shuntingyard::extract_string(const string &str) {
     const char *pExp = str.c_str();
     string newExp;
@@ -172,6 +180,7 @@ Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
         if (!isOperator(str[0]) || (isOperator(str[0]) && str.size() != 1)) {
             newExp = new Number(stof(str));
             stack.push(newExp);
+            will_delete.push_back(newExp);
 
         } else {
             Expression *right = stack.top();
@@ -201,21 +210,4 @@ Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
     }
     Expression *result = stack.top();
     return result;
-}
-
-bool Shuntingyard::check_if_neg(const string &exp) {
-    bool check = false;
-    const char *c = exp.c_str();
-    // if there is no '-' in the number
-    if(c[0]!= '-') return false;
-    // while the end of the number
-    while(*c!= '\0' ){
-        // check if the sign '-' shows once.
-        if(*c == '-' && !check) check = true;
-        else
-            // if there is more things in the string, return false.
-        if(isOperator(*c) && check) return false;
-        c++;
-    }
-    return true;
 }

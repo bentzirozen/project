@@ -22,7 +22,7 @@ class ConnectCommand:public Command{
     int &index;
 public:
     void execute(const vector<string>&cur_lex);
-    ConnectCommand(int &index);
+    explicit ConnectCommand(int &index);
 };
 
 

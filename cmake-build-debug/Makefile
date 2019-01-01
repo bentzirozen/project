@@ -420,33 +420,6 @@ LoopCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/LoopCommand.cpp.s
 .PHONY : LoopCommand.cpp.s
 
-MapDB.o: MapDB.cpp.o
-
-.PHONY : MapDB.o
-
-# target to build an object file
-MapDB.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/MapDB.cpp.o
-.PHONY : MapDB.cpp.o
-
-MapDB.i: MapDB.cpp.i
-
-.PHONY : MapDB.i
-
-# target to preprocess a source file
-MapDB.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/MapDB.cpp.i
-.PHONY : MapDB.cpp.i
-
-MapDB.s: MapDB.cpp.s
-
-.PHONY : MapDB.s
-
-# target to generate assembly for a file
-MapDB.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/MapDB.cpp.s
-.PHONY : MapDB.cpp.s
-
 Minus.o: Minus.cpp.o
 
 .PHONY : Minus.o
@@ -759,9 +732,6 @@ help:
 	@echo "... LoopCommand.o"
 	@echo "... LoopCommand.i"
 	@echo "... LoopCommand.s"
-	@echo "... MapDB.o"
-	@echo "... MapDB.i"
-	@echo "... MapDB.s"
 	@echo "... Minus.o"
 	@echo "... Minus.i"
 	@echo "... Minus.s"

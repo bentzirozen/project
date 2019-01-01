@@ -18,10 +18,12 @@ void PrintCommand::execute(const vector<string> &cur_lex) {
     }
     str += cur_lex[index];
     ++index;
+    //take the exact string
     !SymbolTable::instance()->atTable(str) ? cout << str.substr(1, str.length() - 2) :
     cout << SymbolTable::instance()->getValue((str));
     str = "";
     globalMutex.unlock();
+    //assume it with /n in the end
     cout << "\n";
 }
 

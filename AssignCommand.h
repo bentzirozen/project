@@ -13,7 +13,7 @@
 class AssignCommand : public Command {
     int &index;
 public:
-    AssignCommand(int &index);
+    explicit AssignCommand(int &index);
     void execute(const vector<string> &line);
     ~AssignCommand(){}
 };

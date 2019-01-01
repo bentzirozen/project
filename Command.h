@@ -13,7 +13,6 @@ using namespace std;
 class Command {
 public:
     virtual void execute(const vector<string>&lexer)=0;
-    ~Command(){};
 };
 
 

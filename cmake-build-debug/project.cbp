@@ -93,7 +93,7 @@
 		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/BindingTable.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/BindTable.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Command.h">
@@ -160,12 +160,6 @@
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/LoopCommand.h">
-			<Option target="project"/>
-		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/MapDB.cpp">
-			<Option target="project"/>
-		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/MapDB.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/Minus.cpp">

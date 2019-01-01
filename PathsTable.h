@@ -6,7 +6,7 @@
 #define PROJECT_PATHSTABLE_H
 
 #include "map"
-
+//hold assign paths of values
 class PathsTable {
     std::map<std::string, double> pathTable;
     static PathsTable *s_instance;

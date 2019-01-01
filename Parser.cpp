@@ -4,6 +4,7 @@
 #include "Parser.h"
 #include "ExpressionCommand.h"
 
+//parse all commands that exists
 Parser::Parser(const vector<string> &cur_lex,int& index):index(index) {
     commandsTable["openDataServer"]=new ExpressionCommand(new OpenServerCommand(index),cur_lex);
     commandsTable["connect"]=new ExpressionCommand(new ConnectCommand(index),cur_lex);
@@ -15,19 +16,19 @@ Parser::Parser(const vector<string> &cur_lex,int& index):index(index) {
     commandsTable["while"]=new ExpressionCommand(new LoopCommand(commandsTable,index),cur_lex);
 }
 
-
+//run all the script
 void Parser::run(const vector<string> &cur_lex) {
     string item;
     while (index < cur_lex.size()) {
         item= cur_lex[index];
-        Expression *expression = commandsTable[(cur_lex[index])]; // key- worlds, value - command.
-        // if there is no expression in the commandsTable
+        //get the command from table
+        Expression *expression = commandsTable[(cur_lex[index])];
         if(expression== nullptr) {
             if(cur_lex[index] == "{" || cur_lex[index] == "}") {
                 index ++;
                 continue;
             }
-            // check if there is a variable in symbolTable
+            // check if there is a var in the symbolTable
             if(SymbolTable::instance()->atTable(cur_lex[index]))
                 commandsTable.erase(cur_lex[index]);
             // if there is, go to Assign.
@@ -39,3 +40,8 @@ void Parser::run(const vector<string> &cur_lex) {
     }
 }
 
+Parser::~Parser() {
+    for (auto const &command:commandsTable) {
+        delete command.second;
+    }
+}

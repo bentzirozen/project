@@ -20,6 +20,7 @@ public:
     * @return  the result of the variable.
     */
     virtual double calculate() =0;
+    virtual ~Expression(){};
 
 };
 #endif //UNTITLED8_EXPRESSION_H

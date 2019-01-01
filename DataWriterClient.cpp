@@ -4,16 +4,19 @@
 
 #include "DataWriterClient.h"
 #include "DataReaderServer.h"
-std::string DataWriterClient::message = "";
 
+//statics must be inititalized
+
+
+std::string DataWriterClient::message = "";
 int DataWriterClient::socketFd = 0;
 /**
  * @param message1 the message from the simulator
  */
-void DataWriterClient::setMessage(const string &message1){
+void DataWriterClient::setMessage(const string &message_str){
     globalMutex.lock();
     /* Send message to the server */
-    int n = static_cast<int>(write(getSocketFD(), message1.c_str(), message1.length()));
+    int n = static_cast<int>(write(getSocketFD(), message_str.c_str(), message_str.length()));
     globalMutex.unlock();
     if (n < 0) {
         perror("ERROR writing to socket");

@@ -25,6 +25,7 @@ void OpenServerCommand::execute(const vector<string>&cur_lex) {
     while (!DataReaderServer::isOpen()){
         //wait..
     }
+    //thread in backround while all other things occur
     t.detach();
 }
 

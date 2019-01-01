@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/ConnectCommand.cpp.o"
   "CMakeFiles/project.dir/DataReaderServer.cpp.o"
   "CMakeFiles/project.dir/DefineVarCommand.cpp.o"
-  "CMakeFiles/project.dir/MapDB.cpp.o"
   "CMakeFiles/project.dir/ConditionParser.cpp.o"
   "CMakeFiles/project.dir/IfCommand.cpp.o"
   "CMakeFiles/project.dir/LoopCommand.cpp.o"

@@ -6,8 +6,8 @@
 #define PROJECT_CONDITIONPARSER_H
 
 #include "Command.h"
-#include "MapDB.h"
-
+#include "Expression.h"
+//class which check the conditions and return at the end booleans value about condition
 class ConditionParser: public Command {
     vector<string>cur_lex;
     int &index;

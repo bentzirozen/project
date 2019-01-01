@@ -7,6 +7,7 @@
 
 #include "Command.h"
 #include "Expression.h"
+//take all the commands and make them expression command
 
 class ExpressionCommand:public Expression{
 protected:
@@ -15,7 +16,7 @@ protected:
     int index;
 public:
     ExpressionCommand(Command *command, const vector<string> &cur_lex);
-
+   ~ExpressionCommand();
     virtual double calculate();
 };
 

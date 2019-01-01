@@ -112,7 +112,7 @@ void DataReaderServer::openServer(int port, int hz) {
         }
         ++pt;
         values += '\n';
-        updatePathsTable(splitByComma(values.c_str()));
+        updatePathsTable(split_buf(values.c_str()));
         updateSymbolTable();
         leftovers = "";
         // if there are leftovers:

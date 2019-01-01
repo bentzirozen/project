@@ -4,7 +4,7 @@
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.cpp
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/AssignCommand.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/AssignCommand.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../DataWriterClient.h
@@ -20,7 +20,7 @@ CMakeFiles/project.dir/AssignCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/ConditionParser.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/ConditionParser.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Command.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../ConditionParser.cpp
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../ConditionParser.h
@@ -30,11 +30,9 @@ CMakeFiles/project.dir/ConditionParser.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../DefineVarCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Div.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Expression.h
-CMakeFiles/project.dir/ConditionParser.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Lexer.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../LoopCommand.h
-CMakeFiles/project.dir/ConditionParser.cpp.o: ../MapDB.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Minus.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Mul.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../Number.h
@@ -48,7 +46,7 @@ CMakeFiles/project.dir/ConditionParser.cpp.o: ../SleepCommand.h
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/ConnectCommand.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/ConnectCommand.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../ConnectCommand.cpp
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../ConnectCommand.h
@@ -64,13 +62,13 @@ CMakeFiles/project.dir/ConnectCommand.cpp.o: ../Plus.h
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../Shuntingyard.h
 CMakeFiles/project.dir/ConnectCommand.cpp.o: ../SymbolTable.h
 
-CMakeFiles/project.dir/DataReaderServer.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/DataReaderServer.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../DataReaderServer.cpp
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/DataReaderServer.cpp.o: ../SymbolTable.h
 
-CMakeFiles/project.dir/DataWriterClient.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/DataWriterClient.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../Command.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataWriterClient.cpp
@@ -79,15 +77,13 @@ CMakeFiles/project.dir/DataWriterClient.cpp.o: ../PathsTable.h
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.cpp
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Div.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Expression.h
-CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../ExpressionCommand.h
-CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../MapDB.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Minus.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Mul.h
 CMakeFiles/project.dir/DefineVarCommand.cpp.o: ../Number.h
@@ -111,10 +107,8 @@ CMakeFiles/project.dir/ExpressionCommand.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/IfCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/IfCommand.cpp.o: ../ConditionParser.h
 CMakeFiles/project.dir/IfCommand.cpp.o: ../Expression.h
-CMakeFiles/project.dir/IfCommand.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/IfCommand.cpp.o: ../IfCommand.cpp
 CMakeFiles/project.dir/IfCommand.cpp.o: ../IfCommand.h
-CMakeFiles/project.dir/IfCommand.cpp.o: ../MapDB.h
 
 CMakeFiles/project.dir/Lexer.cpp.o: ../Lexer.cpp
 CMakeFiles/project.dir/Lexer.cpp.o: ../Lexer.h
@@ -122,17 +116,9 @@ CMakeFiles/project.dir/Lexer.cpp.o: ../Lexer.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../ConditionParser.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../Expression.h
-CMakeFiles/project.dir/LoopCommand.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../LoopCommand.cpp
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../LoopCommand.h
-CMakeFiles/project.dir/LoopCommand.cpp.o: ../MapDB.h
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../SymbolTable.h
-
-CMakeFiles/project.dir/MapDB.cpp.o: ../Command.h
-CMakeFiles/project.dir/MapDB.cpp.o: ../Expression.h
-CMakeFiles/project.dir/MapDB.cpp.o: ../ExpressionCommand.h
-CMakeFiles/project.dir/MapDB.cpp.o: ../MapDB.cpp
-CMakeFiles/project.dir/MapDB.cpp.o: ../MapDB.h
 
 CMakeFiles/project.dir/Minus.cpp.o: ../BinaryExpression.h
 CMakeFiles/project.dir/Minus.cpp.o: ../Expression.h
@@ -151,7 +137,7 @@ CMakeFiles/project.dir/Number.cpp.o: ../Number.cpp
 CMakeFiles/project.dir/Number.cpp.o: ../Number.h
 
 CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../Div.h
@@ -168,7 +154,7 @@ CMakeFiles/project.dir/OpenServerCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/Parser.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/Parser.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/Parser.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/Parser.cpp.o: ../Command.h
 CMakeFiles/project.dir/Parser.cpp.o: ../ConditionParser.h
 CMakeFiles/project.dir/Parser.cpp.o: ../ConnectCommand.h
@@ -180,7 +166,6 @@ CMakeFiles/project.dir/Parser.cpp.o: ../Expression.h
 CMakeFiles/project.dir/Parser.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/Parser.cpp.o: ../LoopCommand.h
-CMakeFiles/project.dir/Parser.cpp.o: ../MapDB.h
 CMakeFiles/project.dir/Parser.cpp.o: ../Minus.h
 CMakeFiles/project.dir/Parser.cpp.o: ../Mul.h
 CMakeFiles/project.dir/Parser.cpp.o: ../Number.h
@@ -200,7 +185,7 @@ CMakeFiles/project.dir/Plus.cpp.o: ../Number.h
 CMakeFiles/project.dir/Plus.cpp.o: ../Plus.cpp
 CMakeFiles/project.dir/Plus.cpp.o: ../Plus.h
 
-CMakeFiles/project.dir/PrintCommand.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/PrintCommand.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../Command.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../PathsTable.h
@@ -209,7 +194,7 @@ CMakeFiles/project.dir/PrintCommand.cpp.o: ../PrintCommand.h
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/Shuntingyard.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/Shuntingyard.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../DataReaderServer.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Div.h
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Expression.h
@@ -237,7 +222,7 @@ CMakeFiles/project.dir/SleepCommand.cpp.o: ../SymbolTable.h
 
 CMakeFiles/project.dir/main.cpp.o: ../AssignCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../BinaryExpression.h
-CMakeFiles/project.dir/main.cpp.o: ../BindingTable.h
+CMakeFiles/project.dir/main.cpp.o: ../BindTable.h
 CMakeFiles/project.dir/main.cpp.o: ../Command.h
 CMakeFiles/project.dir/main.cpp.o: ../ConditionParser.h
 CMakeFiles/project.dir/main.cpp.o: ../ConnectCommand.h
@@ -246,11 +231,9 @@ CMakeFiles/project.dir/main.cpp.o: ../DataWriterClient.h
 CMakeFiles/project.dir/main.cpp.o: ../DefineVarCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../Div.h
 CMakeFiles/project.dir/main.cpp.o: ../Expression.h
-CMakeFiles/project.dir/main.cpp.o: ../ExpressionCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../IfCommand.h
 CMakeFiles/project.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/project.dir/main.cpp.o: ../LoopCommand.h
-CMakeFiles/project.dir/main.cpp.o: ../MapDB.h
 CMakeFiles/project.dir/main.cpp.o: ../Minus.h
 CMakeFiles/project.dir/main.cpp.o: ../Mul.h
 CMakeFiles/project.dir/main.cpp.o: ../Number.h

@@ -148,22 +148,9 @@ CMakeFiles/project.dir/DefineVarCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/DefineVarCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/DefineVarCommand.cpp -o CMakeFiles/project.dir/DefineVarCommand.cpp.s
 
-CMakeFiles/project.dir/MapDB.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/MapDB.cpp.o: ../MapDB.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/MapDB.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/MapDB.cpp.o -c /home/bentzirozen/Desktop/project/MapDB.cpp
-
-CMakeFiles/project.dir/MapDB.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/MapDB.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bentzirozen/Desktop/project/MapDB.cpp > CMakeFiles/project.dir/MapDB.cpp.i
-
-CMakeFiles/project.dir/MapDB.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/MapDB.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bentzirozen/Desktop/project/MapDB.cpp -o CMakeFiles/project.dir/MapDB.cpp.s
-
 CMakeFiles/project.dir/ConditionParser.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/ConditionParser.cpp.o: ../ConditionParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project.dir/ConditionParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/ConditionParser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/ConditionParser.cpp.o -c /home/bentzirozen/Desktop/project/ConditionParser.cpp
 
 CMakeFiles/project.dir/ConditionParser.cpp.i: cmake_force
@@ -176,7 +163,7 @@ CMakeFiles/project.dir/ConditionParser.cpp.s: cmake_force
 
 CMakeFiles/project.dir/IfCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/IfCommand.cpp.o: ../IfCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project.dir/IfCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/project.dir/IfCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/IfCommand.cpp.o -c /home/bentzirozen/Desktop/project/IfCommand.cpp
 
 CMakeFiles/project.dir/IfCommand.cpp.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/project.dir/IfCommand.cpp.s: cmake_force
 
 CMakeFiles/project.dir/LoopCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/LoopCommand.cpp.o: ../LoopCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project.dir/LoopCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/project.dir/LoopCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/LoopCommand.cpp.o -c /home/bentzirozen/Desktop/project/LoopCommand.cpp
 
 CMakeFiles/project.dir/LoopCommand.cpp.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/project.dir/LoopCommand.cpp.s: cmake_force
 
 CMakeFiles/project.dir/DataWriterClient.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/DataWriterClient.cpp.o: ../DataWriterClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project.dir/DataWriterClient.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/project.dir/DataWriterClient.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/DataWriterClient.cpp.o -c /home/bentzirozen/Desktop/project/DataWriterClient.cpp
 
 CMakeFiles/project.dir/DataWriterClient.cpp.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/project.dir/DataWriterClient.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Div.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Div.cpp.o: ../Div.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project.dir/Div.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/project.dir/Div.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Div.cpp.o -c /home/bentzirozen/Desktop/project/Div.cpp
 
 CMakeFiles/project.dir/Div.cpp.i: cmake_force
@@ -228,7 +215,7 @@ CMakeFiles/project.dir/Div.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Plus.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Plus.cpp.o: ../Plus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/Plus.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/project.dir/Plus.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Plus.cpp.o -c /home/bentzirozen/Desktop/project/Plus.cpp
 
 CMakeFiles/project.dir/Plus.cpp.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/project.dir/Plus.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Minus.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Minus.cpp.o: ../Minus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/Minus.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/project.dir/Minus.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Minus.cpp.o -c /home/bentzirozen/Desktop/project/Minus.cpp
 
 CMakeFiles/project.dir/Minus.cpp.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/project.dir/Minus.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Mul.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Mul.cpp.o: ../Mul.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project.dir/Mul.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/Mul.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Mul.cpp.o -c /home/bentzirozen/Desktop/project/Mul.cpp
 
 CMakeFiles/project.dir/Mul.cpp.i: cmake_force
@@ -267,7 +254,7 @@ CMakeFiles/project.dir/Mul.cpp.s: cmake_force
 
 CMakeFiles/project.dir/SleepCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project.dir/SleepCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project.dir/SleepCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/SleepCommand.cpp.o -c /home/bentzirozen/Desktop/project/SleepCommand.cpp
 
 CMakeFiles/project.dir/SleepCommand.cpp.i: cmake_force
@@ -280,7 +267,7 @@ CMakeFiles/project.dir/SleepCommand.cpp.s: cmake_force
 
 CMakeFiles/project.dir/PrintCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project.dir/PrintCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/project.dir/PrintCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/PrintCommand.cpp.o -c /home/bentzirozen/Desktop/project/PrintCommand.cpp
 
 CMakeFiles/project.dir/PrintCommand.cpp.i: cmake_force
@@ -293,7 +280,7 @@ CMakeFiles/project.dir/PrintCommand.cpp.s: cmake_force
 
 CMakeFiles/project.dir/ExpressionCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/ExpressionCommand.cpp.o: ../ExpressionCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project.dir/ExpressionCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/project.dir/ExpressionCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/ExpressionCommand.cpp.o -c /home/bentzirozen/Desktop/project/ExpressionCommand.cpp
 
 CMakeFiles/project.dir/ExpressionCommand.cpp.i: cmake_force
@@ -306,7 +293,7 @@ CMakeFiles/project.dir/ExpressionCommand.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Shuntingyard.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Shuntingyard.cpp.o: ../Shuntingyard.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project.dir/Shuntingyard.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/project.dir/Shuntingyard.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Shuntingyard.cpp.o -c /home/bentzirozen/Desktop/project/Shuntingyard.cpp
 
 CMakeFiles/project.dir/Shuntingyard.cpp.i: cmake_force
@@ -319,7 +306,7 @@ CMakeFiles/project.dir/Shuntingyard.cpp.s: cmake_force
 
 CMakeFiles/project.dir/Number.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/Number.cpp.o: ../Number.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project.dir/Number.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/project.dir/Number.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/Number.cpp.o -c /home/bentzirozen/Desktop/project/Number.cpp
 
 CMakeFiles/project.dir/Number.cpp.i: cmake_force
@@ -332,7 +319,7 @@ CMakeFiles/project.dir/Number.cpp.s: cmake_force
 
 CMakeFiles/project.dir/AssignCommand.cpp.o: CMakeFiles/project.dir/flags.make
 CMakeFiles/project.dir/AssignCommand.cpp.o: ../AssignCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/project.dir/AssignCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/project.dir/AssignCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/project.dir/AssignCommand.cpp.o -c /home/bentzirozen/Desktop/project/AssignCommand.cpp
 
 CMakeFiles/project.dir/AssignCommand.cpp.i: cmake_force
@@ -352,7 +339,6 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/ConnectCommand.cpp.o" \
 "CMakeFiles/project.dir/DataReaderServer.cpp.o" \
 "CMakeFiles/project.dir/DefineVarCommand.cpp.o" \
-"CMakeFiles/project.dir/MapDB.cpp.o" \
 "CMakeFiles/project.dir/ConditionParser.cpp.o" \
 "CMakeFiles/project.dir/IfCommand.cpp.o" \
 "CMakeFiles/project.dir/LoopCommand.cpp.o" \
@@ -378,7 +364,6 @@ project: CMakeFiles/project.dir/Parser.cpp.o
 project: CMakeFiles/project.dir/ConnectCommand.cpp.o
 project: CMakeFiles/project.dir/DataReaderServer.cpp.o
 project: CMakeFiles/project.dir/DefineVarCommand.cpp.o
-project: CMakeFiles/project.dir/MapDB.cpp.o
 project: CMakeFiles/project.dir/ConditionParser.cpp.o
 project: CMakeFiles/project.dir/IfCommand.cpp.o
 project: CMakeFiles/project.dir/LoopCommand.cpp.o
@@ -395,7 +380,7 @@ project: CMakeFiles/project.dir/Number.cpp.o
 project: CMakeFiles/project.dir/AssignCommand.cpp.o
 project: CMakeFiles/project.dir/build.make
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentzirozen/Desktop/project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

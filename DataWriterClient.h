@@ -21,7 +21,7 @@ class DataWriterClient {
      static int socketFd;
 public:
     //static because its depend on state
-    static void setMessage(const string &message1);
+    static void setMessage(const string &message_str);
 
     static void createConnection(int port, string address);
 

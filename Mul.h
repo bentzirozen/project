@@ -13,9 +13,6 @@ using namespace std;
 
 class Mul: public BinaryExpression{
 public:
-    Mul(Number val1,Number val2);
-    Mul(Expression* val1,Number val2);
-    Mul(Number val1, Expression* val2);
     Mul(Expression* val1,Expression* val2);
     double calculate();
     ~Mul();

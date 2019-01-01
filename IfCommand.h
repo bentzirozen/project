@@ -12,7 +12,7 @@ class IfCommand:public Command{
     ConditionParser conditionParser;
 public:
      void execute(const vector<string>&lexer);
-     IfCommand(int &index);
+    explicit IfCommand(int &index);
 };
 
 

@@ -20,6 +20,7 @@ using namespace std;
 
 
 class Shuntingyard {
+    vector<Expression*>will_delete;
 public:
     Shuntingyard();
     double algorithm(string exp);
@@ -28,7 +29,6 @@ public:
     unsigned int precedence(char op);
     string extract_string(const string& str);
     ~Shuntingyard();
-    bool check_if_neg(const string &exp);
     Expression *string_to_exp(vector<string> shunt_string);
 };
 

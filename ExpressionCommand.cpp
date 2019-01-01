@@ -13,11 +13,13 @@ double ExpressionCommand::calculate() {
     return 0;
 }
 
-/**
- * @param command the command
- * @param words the array of orders.
- */
+//initialize the members
 ExpressionCommand::ExpressionCommand(Command *command, const vector<string> &cur_lex) : command(
         command), lexer(cur_lex){}
+
+ExpressionCommand::~ExpressionCommand() {
+    delete this->command;
+
+}
 
 

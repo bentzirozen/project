@@ -12,7 +12,6 @@
 #include "OpenServerCommand.h"
 #include "ConnectCommand.h"
 #include "DefineVarCommand.h"
-#include "MapDB.h"
 #include "IfCommand.h"
 #include "LoopCommand.h"
 #include "PrintCommand.h"
@@ -26,6 +25,7 @@ class Parser{
 public:
     Parser(const vector<string>&cur_lex,int& index);
     void run(const vector<string> &cur_lex);
+    ~Parser();
 
 };
 
