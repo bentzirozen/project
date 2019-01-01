@@ -15,7 +15,7 @@ private:
 public:
     Number(double val);
     double calculate();
-    virtual ~Number();
+    virtual ~Number(){}
 };
 
 

@@ -132,13 +132,15 @@ double Shuntingyard:: algorithm(string exp){
     //the new expression
     Expression* result = string_to_exp(str_vec);
     double ret = result->calculate();
-    delete result;
     return ret;
 
 
 }
 
 Shuntingyard::~Shuntingyard() {
+    for(auto &exp:will_delete){
+        delete exp;
+    }
 }
 //extract values from string and it will send it to shunting yard algoritm to calculate in all the time
 string Shuntingyard::extract_string(const string &str) {
@@ -179,7 +181,6 @@ Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
             stack.push(newExp);
             will_delete.push_back(newExp);
         } else {
-            will_delete.clear();
             Expression *right = stack.top();
             stack.pop();
             Expression *left = stack.top();
@@ -188,24 +189,27 @@ Expression *Shuntingyard::string_to_exp(vector<string> shunt_vec) {
                 case '+':
                     newExp = new Plus(left, right);
                     stack.push(newExp);
+                    will_delete.push_back(newExp);
                     break;
                 case '-':
                     newExp = new Minus(left, right);
                     stack.push(newExp);
+                    will_delete.push_back(newExp);
                     break;
                 case '/':
                     newExp = new Div(left, right);
                     stack.push(newExp);
+                    will_delete.push_back(newExp);
                     break;
                 case '*':
                     newExp = new Mul(left, right);
                     stack.push(newExp);
+                    will_delete.push_back(newExp);
                     break;
             }
 
         }
     }
     Expression *result = stack.top();
-    will_delete.push_back(result);
     return result;
 }

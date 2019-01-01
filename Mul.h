@@ -15,7 +15,7 @@ class Mul: public BinaryExpression{
 public:
     Mul(Expression* val1,Expression* val2);
     double calculate();
-    virtual ~Mul();
+    virtual ~Mul(){}
 };
 
 

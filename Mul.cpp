@@ -12,7 +12,3 @@ double Mul::calculate() {
 }
 Mul:: Mul(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
-Mul::~Mul() {
-    delete right;
-    delete left;
-}

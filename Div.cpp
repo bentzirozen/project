@@ -12,8 +12,3 @@ double Div::calculate() {
 
 Div:: Div(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
-
-Div::~Div() {
-    delete left;
-    delete right;
-}

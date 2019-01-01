@@ -15,7 +15,7 @@ class Minus: public BinaryExpression {
 public:
     Minus(Expression* val1,Expression* val2);
     double calculate();
-    virtual ~Minus();
+    virtual ~Minus(){}
 
 };
 

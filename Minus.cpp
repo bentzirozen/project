@@ -12,9 +12,3 @@ double Minus::calculate() {
 }
 Minus:: Minus(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
-
-Minus::~Minus() {
-    delete right;
-    delete left;
-
-}

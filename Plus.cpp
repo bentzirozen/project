@@ -11,8 +11,3 @@ double Plus::calculate() {
 }
 Plus:: Plus(Expression* val1,Expression* val2):BinaryExpression(val1,val2){
 }
-
-Plus::~Plus() {
-    delete right;
-    delete left;
-}

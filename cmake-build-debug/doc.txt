@@ -1,4 +1,4 @@
-openDataServer -500+5900 5*2
+openDataServer 5400 5*2
 connect 192.168.1.12 5402
 var breaks = bind "/controls/flight/speedbrake"
 var throttle = bind "/controls/engines/current-engine/throttle"

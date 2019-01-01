@@ -13,5 +13,3 @@ double Number::calculate() {
 Number::Number(double val) {
     this->value = val;
 }
-Number::~Number() {
-}
