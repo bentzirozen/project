@@ -123,572 +123,572 @@ project/fast:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
-AssignCommand.o: AssignCommand.cpp.o
+Commands/AssignCommand.o: Commands/AssignCommand.cpp.o
 
-.PHONY : AssignCommand.o
-
-# target to build an object file
-AssignCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.o
-.PHONY : AssignCommand.cpp.o
-
-AssignCommand.i: AssignCommand.cpp.i
-
-.PHONY : AssignCommand.i
-
-# target to preprocess a source file
-AssignCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.i
-.PHONY : AssignCommand.cpp.i
-
-AssignCommand.s: AssignCommand.cpp.s
-
-.PHONY : AssignCommand.s
-
-# target to generate assembly for a file
-AssignCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/AssignCommand.cpp.s
-.PHONY : AssignCommand.cpp.s
-
-BinaryExpression.o: BinaryExpression.cpp.o
-
-.PHONY : BinaryExpression.o
+.PHONY : Commands/AssignCommand.o
 
 # target to build an object file
-BinaryExpression.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.o
-.PHONY : BinaryExpression.cpp.o
+Commands/AssignCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/AssignCommand.cpp.o
+.PHONY : Commands/AssignCommand.cpp.o
 
-BinaryExpression.i: BinaryExpression.cpp.i
+Commands/AssignCommand.i: Commands/AssignCommand.cpp.i
 
-.PHONY : BinaryExpression.i
+.PHONY : Commands/AssignCommand.i
 
 # target to preprocess a source file
-BinaryExpression.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.i
-.PHONY : BinaryExpression.cpp.i
+Commands/AssignCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/AssignCommand.cpp.i
+.PHONY : Commands/AssignCommand.cpp.i
 
-BinaryExpression.s: BinaryExpression.cpp.s
+Commands/AssignCommand.s: Commands/AssignCommand.cpp.s
 
-.PHONY : BinaryExpression.s
+.PHONY : Commands/AssignCommand.s
 
 # target to generate assembly for a file
-BinaryExpression.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/BinaryExpression.cpp.s
-.PHONY : BinaryExpression.cpp.s
+Commands/AssignCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/AssignCommand.cpp.s
+.PHONY : Commands/AssignCommand.cpp.s
 
-ConditionParser.o: ConditionParser.cpp.o
+Commands/ConditionParser.o: Commands/ConditionParser.cpp.o
 
-.PHONY : ConditionParser.o
+.PHONY : Commands/ConditionParser.o
 
 # target to build an object file
-ConditionParser.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConditionParser.cpp.o
-.PHONY : ConditionParser.cpp.o
+Commands/ConditionParser.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConditionParser.cpp.o
+.PHONY : Commands/ConditionParser.cpp.o
 
-ConditionParser.i: ConditionParser.cpp.i
+Commands/ConditionParser.i: Commands/ConditionParser.cpp.i
 
-.PHONY : ConditionParser.i
+.PHONY : Commands/ConditionParser.i
 
 # target to preprocess a source file
-ConditionParser.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConditionParser.cpp.i
-.PHONY : ConditionParser.cpp.i
+Commands/ConditionParser.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConditionParser.cpp.i
+.PHONY : Commands/ConditionParser.cpp.i
 
-ConditionParser.s: ConditionParser.cpp.s
+Commands/ConditionParser.s: Commands/ConditionParser.cpp.s
 
-.PHONY : ConditionParser.s
+.PHONY : Commands/ConditionParser.s
 
 # target to generate assembly for a file
-ConditionParser.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConditionParser.cpp.s
-.PHONY : ConditionParser.cpp.s
+Commands/ConditionParser.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConditionParser.cpp.s
+.PHONY : Commands/ConditionParser.cpp.s
 
-ConnectCommand.o: ConnectCommand.cpp.o
+Commands/ConnectCommand.o: Commands/ConnectCommand.cpp.o
 
-.PHONY : ConnectCommand.o
+.PHONY : Commands/ConnectCommand.o
 
 # target to build an object file
-ConnectCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConnectCommand.cpp.o
-.PHONY : ConnectCommand.cpp.o
+Commands/ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConnectCommand.cpp.o
+.PHONY : Commands/ConnectCommand.cpp.o
 
-ConnectCommand.i: ConnectCommand.cpp.i
+Commands/ConnectCommand.i: Commands/ConnectCommand.cpp.i
 
-.PHONY : ConnectCommand.i
+.PHONY : Commands/ConnectCommand.i
 
 # target to preprocess a source file
-ConnectCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConnectCommand.cpp.i
-.PHONY : ConnectCommand.cpp.i
+Commands/ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConnectCommand.cpp.i
+.PHONY : Commands/ConnectCommand.cpp.i
 
-ConnectCommand.s: ConnectCommand.cpp.s
+Commands/ConnectCommand.s: Commands/ConnectCommand.cpp.s
 
-.PHONY : ConnectCommand.s
+.PHONY : Commands/ConnectCommand.s
 
 # target to generate assembly for a file
-ConnectCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ConnectCommand.cpp.s
-.PHONY : ConnectCommand.cpp.s
+Commands/ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ConnectCommand.cpp.s
+.PHONY : Commands/ConnectCommand.cpp.s
 
-DataReaderServer.o: DataReaderServer.cpp.o
+Commands/DefineVarCommand.o: Commands/DefineVarCommand.cpp.o
 
-.PHONY : DataReaderServer.o
+.PHONY : Commands/DefineVarCommand.o
 
 # target to build an object file
-DataReaderServer.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataReaderServer.cpp.o
-.PHONY : DataReaderServer.cpp.o
+Commands/DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/DefineVarCommand.cpp.o
+.PHONY : Commands/DefineVarCommand.cpp.o
 
-DataReaderServer.i: DataReaderServer.cpp.i
+Commands/DefineVarCommand.i: Commands/DefineVarCommand.cpp.i
 
-.PHONY : DataReaderServer.i
+.PHONY : Commands/DefineVarCommand.i
 
 # target to preprocess a source file
-DataReaderServer.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataReaderServer.cpp.i
-.PHONY : DataReaderServer.cpp.i
+Commands/DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/DefineVarCommand.cpp.i
+.PHONY : Commands/DefineVarCommand.cpp.i
 
-DataReaderServer.s: DataReaderServer.cpp.s
+Commands/DefineVarCommand.s: Commands/DefineVarCommand.cpp.s
 
-.PHONY : DataReaderServer.s
+.PHONY : Commands/DefineVarCommand.s
 
 # target to generate assembly for a file
-DataReaderServer.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataReaderServer.cpp.s
-.PHONY : DataReaderServer.cpp.s
+Commands/DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/DefineVarCommand.cpp.s
+.PHONY : Commands/DefineVarCommand.cpp.s
 
-DataWriterClient.o: DataWriterClient.cpp.o
+Commands/ExpressionCommand.o: Commands/ExpressionCommand.cpp.o
 
-.PHONY : DataWriterClient.o
+.PHONY : Commands/ExpressionCommand.o
 
 # target to build an object file
-DataWriterClient.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.o
-.PHONY : DataWriterClient.cpp.o
+Commands/ExpressionCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ExpressionCommand.cpp.o
+.PHONY : Commands/ExpressionCommand.cpp.o
 
-DataWriterClient.i: DataWriterClient.cpp.i
+Commands/ExpressionCommand.i: Commands/ExpressionCommand.cpp.i
 
-.PHONY : DataWriterClient.i
+.PHONY : Commands/ExpressionCommand.i
 
 # target to preprocess a source file
-DataWriterClient.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.i
-.PHONY : DataWriterClient.cpp.i
+Commands/ExpressionCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ExpressionCommand.cpp.i
+.PHONY : Commands/ExpressionCommand.cpp.i
 
-DataWriterClient.s: DataWriterClient.cpp.s
+Commands/ExpressionCommand.s: Commands/ExpressionCommand.cpp.s
 
-.PHONY : DataWriterClient.s
+.PHONY : Commands/ExpressionCommand.s
 
 # target to generate assembly for a file
-DataWriterClient.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DataWriterClient.cpp.s
-.PHONY : DataWriterClient.cpp.s
+Commands/ExpressionCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/ExpressionCommand.cpp.s
+.PHONY : Commands/ExpressionCommand.cpp.s
 
-DefineVarCommand.o: DefineVarCommand.cpp.o
+Commands/IfCommand.o: Commands/IfCommand.cpp.o
 
-.PHONY : DefineVarCommand.o
+.PHONY : Commands/IfCommand.o
 
 # target to build an object file
-DefineVarCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DefineVarCommand.cpp.o
-.PHONY : DefineVarCommand.cpp.o
+Commands/IfCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/IfCommand.cpp.o
+.PHONY : Commands/IfCommand.cpp.o
 
-DefineVarCommand.i: DefineVarCommand.cpp.i
+Commands/IfCommand.i: Commands/IfCommand.cpp.i
 
-.PHONY : DefineVarCommand.i
+.PHONY : Commands/IfCommand.i
 
 # target to preprocess a source file
-DefineVarCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DefineVarCommand.cpp.i
-.PHONY : DefineVarCommand.cpp.i
+Commands/IfCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/IfCommand.cpp.i
+.PHONY : Commands/IfCommand.cpp.i
 
-DefineVarCommand.s: DefineVarCommand.cpp.s
+Commands/IfCommand.s: Commands/IfCommand.cpp.s
 
-.PHONY : DefineVarCommand.s
+.PHONY : Commands/IfCommand.s
 
 # target to generate assembly for a file
-DefineVarCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/DefineVarCommand.cpp.s
-.PHONY : DefineVarCommand.cpp.s
+Commands/IfCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/IfCommand.cpp.s
+.PHONY : Commands/IfCommand.cpp.s
 
-Div.o: Div.cpp.o
+Commands/LoopCommand.o: Commands/LoopCommand.cpp.o
 
-.PHONY : Div.o
+.PHONY : Commands/LoopCommand.o
 
 # target to build an object file
-Div.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.o
-.PHONY : Div.cpp.o
+Commands/LoopCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/LoopCommand.cpp.o
+.PHONY : Commands/LoopCommand.cpp.o
 
-Div.i: Div.cpp.i
+Commands/LoopCommand.i: Commands/LoopCommand.cpp.i
 
-.PHONY : Div.i
+.PHONY : Commands/LoopCommand.i
 
 # target to preprocess a source file
-Div.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.i
-.PHONY : Div.cpp.i
+Commands/LoopCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/LoopCommand.cpp.i
+.PHONY : Commands/LoopCommand.cpp.i
 
-Div.s: Div.cpp.s
+Commands/LoopCommand.s: Commands/LoopCommand.cpp.s
 
-.PHONY : Div.s
+.PHONY : Commands/LoopCommand.s
 
 # target to generate assembly for a file
-Div.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Div.cpp.s
-.PHONY : Div.cpp.s
+Commands/LoopCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/LoopCommand.cpp.s
+.PHONY : Commands/LoopCommand.cpp.s
 
-ExpressionCommand.o: ExpressionCommand.cpp.o
+Commands/OpenServerCommand.o: Commands/OpenServerCommand.cpp.o
 
-.PHONY : ExpressionCommand.o
+.PHONY : Commands/OpenServerCommand.o
 
 # target to build an object file
-ExpressionCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.o
-.PHONY : ExpressionCommand.cpp.o
+Commands/OpenServerCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/OpenServerCommand.cpp.o
+.PHONY : Commands/OpenServerCommand.cpp.o
 
-ExpressionCommand.i: ExpressionCommand.cpp.i
+Commands/OpenServerCommand.i: Commands/OpenServerCommand.cpp.i
 
-.PHONY : ExpressionCommand.i
+.PHONY : Commands/OpenServerCommand.i
 
 # target to preprocess a source file
-ExpressionCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.i
-.PHONY : ExpressionCommand.cpp.i
+Commands/OpenServerCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/OpenServerCommand.cpp.i
+.PHONY : Commands/OpenServerCommand.cpp.i
 
-ExpressionCommand.s: ExpressionCommand.cpp.s
+Commands/OpenServerCommand.s: Commands/OpenServerCommand.cpp.s
 
-.PHONY : ExpressionCommand.s
+.PHONY : Commands/OpenServerCommand.s
 
 # target to generate assembly for a file
-ExpressionCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/ExpressionCommand.cpp.s
-.PHONY : ExpressionCommand.cpp.s
+Commands/OpenServerCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/OpenServerCommand.cpp.s
+.PHONY : Commands/OpenServerCommand.cpp.s
 
-IfCommand.o: IfCommand.cpp.o
+Commands/PrintCommand.o: Commands/PrintCommand.cpp.o
 
-.PHONY : IfCommand.o
+.PHONY : Commands/PrintCommand.o
 
 # target to build an object file
-IfCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/IfCommand.cpp.o
-.PHONY : IfCommand.cpp.o
+Commands/PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/PrintCommand.cpp.o
+.PHONY : Commands/PrintCommand.cpp.o
 
-IfCommand.i: IfCommand.cpp.i
+Commands/PrintCommand.i: Commands/PrintCommand.cpp.i
 
-.PHONY : IfCommand.i
+.PHONY : Commands/PrintCommand.i
 
 # target to preprocess a source file
-IfCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/IfCommand.cpp.i
-.PHONY : IfCommand.cpp.i
+Commands/PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/PrintCommand.cpp.i
+.PHONY : Commands/PrintCommand.cpp.i
 
-IfCommand.s: IfCommand.cpp.s
+Commands/PrintCommand.s: Commands/PrintCommand.cpp.s
 
-.PHONY : IfCommand.s
+.PHONY : Commands/PrintCommand.s
 
 # target to generate assembly for a file
-IfCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/IfCommand.cpp.s
-.PHONY : IfCommand.cpp.s
+Commands/PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/PrintCommand.cpp.s
+.PHONY : Commands/PrintCommand.cpp.s
 
-Lexer.o: Lexer.cpp.o
+Commands/SleepCommand.o: Commands/SleepCommand.cpp.o
 
-.PHONY : Lexer.o
+.PHONY : Commands/SleepCommand.o
 
 # target to build an object file
-Lexer.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Lexer.cpp.o
-.PHONY : Lexer.cpp.o
+Commands/SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/SleepCommand.cpp.o
+.PHONY : Commands/SleepCommand.cpp.o
 
-Lexer.i: Lexer.cpp.i
+Commands/SleepCommand.i: Commands/SleepCommand.cpp.i
 
-.PHONY : Lexer.i
+.PHONY : Commands/SleepCommand.i
 
 # target to preprocess a source file
-Lexer.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Lexer.cpp.i
-.PHONY : Lexer.cpp.i
+Commands/SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/SleepCommand.cpp.i
+.PHONY : Commands/SleepCommand.cpp.i
 
-Lexer.s: Lexer.cpp.s
+Commands/SleepCommand.s: Commands/SleepCommand.cpp.s
 
-.PHONY : Lexer.s
+.PHONY : Commands/SleepCommand.s
 
 # target to generate assembly for a file
-Lexer.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Lexer.cpp.s
-.PHONY : Lexer.cpp.s
+Commands/SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Commands/SleepCommand.cpp.s
+.PHONY : Commands/SleepCommand.cpp.s
 
-LoopCommand.o: LoopCommand.cpp.o
+Expression/BinaryExpression.o: Expression/BinaryExpression.cpp.o
 
-.PHONY : LoopCommand.o
+.PHONY : Expression/BinaryExpression.o
 
 # target to build an object file
-LoopCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/LoopCommand.cpp.o
-.PHONY : LoopCommand.cpp.o
+Expression/BinaryExpression.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/BinaryExpression.cpp.o
+.PHONY : Expression/BinaryExpression.cpp.o
 
-LoopCommand.i: LoopCommand.cpp.i
+Expression/BinaryExpression.i: Expression/BinaryExpression.cpp.i
 
-.PHONY : LoopCommand.i
+.PHONY : Expression/BinaryExpression.i
 
 # target to preprocess a source file
-LoopCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/LoopCommand.cpp.i
-.PHONY : LoopCommand.cpp.i
+Expression/BinaryExpression.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/BinaryExpression.cpp.i
+.PHONY : Expression/BinaryExpression.cpp.i
 
-LoopCommand.s: LoopCommand.cpp.s
+Expression/BinaryExpression.s: Expression/BinaryExpression.cpp.s
 
-.PHONY : LoopCommand.s
+.PHONY : Expression/BinaryExpression.s
 
 # target to generate assembly for a file
-LoopCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/LoopCommand.cpp.s
-.PHONY : LoopCommand.cpp.s
+Expression/BinaryExpression.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/BinaryExpression.cpp.s
+.PHONY : Expression/BinaryExpression.cpp.s
 
-Minus.o: Minus.cpp.o
+Expression/Div.o: Expression/Div.cpp.o
 
-.PHONY : Minus.o
+.PHONY : Expression/Div.o
 
 # target to build an object file
-Minus.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.o
-.PHONY : Minus.cpp.o
+Expression/Div.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Div.cpp.o
+.PHONY : Expression/Div.cpp.o
 
-Minus.i: Minus.cpp.i
+Expression/Div.i: Expression/Div.cpp.i
 
-.PHONY : Minus.i
+.PHONY : Expression/Div.i
 
 # target to preprocess a source file
-Minus.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.i
-.PHONY : Minus.cpp.i
+Expression/Div.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Div.cpp.i
+.PHONY : Expression/Div.cpp.i
 
-Minus.s: Minus.cpp.s
+Expression/Div.s: Expression/Div.cpp.s
 
-.PHONY : Minus.s
+.PHONY : Expression/Div.s
 
 # target to generate assembly for a file
-Minus.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Minus.cpp.s
-.PHONY : Minus.cpp.s
+Expression/Div.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Div.cpp.s
+.PHONY : Expression/Div.cpp.s
 
-Mul.o: Mul.cpp.o
+Expression/Minus.o: Expression/Minus.cpp.o
 
-.PHONY : Mul.o
+.PHONY : Expression/Minus.o
 
 # target to build an object file
-Mul.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.o
-.PHONY : Mul.cpp.o
+Expression/Minus.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Minus.cpp.o
+.PHONY : Expression/Minus.cpp.o
 
-Mul.i: Mul.cpp.i
+Expression/Minus.i: Expression/Minus.cpp.i
 
-.PHONY : Mul.i
+.PHONY : Expression/Minus.i
 
 # target to preprocess a source file
-Mul.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.i
-.PHONY : Mul.cpp.i
+Expression/Minus.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Minus.cpp.i
+.PHONY : Expression/Minus.cpp.i
 
-Mul.s: Mul.cpp.s
+Expression/Minus.s: Expression/Minus.cpp.s
 
-.PHONY : Mul.s
+.PHONY : Expression/Minus.s
 
 # target to generate assembly for a file
-Mul.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Mul.cpp.s
-.PHONY : Mul.cpp.s
+Expression/Minus.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Minus.cpp.s
+.PHONY : Expression/Minus.cpp.s
 
-Number.o: Number.cpp.o
+Expression/Mul.o: Expression/Mul.cpp.o
 
-.PHONY : Number.o
+.PHONY : Expression/Mul.o
 
 # target to build an object file
-Number.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.o
-.PHONY : Number.cpp.o
+Expression/Mul.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Mul.cpp.o
+.PHONY : Expression/Mul.cpp.o
 
-Number.i: Number.cpp.i
+Expression/Mul.i: Expression/Mul.cpp.i
 
-.PHONY : Number.i
+.PHONY : Expression/Mul.i
 
 # target to preprocess a source file
-Number.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.i
-.PHONY : Number.cpp.i
+Expression/Mul.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Mul.cpp.i
+.PHONY : Expression/Mul.cpp.i
 
-Number.s: Number.cpp.s
+Expression/Mul.s: Expression/Mul.cpp.s
 
-.PHONY : Number.s
+.PHONY : Expression/Mul.s
 
 # target to generate assembly for a file
-Number.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Number.cpp.s
-.PHONY : Number.cpp.s
+Expression/Mul.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Mul.cpp.s
+.PHONY : Expression/Mul.cpp.s
 
-OpenServerCommand.o: OpenServerCommand.cpp.o
+Expression/Number.o: Expression/Number.cpp.o
 
-.PHONY : OpenServerCommand.o
+.PHONY : Expression/Number.o
 
 # target to build an object file
-OpenServerCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/OpenServerCommand.cpp.o
-.PHONY : OpenServerCommand.cpp.o
+Expression/Number.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Number.cpp.o
+.PHONY : Expression/Number.cpp.o
 
-OpenServerCommand.i: OpenServerCommand.cpp.i
+Expression/Number.i: Expression/Number.cpp.i
 
-.PHONY : OpenServerCommand.i
+.PHONY : Expression/Number.i
 
 # target to preprocess a source file
-OpenServerCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/OpenServerCommand.cpp.i
-.PHONY : OpenServerCommand.cpp.i
+Expression/Number.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Number.cpp.i
+.PHONY : Expression/Number.cpp.i
 
-OpenServerCommand.s: OpenServerCommand.cpp.s
+Expression/Number.s: Expression/Number.cpp.s
 
-.PHONY : OpenServerCommand.s
+.PHONY : Expression/Number.s
 
 # target to generate assembly for a file
-OpenServerCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/OpenServerCommand.cpp.s
-.PHONY : OpenServerCommand.cpp.s
+Expression/Number.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Number.cpp.s
+.PHONY : Expression/Number.cpp.s
 
-Parser.o: Parser.cpp.o
+Expression/Plus.o: Expression/Plus.cpp.o
 
-.PHONY : Parser.o
+.PHONY : Expression/Plus.o
 
 # target to build an object file
-Parser.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Parser.cpp.o
-.PHONY : Parser.cpp.o
+Expression/Plus.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Plus.cpp.o
+.PHONY : Expression/Plus.cpp.o
 
-Parser.i: Parser.cpp.i
+Expression/Plus.i: Expression/Plus.cpp.i
 
-.PHONY : Parser.i
+.PHONY : Expression/Plus.i
 
 # target to preprocess a source file
-Parser.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Parser.cpp.i
-.PHONY : Parser.cpp.i
+Expression/Plus.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Plus.cpp.i
+.PHONY : Expression/Plus.cpp.i
 
-Parser.s: Parser.cpp.s
+Expression/Plus.s: Expression/Plus.cpp.s
 
-.PHONY : Parser.s
+.PHONY : Expression/Plus.s
 
 # target to generate assembly for a file
-Parser.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Parser.cpp.s
-.PHONY : Parser.cpp.s
+Expression/Plus.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Plus.cpp.s
+.PHONY : Expression/Plus.cpp.s
 
-Plus.o: Plus.cpp.o
+Expression/Shuntingyard.o: Expression/Shuntingyard.cpp.o
 
-.PHONY : Plus.o
+.PHONY : Expression/Shuntingyard.o
 
 # target to build an object file
-Plus.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.o
-.PHONY : Plus.cpp.o
+Expression/Shuntingyard.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Shuntingyard.cpp.o
+.PHONY : Expression/Shuntingyard.cpp.o
 
-Plus.i: Plus.cpp.i
+Expression/Shuntingyard.i: Expression/Shuntingyard.cpp.i
 
-.PHONY : Plus.i
+.PHONY : Expression/Shuntingyard.i
 
 # target to preprocess a source file
-Plus.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.i
-.PHONY : Plus.cpp.i
+Expression/Shuntingyard.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Shuntingyard.cpp.i
+.PHONY : Expression/Shuntingyard.cpp.i
 
-Plus.s: Plus.cpp.s
+Expression/Shuntingyard.s: Expression/Shuntingyard.cpp.s
 
-.PHONY : Plus.s
+.PHONY : Expression/Shuntingyard.s
 
 # target to generate assembly for a file
-Plus.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Plus.cpp.s
-.PHONY : Plus.cpp.s
+Expression/Shuntingyard.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Expression/Shuntingyard.cpp.s
+.PHONY : Expression/Shuntingyard.cpp.s
 
-PrintCommand.o: PrintCommand.cpp.o
+Interpeter/Lexer.o: Interpeter/Lexer.cpp.o
 
-.PHONY : PrintCommand.o
+.PHONY : Interpeter/Lexer.o
 
 # target to build an object file
-PrintCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.o
-.PHONY : PrintCommand.cpp.o
+Interpeter/Lexer.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Lexer.cpp.o
+.PHONY : Interpeter/Lexer.cpp.o
 
-PrintCommand.i: PrintCommand.cpp.i
+Interpeter/Lexer.i: Interpeter/Lexer.cpp.i
 
-.PHONY : PrintCommand.i
+.PHONY : Interpeter/Lexer.i
 
 # target to preprocess a source file
-PrintCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.i
-.PHONY : PrintCommand.cpp.i
+Interpeter/Lexer.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Lexer.cpp.i
+.PHONY : Interpeter/Lexer.cpp.i
 
-PrintCommand.s: PrintCommand.cpp.s
+Interpeter/Lexer.s: Interpeter/Lexer.cpp.s
 
-.PHONY : PrintCommand.s
+.PHONY : Interpeter/Lexer.s
 
 # target to generate assembly for a file
-PrintCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/PrintCommand.cpp.s
-.PHONY : PrintCommand.cpp.s
+Interpeter/Lexer.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Lexer.cpp.s
+.PHONY : Interpeter/Lexer.cpp.s
 
-Shuntingyard.o: Shuntingyard.cpp.o
+Interpeter/Parser.o: Interpeter/Parser.cpp.o
 
-.PHONY : Shuntingyard.o
+.PHONY : Interpeter/Parser.o
 
 # target to build an object file
-Shuntingyard.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.o
-.PHONY : Shuntingyard.cpp.o
+Interpeter/Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Parser.cpp.o
+.PHONY : Interpeter/Parser.cpp.o
 
-Shuntingyard.i: Shuntingyard.cpp.i
+Interpeter/Parser.i: Interpeter/Parser.cpp.i
 
-.PHONY : Shuntingyard.i
+.PHONY : Interpeter/Parser.i
 
 # target to preprocess a source file
-Shuntingyard.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.i
-.PHONY : Shuntingyard.cpp.i
+Interpeter/Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Parser.cpp.i
+.PHONY : Interpeter/Parser.cpp.i
 
-Shuntingyard.s: Shuntingyard.cpp.s
+Interpeter/Parser.s: Interpeter/Parser.cpp.s
 
-.PHONY : Shuntingyard.s
+.PHONY : Interpeter/Parser.s
 
 # target to generate assembly for a file
-Shuntingyard.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Shuntingyard.cpp.s
-.PHONY : Shuntingyard.cpp.s
+Interpeter/Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Interpeter/Parser.cpp.s
+.PHONY : Interpeter/Parser.cpp.s
 
-SleepCommand.o: SleepCommand.cpp.o
+Server_and_Client/DataReaderServer.o: Server_and_Client/DataReaderServer.cpp.o
 
-.PHONY : SleepCommand.o
+.PHONY : Server_and_Client/DataReaderServer.o
 
 # target to build an object file
-SleepCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.o
-.PHONY : SleepCommand.cpp.o
+Server_and_Client/DataReaderServer.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataReaderServer.cpp.o
+.PHONY : Server_and_Client/DataReaderServer.cpp.o
 
-SleepCommand.i: SleepCommand.cpp.i
+Server_and_Client/DataReaderServer.i: Server_and_Client/DataReaderServer.cpp.i
 
-.PHONY : SleepCommand.i
+.PHONY : Server_and_Client/DataReaderServer.i
 
 # target to preprocess a source file
-SleepCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.i
-.PHONY : SleepCommand.cpp.i
+Server_and_Client/DataReaderServer.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataReaderServer.cpp.i
+.PHONY : Server_and_Client/DataReaderServer.cpp.i
 
-SleepCommand.s: SleepCommand.cpp.s
+Server_and_Client/DataReaderServer.s: Server_and_Client/DataReaderServer.cpp.s
 
-.PHONY : SleepCommand.s
+.PHONY : Server_and_Client/DataReaderServer.s
 
 # target to generate assembly for a file
-SleepCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/SleepCommand.cpp.s
-.PHONY : SleepCommand.cpp.s
+Server_and_Client/DataReaderServer.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataReaderServer.cpp.s
+.PHONY : Server_and_Client/DataReaderServer.cpp.s
+
+Server_and_Client/DataWriterClient.o: Server_and_Client/DataWriterClient.cpp.o
+
+.PHONY : Server_and_Client/DataWriterClient.o
+
+# target to build an object file
+Server_and_Client/DataWriterClient.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataWriterClient.cpp.o
+.PHONY : Server_and_Client/DataWriterClient.cpp.o
+
+Server_and_Client/DataWriterClient.i: Server_and_Client/DataWriterClient.cpp.i
+
+.PHONY : Server_and_Client/DataWriterClient.i
+
+# target to preprocess a source file
+Server_and_Client/DataWriterClient.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataWriterClient.cpp.i
+.PHONY : Server_and_Client/DataWriterClient.cpp.i
+
+Server_and_Client/DataWriterClient.s: Server_and_Client/DataWriterClient.cpp.s
+
+.PHONY : Server_and_Client/DataWriterClient.s
+
+# target to generate assembly for a file
+Server_and_Client/DataWriterClient.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Server_and_Client/DataWriterClient.cpp.s
+.PHONY : Server_and_Client/DataWriterClient.cpp.s
 
 main.o: main.cpp.o
 
@@ -726,69 +726,69 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... project"
-	@echo "... AssignCommand.o"
-	@echo "... AssignCommand.i"
-	@echo "... AssignCommand.s"
-	@echo "... BinaryExpression.o"
-	@echo "... BinaryExpression.i"
-	@echo "... BinaryExpression.s"
-	@echo "... ConditionParser.o"
-	@echo "... ConditionParser.i"
-	@echo "... ConditionParser.s"
-	@echo "... ConnectCommand.o"
-	@echo "... ConnectCommand.i"
-	@echo "... ConnectCommand.s"
-	@echo "... DataReaderServer.o"
-	@echo "... DataReaderServer.i"
-	@echo "... DataReaderServer.s"
-	@echo "... DataWriterClient.o"
-	@echo "... DataWriterClient.i"
-	@echo "... DataWriterClient.s"
-	@echo "... DefineVarCommand.o"
-	@echo "... DefineVarCommand.i"
-	@echo "... DefineVarCommand.s"
-	@echo "... Div.o"
-	@echo "... Div.i"
-	@echo "... Div.s"
-	@echo "... ExpressionCommand.o"
-	@echo "... ExpressionCommand.i"
-	@echo "... ExpressionCommand.s"
-	@echo "... IfCommand.o"
-	@echo "... IfCommand.i"
-	@echo "... IfCommand.s"
-	@echo "... Lexer.o"
-	@echo "... Lexer.i"
-	@echo "... Lexer.s"
-	@echo "... LoopCommand.o"
-	@echo "... LoopCommand.i"
-	@echo "... LoopCommand.s"
-	@echo "... Minus.o"
-	@echo "... Minus.i"
-	@echo "... Minus.s"
-	@echo "... Mul.o"
-	@echo "... Mul.i"
-	@echo "... Mul.s"
-	@echo "... Number.o"
-	@echo "... Number.i"
-	@echo "... Number.s"
-	@echo "... OpenServerCommand.o"
-	@echo "... OpenServerCommand.i"
-	@echo "... OpenServerCommand.s"
-	@echo "... Parser.o"
-	@echo "... Parser.i"
-	@echo "... Parser.s"
-	@echo "... Plus.o"
-	@echo "... Plus.i"
-	@echo "... Plus.s"
-	@echo "... PrintCommand.o"
-	@echo "... PrintCommand.i"
-	@echo "... PrintCommand.s"
-	@echo "... Shuntingyard.o"
-	@echo "... Shuntingyard.i"
-	@echo "... Shuntingyard.s"
-	@echo "... SleepCommand.o"
-	@echo "... SleepCommand.i"
-	@echo "... SleepCommand.s"
+	@echo "... Commands/AssignCommand.o"
+	@echo "... Commands/AssignCommand.i"
+	@echo "... Commands/AssignCommand.s"
+	@echo "... Commands/ConditionParser.o"
+	@echo "... Commands/ConditionParser.i"
+	@echo "... Commands/ConditionParser.s"
+	@echo "... Commands/ConnectCommand.o"
+	@echo "... Commands/ConnectCommand.i"
+	@echo "... Commands/ConnectCommand.s"
+	@echo "... Commands/DefineVarCommand.o"
+	@echo "... Commands/DefineVarCommand.i"
+	@echo "... Commands/DefineVarCommand.s"
+	@echo "... Commands/ExpressionCommand.o"
+	@echo "... Commands/ExpressionCommand.i"
+	@echo "... Commands/ExpressionCommand.s"
+	@echo "... Commands/IfCommand.o"
+	@echo "... Commands/IfCommand.i"
+	@echo "... Commands/IfCommand.s"
+	@echo "... Commands/LoopCommand.o"
+	@echo "... Commands/LoopCommand.i"
+	@echo "... Commands/LoopCommand.s"
+	@echo "... Commands/OpenServerCommand.o"
+	@echo "... Commands/OpenServerCommand.i"
+	@echo "... Commands/OpenServerCommand.s"
+	@echo "... Commands/PrintCommand.o"
+	@echo "... Commands/PrintCommand.i"
+	@echo "... Commands/PrintCommand.s"
+	@echo "... Commands/SleepCommand.o"
+	@echo "... Commands/SleepCommand.i"
+	@echo "... Commands/SleepCommand.s"
+	@echo "... Expression/BinaryExpression.o"
+	@echo "... Expression/BinaryExpression.i"
+	@echo "... Expression/BinaryExpression.s"
+	@echo "... Expression/Div.o"
+	@echo "... Expression/Div.i"
+	@echo "... Expression/Div.s"
+	@echo "... Expression/Minus.o"
+	@echo "... Expression/Minus.i"
+	@echo "... Expression/Minus.s"
+	@echo "... Expression/Mul.o"
+	@echo "... Expression/Mul.i"
+	@echo "... Expression/Mul.s"
+	@echo "... Expression/Number.o"
+	@echo "... Expression/Number.i"
+	@echo "... Expression/Number.s"
+	@echo "... Expression/Plus.o"
+	@echo "... Expression/Plus.i"
+	@echo "... Expression/Plus.s"
+	@echo "... Expression/Shuntingyard.o"
+	@echo "... Expression/Shuntingyard.i"
+	@echo "... Expression/Shuntingyard.s"
+	@echo "... Interpeter/Lexer.o"
+	@echo "... Interpeter/Lexer.i"
+	@echo "... Interpeter/Lexer.s"
+	@echo "... Interpeter/Parser.o"
+	@echo "... Interpeter/Parser.i"
+	@echo "... Interpeter/Parser.s"
+	@echo "... Server_and_Client/DataReaderServer.o"
+	@echo "... Server_and_Client/DataReaderServer.i"
+	@echo "... Server_and_Client/DataReaderServer.s"
+	@echo "... Server_and_Client/DataWriterClient.o"
+	@echo "... Server_and_Client/DataWriterClient.i"
+	@echo "... Server_and_Client/DataWriterClient.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

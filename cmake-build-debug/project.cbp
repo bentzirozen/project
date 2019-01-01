@@ -84,145 +84,145 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bentzirozen/Desktop/project/AssignCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/AssignCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/AssignCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/AssignCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/Command.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/BinaryExpression.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ConditionParser.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/BindTable.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ConditionParser.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Command.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ConnectCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ConditionParser.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ConnectCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ConditionParser.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/DefineVarCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ConnectCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/DefineVarCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ConnectCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ExpressionCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DataReaderServer.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/ExpressionCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DataReaderServer.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/IfCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DataWriterClient.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/IfCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DataWriterClient.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/LoopCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DefineVarCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/LoopCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/DefineVarCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/OpenServerCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Div.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/OpenServerCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Div.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/PrintCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Expression.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/PrintCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ExpressionCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/SleepCommand.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/ExpressionCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Commands/SleepCommand.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/IfCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/BinaryExpression.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/IfCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/BinaryExpression.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Lexer.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Div.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Lexer.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Div.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/LoopCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Expression.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/LoopCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Minus.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Minus.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Minus.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Minus.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Mul.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Mul.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Mul.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Mul.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Number.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Number.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Number.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Number.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Plus.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/OpenServerCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Plus.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/OpenServerCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Shuntingyard.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Parser.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Expression/Shuntingyard.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Parser.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Interpeter/Lexer.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/PathsTable.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Interpeter/Lexer.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Plus.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Interpeter/Parser.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Plus.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Interpeter/Parser.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/PrintCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Server and Client/DataReaderServer.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/PrintCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Server and Client/DataReaderServer.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Shuntingyard.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Server and Client/DataWriterClient.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/Shuntingyard.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Server and Client/DataWriterClient.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/SleepCommand.cpp">
+		<Unit filename="/home/bentzirozen/Desktop/project/Tables/BindTable.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/SleepCommand.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Tables/PathsTable.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/home/bentzirozen/Desktop/project/SymbolTable.h">
+		<Unit filename="/home/bentzirozen/Desktop/project/Tables/SymbolTable.h">
 			<Option target="project"/>
 		</Unit>
 		<Unit filename="/home/bentzirozen/Desktop/project/main.cpp">
