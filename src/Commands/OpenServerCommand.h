@@ -9,11 +9,10 @@
 #include <string>
 #include "Command.h"
 #include "map"
-#include "../Server and Client/DataReaderServer.h"
+#include "../Server_and_Client/DataReaderServer.h"
 /**
  * A class which opens a thread which opens a server that listens to a specific given port
  */
-// TODO: finish class
 class OpenServerCommand : public Command {
     int &index;
 

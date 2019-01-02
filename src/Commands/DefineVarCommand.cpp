@@ -8,7 +8,7 @@
 #include "../Tables/SymbolTable.h"
 #include "../Tables/BindTable.h"
 #include "../Tables/PathsTable.h"
-#include "../Server and Client/DataReaderServer.h"
+#include "../Server_and_Client/DataReaderServer.h"
 #include "../Expression/Shuntingyard.h"
 
 void DefineVarCommand::execute(const vector<string> &cur_lex) {

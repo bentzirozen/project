@@ -3,7 +3,7 @@
 //
 #include "ConnectCommand.h"
 #include "thread"
-#include "../Server and Client/DataReaderServer.h"
+#include "../Server_and_Client/DataReaderServer.h"
 #include "../Expression/Shuntingyard.h"
 
 void ConnectCommand::execute(const vector<string> &cur_lex) {

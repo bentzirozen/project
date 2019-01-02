@@ -15,8 +15,8 @@
 #include <string.h>
 #include <sys/socket.h>
 #include "thread"
-#include "../Server and Client/DataReaderServer.h"
-#include "../Server and Client/DataWriterClient.h"
+#include "../Server_and_Client/DataReaderServer.h"
+#include "../Server_and_Client/DataWriterClient.h"
 
 class ConnectCommand:public Command{
     int &index;

@@ -52,7 +52,7 @@ void DataReaderServer::updateSymbolTable() {
     globalMutex.unlock();
 }
 
-void DataReaderServer::openServer(int port, int hz) {
+void DataReaderServer::openServer(int port, int freq) {
     int sockfd, newsockfd, clilen;
     struct sockaddr_in serv_addr, cli_addr;
     int n;
@@ -103,6 +103,7 @@ void DataReaderServer::openServer(int port, int hz) {
             perror("ERROR writing to socket");
             exit(1);
         }
+        this_thread::sleep_for(std::chrono::milliseconds(freq/1000));
         open = true;
         values = "";
         char *pt = buffer;

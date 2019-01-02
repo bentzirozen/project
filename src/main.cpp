@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
     vector<string> cur_lex = lexer.split_from_file(argv[1]);
     Parser parser(cur_lex, index);
     parser.run(cur_lex);
+    //about threads
     close(DataReaderServer::getSocketFD());
     close(DataWriterClient::getSocketFD());
     return 0;

@@ -3,7 +3,7 @@
 //
 
 #include "AssignCommand.h"
-#include "../Server and Client/DataReaderServer.h"
+#include "../Server_and_Client/DataReaderServer.h"
 
 AssignCommand::AssignCommand( int &index) : index(index){}
 
