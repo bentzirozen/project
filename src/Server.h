@@ -4,8 +4,15 @@
 
 #ifndef PROJECT_SERVER_H
 #define PROJECT_SERVER_H
-
+#define BUFFER_SIZE 1024
 #include "ClientHandler.h"
+#include <iostream>
+#include <stdlib.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <string.h>
+#include <sys/socket.h>
 //creating new namespace
 namespace server_side{
 
@@ -14,7 +21,7 @@ namespace server_side{
     public:
 
         virtual void open(int port,ClientHandler* clientHandler)=0;
-        virtual void close()=0;
+        virtual void closeServer()=0;
     };
 }
 

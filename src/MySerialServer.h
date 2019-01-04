@@ -9,10 +9,13 @@
 using namespace server_side;
 
 class MySerialServer:public Server{
+    ClientHandler* clientHandler;
+    int sockFd;
+    bool success;
 public:
 
     void open(int port,ClientHandler* clientHandler);
-    void close();
+    void closeServer();
 };
 
 
