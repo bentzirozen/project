@@ -13,6 +13,7 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <sys/socket.h>
+using namespace std;
 //creating new namespace
 namespace server_side{
 
@@ -22,6 +23,7 @@ namespace server_side{
 
         virtual void open(int port,ClientHandler* clientHandler)=0;
         virtual void closeServer()=0;
+        virtual void start() = 0;
     };
 }
 

@@ -1,6 +1,7 @@
 //
 // Created by bentzirozen on 1/2/19.
 //
+#include <thread>
 #include "MySerialServer.h"
 
 //open for serial server
@@ -30,11 +31,31 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
         perror("ERROR on binding");
         exit(1);
     }
-    this->success = true;
+    this->is_open = true;
 
+
+}
+void MySerialServer::start() {
+    thread t(&MySerialServer::connection,this);
+    while (!MySerialServer::isOpen()){
+        //wait..
+    }
+    //thread in backround while all other things occur
+    t.detach();
+}
+
+void MySerialServer::closeServer() {
+    is_open = false;
+    close(sockFd);
+}
+
+void MySerialServer::connection() {
+    int sockfd, newsockfd, clilen;
+    struct sockaddr_in serv_addr, cli_addr;
+    int n;
     /* Now start listening for the clients, here process will
-       * go in sleep mode and will wait for the incoming connection
-    */
+      * go in sleep mode and will wait for the incoming connection
+   */
     //serial server , one by one
     listen(sockFd, 1);
     clilen = sizeof(cli_addr);
@@ -50,6 +71,9 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
     std::string values;
     std::string leftovers;
     bzero(buffer, BUFFER_SIZE);
+    /*
+     *TODO: need to add timeout !!!!!!!!1
+     */
     while (true) {
         // to know where to put data:
         int start = leftovers.length() ? leftovers.length() - 1 : 0;
@@ -62,7 +86,3 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
     }
 }
 
-void MySerialServer::closeServer() {
-    this->success = false;
-    close(this->sockFd);
-}

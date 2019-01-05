@@ -10,12 +10,17 @@ using namespace server_side;
 
 class MySerialServer:public Server{
     ClientHandler* clientHandler;
-    int sockFd;
-    bool success;
+    //stateful
+    static int sockFd;
+    static bool is_open;
 public:
-
+    static void connection();
     void open(int port,ClientHandler* clientHandler);
     void closeServer();
+    void start();
+    inline static bool isOpen(){
+        return is_open;
+    }
 };
 
 
