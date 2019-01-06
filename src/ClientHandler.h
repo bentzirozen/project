@@ -14,7 +14,9 @@ using namespace std;
 class ClientHandler{
 public:
 
-    virtual void handleClient(istream inputStream,ostream outputStream)=0;
+    virtual void handleClient(int sockFd)=0;
+    virtual ClientHandler& operator<<(string& str)=0;
+    virtual ClientHandler& operator>>(string& str)=0;
 };
 
 #endif //PROJECT_CLIENTHANDLER_H

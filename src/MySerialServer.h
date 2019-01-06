@@ -9,7 +9,7 @@
 using namespace server_side;
 
 class MySerialServer:public Server{
-    ClientHandler* clientHandler;
+    static ClientHandler* clientHandler;
     //stateful
     static int sockFd;
     static bool is_open;

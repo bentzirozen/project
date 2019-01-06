@@ -10,10 +10,12 @@
 #include "CacheManager.h"
 
 class MyTestClientHandler: public ClientHandler{
-    Solver* solver;
+    Solver<class P,class S>* solver;
     CacheManager* cacheManager;
 public:
-    void handleClient(istream inputStream,ostream outputStream);
+    void handleClient(int sockFd);
+    ClientHandler& operator<<(string& str);
+    ClientHandler& operator>>(string& str);
 };
 
 #endif //PROJECT_MYTESTCLIENTHANDLER_H

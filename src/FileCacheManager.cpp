@@ -4,16 +4,17 @@
 
 #include "FileCacheManager.h"
 
+template <class Problem,class Solution>
 
-bool FileCacheManager::solution_exist(Problem p) {
+bool FileCacheManager<Problem,Solution>::solution_exist(Problem p) {
     return false;
 }
-
-Solution FileCacheManager::get_solution(Problem p) {
+template <class Problem,class Solution>
+Solution FileCacheManager<Problem,Solution>::get_solution(Problem p) {
     return Solution();
 }
-
-void FileCacheManager::save_solution(Problem p) {
+template <class Problem,class Solution>
+void FileCacheManager<Problem,Solution>::save_solution(Problem p) {
 
 }
 

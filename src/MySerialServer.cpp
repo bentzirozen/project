@@ -2,14 +2,13 @@
 // Created by bentzirozen on 1/2/19.
 //
 #include <thread>
+#include <fstream>
 #include "MySerialServer.h"
 
 //open for serial server
 void MySerialServer::open(int port, ClientHandler *clientHandler) {
-    this->clientHandler = clientHandler;
-    int  newsockfd, clilen;
-    struct sockaddr_in serv_addr, cli_addr;
-    int n;
+    clientHandler = clientHandler;
+    struct sockaddr_in serv_addr;
 
     /* First call to socket() function */
     sockFd = socket(AF_INET, SOCK_STREAM, 0);
@@ -50,39 +49,34 @@ void MySerialServer::closeServer() {
 }
 
 void MySerialServer::connection() {
-    int sockfd, newsockfd, clilen;
+    int  newsockfd, clilen;
     struct sockaddr_in serv_addr, cli_addr;
-    int n;
+    int timeout = 15;
+    fd_set fd;
+    timeval tv;
     /* Now start listening for the clients, here process will
       * go in sleep mode and will wait for the incoming connection
    */
     //serial server , one by one
     listen(sockFd, 1);
     clilen = sizeof(cli_addr);
-
-    /* Accept actual connection from the client */
-    newsockfd = accept(sockFd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
-    sockFd = newsockfd;
-    if (newsockfd < 0) {
-        perror("ERROR on accept");
-        exit(1);
-    }
-    char buffer[BUFFER_SIZE];
-    std::string values;
-    std::string leftovers;
-    bzero(buffer, BUFFER_SIZE);
-    /*
-     *TODO: need to add timeout !!!!!!!!1
-     */
-    while (true) {
-        // to know where to put data:
-        int start = leftovers.length() ? leftovers.length() - 1 : 0;
-        while (read(newsockfd, buffer + start, BUFFER_SIZE - start) < 0) {
-            perror("ERROR writing to socket");
+    //timeout
+    FD_ZERO(&fd);
+    FD_SET(sockFd, &fd);
+    tv.tv_sec = timeout;
+    tv.tv_usec = 0;
+    while (is_open && select(0, &fd, nullptr, nullptr, &tv)) {
+        /* Accept actual connection from the client */
+        newsockfd = accept(sockFd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
+        sockFd = newsockfd;
+        if (newsockfd < 0) {
+            perror("ERROR on accept");
             exit(1);
         }
-
-
+        clientHandler->handleClient(sockFd);
     }
+
+
 }
+
 

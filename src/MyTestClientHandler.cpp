@@ -5,6 +5,6 @@
 #include "MyTestClientHandler.h"
 
 
-void MyTestClientHandler::handleClient(istream inputStream, ostream outputStream) {
+void MyTestClientHandler::handleClient(int sockFd) {
 
 }
