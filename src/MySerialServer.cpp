@@ -4,9 +4,12 @@
 #include <thread>
 #include <fstream>
 #include "MySerialServer.h"
-
+int MySerialServer::sockFd=0;
+bool MySerialServer::is_open=false;
+ClientHandler* MySerialServer::clientHandler= nullptr;
 //open for serial server
 void MySerialServer::open(int port, ClientHandler *clientHandler) {
+    start();
     clientHandler = clientHandler;
     struct sockaddr_in serv_addr;
 
@@ -33,9 +36,10 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
     this->is_open = true;
 
 
+
 }
 void MySerialServer::start() {
-    thread t(&MySerialServer::connection,this);
+    thread t(&MySerialServer::connection);
     while (!MySerialServer::isOpen()){
         //wait..
     }

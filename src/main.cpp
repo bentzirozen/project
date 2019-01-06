@@ -10,23 +10,24 @@
 #include "Interpeter/Parser.h"
 #include "Commands/OpenServerCommand.h"
 #include <stack>
+#include "CacheManager.h"
+#include "FileCacheManager.h"
+#include "StringReverser.h"
+#include "MySerialServer.h"
+#include "ClientHandler.h"
+#include "MyTestClientHandler.h"
+
+#include <iostream>
 using namespace std;
 
-/**
- *  all the tables is singeltons and dont have a cpp file for it and they all statics we initialize them in the main
- */
 BindTable *BindTable::s_instance = 0;
 SymbolTable *SymbolTable::s_instance = 0;
 PathsTable *PathsTable::s_instance = 0;
 
+
 int main(int argc, char **argv) {
-    int index =0;
-    Lexer lexer;
-    vector<string> cur_lex = lexer.split_from_file(argv[1]);
-    Parser parser(cur_lex, index);
-    parser.run(cur_lex);
-    //about threads
-    close(DataReaderServer::getSocketFD());
-    close(DataWriterClient::getSocketFD());
+    MySerialServer tester;
+    ClientHandler *clientHandler= new MyTestClientHandler<string,string>;
+    tester.open(5400,clientHandler);
     return 0;
 }

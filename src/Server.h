@@ -7,12 +7,6 @@
 #define BUFFER_SIZE 1024
 #include "ClientHandler.h"
 #include <iostream>
-#include <stdlib.h>
-#include <netdb.h>
-#include <unistd.h>
-#include <netinet/in.h>
-#include <string.h>
-#include <sys/socket.h>
 using namespace std;
 //creating new namespace
 namespace server_side{
