@@ -4,7 +4,7 @@
 
 #include "MyTestClientHandler.h"
 
-
-void MyTestClientHandler::handleClient(int sockFd) {
+template <class Problem,class Solution>
+void MyTestClientHandler<Problem,Solution>::handleClient(int sockFd) {
 
 }

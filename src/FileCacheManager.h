@@ -10,7 +10,7 @@
 #include <map>
 using namespace std;
 template<class Problem,class Solution>
-class FileCacheManager:public CacheManager{
+class FileCacheManager:public CacheManager<Problem,Solution>{
     map<Problem,Solution>sol_list;
 public:
     bool solution_exist(Problem p);

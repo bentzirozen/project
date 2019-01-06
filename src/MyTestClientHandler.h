@@ -8,10 +8,10 @@
 #include "ClientHandler.h"
 #include "Solver.h"
 #include "CacheManager.h"
-
+template <class Problem,class Solution>
 class MyTestClientHandler: public ClientHandler{
-    Solver<class P,class S>* solver;
-    CacheManager* cacheManager;
+    Solver<Problem,Solution>* solver;
+    CacheManager<Problem,Solution>* cacheManager;
 public:
     void handleClient(int sockFd);
     ClientHandler& operator<<(string& str);

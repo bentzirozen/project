@@ -5,13 +5,13 @@
 #ifndef PROJECT_CACHEMANAGER_H
 #define PROJECT_CACHEMANAGER_H
 
-#include "Solution.h"
-#include "Problem.h"
 
 //cache manager interface
 
-
+template <class Problem,class Solution>
 class CacheManager{
+protected:
+
 public:
 
     virtual bool solution_exist(Problem p)=0;
