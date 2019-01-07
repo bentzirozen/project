@@ -9,10 +9,29 @@ bool MySerialServer::is_open=false;
 ClientHandler* MySerialServer::clientHandler= nullptr;
 //open for serial server
 void MySerialServer::open(int port, ClientHandler *clientHandler) {
-    start();
     clientHandler = clientHandler;
-    struct sockaddr_in serv_addr;
+    thread t(&MySerialServer::connection,port);
+    while (!MySerialServer::isOpen()){
+        //wait..
+    }
+    //thread in backround while all other things occur
+    t.detach();
 
+
+
+}
+
+void MySerialServer::closeServer() {
+    is_open = false;
+    close(sockFd);
+}
+
+void MySerialServer::connection(int port) {
+    int  newsockfd, clilen;
+    struct sockaddr_in serv_addr, cli_addr;
+    int timeout = 15;
+    fd_set fd;
+    timeval tv;
     /* First call to socket() function */
     sockFd = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -33,31 +52,7 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
         perror("ERROR on binding");
         exit(1);
     }
-    this->is_open = true;
 
-
-
-}
-void MySerialServer::start() {
-    thread t(&MySerialServer::connection);
-    while (!MySerialServer::isOpen()){
-        //wait..
-    }
-    //thread in backround while all other things occur
-    t.detach();
-}
-
-void MySerialServer::closeServer() {
-    is_open = false;
-    close(sockFd);
-}
-
-void MySerialServer::connection() {
-    int  newsockfd, clilen;
-    struct sockaddr_in serv_addr, cli_addr;
-    int timeout = 15;
-    fd_set fd;
-    timeval tv;
     /* Now start listening for the clients, here process will
       * go in sleep mode and will wait for the incoming connection
    */
@@ -77,6 +72,7 @@ void MySerialServer::connection() {
             perror("ERROR on accept");
             exit(1);
         }
+        is_open = true;
         clientHandler->handleClient(sockFd);
     }
 

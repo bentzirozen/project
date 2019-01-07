@@ -26,8 +26,9 @@ PathsTable *PathsTable::s_instance = 0;
 
 
 int main(int argc, char **argv) {
-    MySerialServer tester;
-    ClientHandler *clientHandler= new MyTestClientHandler<string,string>;
-    tester.open(5400,clientHandler);
+    CacheManager <string,string> *fileCacheManager= new FileCacheManager<string,string>();
+    cout<<fileCacheManager->isProblemExist("bye")<<endl;
+    fileCacheManager->saveSolution("hello","bye");
+    cout<<fileCacheManager->isProblemExist("hello")<<endl;;
     return 0;
 }

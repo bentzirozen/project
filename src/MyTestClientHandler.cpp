@@ -6,14 +6,11 @@
 
 template <class Problem,class Solution>
 void MyTestClientHandler<Problem,Solution>::handleClient(int sockFd) {
-    int clilen;
+    string solution;
     ssize_t n;
-    bool keepReading = true;
-
-
-    while(keepReading) {
+    while(true) {
         char buffer[BUFFER_SIZE];
-        // If connection is established then start communicating
+        // start comunicate
         bzero(buffer, BUFFER_SIZE);
         n = read(sockFd, buffer, BUFFER_SIZE);
 
@@ -25,25 +22,20 @@ void MyTestClientHandler<Problem,Solution>::handleClient(int sockFd) {
             perror("ERROR reading from socket");
             exit(1);
         }
-
+        //if solution dont exist , so solve it
         if(!this->cacheManager->solution_exist(buffer)){
-            string solution = this->solver->solve(buffer);
+            solution = this->solver->solve(buffer);
             this->cacheManager->save_solution(solution, buffer);
         }
-
-        this->writeTheSolution(sockFd,buffer);
+        //write the solution
+        solution = this->cacheManager->get_solution(buffer);
+        ssize_t n = write(sockFd, solution.c_str(), BUFFER_SIZE);
+        if (n < 0) {
+            perror("ERROR writing to socket");
+            exit(1);
+        }
     }
 }
 
-template<class Problem, class Solution>
-void MyTestClientHandler<Problem, Solution>::writeTheSolution(int id, const char* buffer) {
-    string solution = this->cacheManager->get_solution(buffer);
-    ssize_t n = write(id, solution.c_str(), BUFFER_SIZE);
-    if (n < 0) {
-        perror("ERROR writing to socket");
-        exit(1);
-    }
-
-}
 
 template class MyTestClientHandler<string,string>;

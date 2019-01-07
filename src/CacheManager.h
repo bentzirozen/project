@@ -4,9 +4,11 @@
 
 #ifndef PROJECT_CACHEMANAGER_H
 #define PROJECT_CACHEMANAGER_H
-
+#define SOL_TABLE "solutions.txt"
 #include <map>
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 //cache manager interface

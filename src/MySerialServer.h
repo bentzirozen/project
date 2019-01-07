@@ -14,10 +14,9 @@ class MySerialServer:public Server{
     static int sockFd;
     static bool is_open;
 public:
-    static void connection();
+    static void connection(int port);
     void open(int port,ClientHandler* clientHandler);
     void closeServer();
-    void start();
     inline static bool isOpen(){
         return is_open;
     }

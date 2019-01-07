@@ -11,20 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="remove problem and solution and make them templates">
+    <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="fix client hendler">
+      <change afterPath="$PROJECT_DIR$/src/check" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FileCacheManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileCacheManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MySerialServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MySerialServer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyTestClientHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTestClientHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyTestClientHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyTestClientHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Searcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searcher.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MySerialServer.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MySerialServer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solver.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringReverser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringReverser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringReverser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/StringReverser.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/src/cmake-build-debug/" />
@@ -59,10 +51,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="check" value="1" />
           <entry key="cmake" value="2" />
-          <entry key="cpp" value="307" />
+          <entry key="cpp" value="312" />
           <entry key="functional" value="5" />
-          <entry key="h" value="399" />
+          <entry key="h" value="404" />
           <entry key="makefile" value="2" />
           <entry key="mutex" value="1" />
           <entry key="new" value="1" />
@@ -78,24 +71,24 @@
           <entry key="CMakeCache.txt" value="1" />
           <entry key="CMakeLists.txt" value="11" />
           <entry key="Disassembly" value="66" />
-          <entry key="ObjectiveC" value="728" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="ObjectiveC" value="738" />
+          <entry key="PLAIN_TEXT" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="16792" />
-          <entry key="h" value="8223" />
+          <entry key="cpp" value="16828" />
+          <entry key="h" value="8244" />
           <entry key="mm" value="18" />
-          <entry key="txt" value="1440" />
+          <entry key="txt" value="1472" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="169" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="25028" />
-          <entry key="PLAIN_TEXT" value="1271" />
+          <entry key="ObjectiveC" value="25085" />
+          <entry key="PLAIN_TEXT" value="1303" />
         </counts>
       </usages-collector>
     </session>
@@ -103,9 +96,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MySerialServer.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#43#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/check">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="212">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
@@ -114,64 +128,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MySerialServer.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="-1068">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
-                <element signature="e#43#60#0" expanded="true" />
+                <element signature="e#46#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FileCacheManager.cpp">
+        <entry file="file://$PROJECT_DIR$/src/MySerialServer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="47" />
-              <folding>
-                <element signature="e#44#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyTestClientHandler.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-              <folding>
-                <element signature="e#87#117#0" expanded="true" />
-                <element signature="e#920#951#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyTestClientHandler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding>
-                <element signature="e#121#147#0" expanded="true" />
-                <element signature="e#203#233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClientHandler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding>
-                <element signature="e#109#127#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -179,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="255">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="e#119#145#0" expanded="true" />
               </folding>
@@ -198,22 +171,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Solver.h">
+        <entry file="file://$PROJECT_DIR$/src/State.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="225">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="e#101#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StringReverser.h">
+        <entry file="file://$PROJECT_DIR$/src/State.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
-                <element signature="e#111#130#0" expanded="true" />
+                <element signature="e#71#80#0" expanded="true" />
+                <element signature="e#144#153#0" expanded="true" />
+                <element signature="e#226#235#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Solver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -285,7 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Lexer.cpp" />
         <option value="$PROJECT_DIR$/AssignCommand.cpp" />
         <option value="$PROJECT_DIR$/Command.h" />
         <option value="$PROJECT_DIR$/ExpressionCommand.h" />
@@ -321,7 +307,6 @@
         <option value="$PROJECT_DIR$/src/State.h" />
         <option value="$PROJECT_DIR$/src/State.cpp" />
         <option value="$PROJECT_DIR$/src/Searchable.h" />
-        <option value="$PROJECT_DIR$/src/MySerialServer.h" />
         <option value="$PROJECT_DIR$/src/FileCacheManager.h" />
         <option value="$PROJECT_DIR$/src/CacheManager.h" />
         <option value="$PROJECT_DIR$/src/Searcher.h" />
@@ -329,13 +314,15 @@
         <option value="$PROJECT_DIR$/src/FileCacheManager.cpp" />
         <option value="$PROJECT_DIR$/src/StringReverser.h" />
         <option value="$PROJECT_DIR$/src/StringReverser.cpp" />
-        <option value="$PROJECT_DIR$/src/Server.h" />
         <option value="$PROJECT_DIR$/src/ClientHandler.h" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/MyTestClientHandler.cpp" />
         <option value="$PROJECT_DIR$/src/Solver.h" />
         <option value="$PROJECT_DIR$/src/MyTestClientHandler.h" />
+        <option value="$PROJECT_DIR$/src/MySerialServer.h" />
+        <option value="$PROJECT_DIR$/src/Server.h" />
         <option value="$PROJECT_DIR$/src/MySerialServer.cpp" />
+        <option value="$PROJECT_DIR$/src/check" />
       </list>
     </option>
   </component>
@@ -448,7 +435,7 @@
       <workItem from="1545984123805" duration="55854000" />
       <workItem from="1546258074066" duration="1000" />
       <workItem from="1546258104719" duration="40538000" />
-      <workItem from="1546423446220" duration="31787000" />
+      <workItem from="1546423446220" duration="35495000" />
     </task>
     <task id="LOCAL-00001" summary="final lexer">
       <created>1545551674541</created>
@@ -723,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546790186210</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fix client hendler">
+      <created>1546807198412</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1546807198412</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277611000" />
+    <option name="totallyTimeSpent" value="281319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,6 +734,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27011952" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -817,7 +812,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="change data reader server" />
     <MESSAGE value="update mapdb and define var command" />
     <MESSAGE value="change map database and define val command" />
     <MESSAGE value="created data writer client" />
@@ -842,7 +836,8 @@
     <MESSAGE value="started build searcher, searchable and serial server" />
     <MESSAGE value="created serial server without timeout" />
     <MESSAGE value="remove problem and solution and make them templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove problem and solution and make them templates" />
+    <MESSAGE value="fix client hendler" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix client hendler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,11 +847,20 @@
           <line>28</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/MySerialServer.cpp</url>
+          <line>68</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/MySerialServer.cpp</url>
+          <line>66</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Expression/Number.cpp" />
     <entry file="file://$PROJECT_DIR$/Expression/Mul.cpp" />
     <entry file="file://$PROJECT_DIR$/Expression/Minus.cpp" />
     <entry file="file://$PROJECT_DIR$/Expression/Div.cpp" />
@@ -913,43 +917,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="e#71#80#0" expanded="true" />
-            <element signature="e#144#153#0" expanded="true" />
-            <element signature="e#226#235#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataWriterClient.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="e#101#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataWriterClient.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/OpenServerCommand.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="28" selection-end-column="15" />
-          <folding>
-            <element signature="e#46#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problem.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -1012,30 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MySerialServer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="e#46#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1056,47 +1004,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solver.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#119#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="e#109#127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StringReverser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTestClientHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#121#147#0" expanded="true" />
-            <element signature="e#203#233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1111,9 +1024,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/OpenServerCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#46#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyTestClientHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#121#147#0" expanded="true" />
+            <element signature="e#203#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyTestClientHandler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
+        <state relative-caret-position="-58">
           <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="e#87#117#0" expanded="true" />
@@ -1122,9 +1063,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/StringReverser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#101#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#71#80#0" expanded="true" />
+            <element signature="e#144#153#0" expanded="true" />
+            <element signature="e#226#235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#119#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1068">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="e#46#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MySerialServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="212">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
@@ -1135,10 +1139,17 @@
     <entry file="file://$PROJECT_DIR$/src/MySerialServer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#43#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/check">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>

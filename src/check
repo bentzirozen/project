@@ -1,0 +1,13 @@
+
+sock = socket(AF_INET, SOCK_STREAM)
+sock.bind((ip, port))
+sock.listen(5)
+sock_in, addr = sock.accept()
+
+print ("Received a message from ", addr)
+message = sock_in.recv(128)
+print(message)
+sock_in.send(b"Thank you!")
+sock_in.close()
+
+sock.close()

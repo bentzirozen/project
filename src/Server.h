@@ -14,10 +14,8 @@ namespace server_side{
     //server interface
     class Server{
     public:
-
         virtual void open(int port,ClientHandler* clientHandler)=0;
         virtual void closeServer()=0;
-        virtual void start() = 0;
     };
 }
 
