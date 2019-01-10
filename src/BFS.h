@@ -1,0 +1,38 @@
+//
+// Created by bentzirozen on 1/7/19.
+//
+
+#ifndef PROJECT_BFS_H
+#define PROJECT_BFS_H
+#include "GraphSearcher.h"
+
+//bfs algorithm - type of graph searcher
+template<class T>
+class BFS:public GraphSearcher<T>{
+    State<T> search(Searchable<T>* searchable){
+        list<State<T>> in_nodes;
+        set<State<T>> out_nodes;
+        State<T> cur_node= nullptr;
+        in_nodes.push_back(searchable->getInitialState());
+        while (!in_nodes.empty()) {
+            cur_node = in_nodes.pop_front();
+            out_nodes.insert(cur_node);
+                if (cur_node == searchable->getGoalState()) {
+                    return cur_node;
+                }
+
+                for (State<T>& s : searchable->getAllPossibleStates(cur_node)) {
+                    if (out_nodes.find(s).equal(out_nodes.end())&& find(in_nodes.begin(), in_nodes.end(), s) == in_nodes.end()) {
+                        s.setParent(cur_node);
+                        in_nodes.push_back(s);
+                    }
+                }
+            }
+        }
+
+    int getNumberOfNodesEvaluted();
+};
+
+
+
+#endif //PROJECT_BFS_H

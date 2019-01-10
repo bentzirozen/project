@@ -119,3 +119,23 @@ vector<string> Lexer::fromStringtoLex(vector<string> lines) {
 bool Lexer::isOperator(string & c) {
     return(c == "+" || c == "-" || c == "*" || c == "=" || c == "/"  );
 }
+
+vector<vector<int>> Lexer::convert_to_matrix(vector<string> values) {
+    vector<vector<int>> matrix;
+    string val,token;
+    string delimiter=",";
+    size_t pos=0;
+    vector<int> row_vals;
+    //adding vals row by row
+    for (int i = 0; i < values.size(); ++i) {
+        val = values.at(i);
+        while ((pos = val.find(delimiter)) != string::npos) {
+            token = val.substr(0, pos);
+            row_vals.push_back(stoi(token));
+            val.erase(0, pos + delimiter.length());
+        }
+        row_vals.push_back(stoi(val));
+        matrix.push_back(row_vals);
+    }
+    return matrix;
+}

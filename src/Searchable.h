@@ -6,6 +6,8 @@
 #define PROJECT_SEARCHABLE_H
 
 #include "State.h"
+#include <vector>
+using namespace std;
 //searchable interface
 template <class T>
 class Searchable {

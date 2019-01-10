@@ -14,7 +14,9 @@ template<class T>
     State(T state);
     void setCost(double cost);
     bool equal(State<T>other_state);
+    double getCost();
     ~State();
+    void setFather(State<T>father);
 };
 
 

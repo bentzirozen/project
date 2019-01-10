@@ -27,8 +27,9 @@ PathsTable *PathsTable::s_instance = 0;
 
 int main(int argc, char **argv) {
     CacheManager <string,string> *fileCacheManager= new FileCacheManager<string,string>();
-    cout<<fileCacheManager->isProblemExist("bye")<<endl;
-    fileCacheManager->saveSolution("hello","bye");
-    cout<<fileCacheManager->isProblemExist("hello")<<endl;;
+    cout<<fileCacheManager->solution_exist("check1")<<endl;
+    fileCacheManager->save_solution("check1","check2");
+    cout<<fileCacheManager->solution_exist("check1")<<endl;
+    fileCacheManager->save_solution("bentzi","rozen");
     return 0;
 }

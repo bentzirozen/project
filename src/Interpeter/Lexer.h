@@ -22,12 +22,14 @@ using namespace std;
 
 class Lexer{
     vector<string> cur_lex;
+    vector<vector<int>> matrix;
 
 public:
     Lexer(){};
     bool isOperator(string & c);
     vector<string>split_from_file(string fileName);
     vector<string>fromStringtoLex(vector<string> lines);
+    vector<vector<int>>convert_to_matrix(vector<string>values);
     ~Lexer(){};
 };
 
