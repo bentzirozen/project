@@ -22,8 +22,10 @@ public:
             current = open.front();
             open.pop_front();
             close.insert(current);
+            this->numberOfNodesEvaluated++;
 
             if (current == searchable->getGoalState()) {
+                this->numberOfNodesEvaluated++;
                 return backTrace(current,searchable);
             }
 
@@ -35,45 +37,8 @@ public:
             }
         }
     }
-    string backTrace(State<T>* goal, Searchable<T>* toSearch) {
-        State<T> *start = toSearch->getInitialState();
-        string result = "";
-        list<State<T> *> backTraceList;
-
-        while (!goal->equals(start)) {
-            string name = goal->getState();
-            string parentName = goal->getFather()->getState();
-
-            char *divide = const_cast<char *>(name.c_str());
-            int childI = stoi(strtok(divide, ","));
-            int childJ = stoi(strtok(NULL, ","));
-
-            char *divideParent = const_cast<char *>(parentName.c_str());
-            int parentI = stoi(strtok(divideParent, ","));
-            int parentJ = stoi(strtok(NULL, ","));
-
-            if (childI > parentI) {
-                result = "Down" + result;
-            } else if (childI < parentI) {
-                result = "Up" + result;
-            } else if (childJ > parentJ) {
-                result = "Right" + result;
-            } else if (childJ < parentJ) {
-                result = "Left" + result;
-            }
-
-            result = ", " + result;
-
-            goal = goal->getFather();
-        }
-
-        result = result.substr(2);
-
-        return result;
-    }
-
     int getNumberOfNodesEvaluted(){
-        return 8;
+        return this->numberOfNodesEvaluated;
     }
 };
 

@@ -10,26 +10,29 @@
 template<class T>
 class DFS:public GraphSearcher<T>{
     State<T> search(Searchable<T>* searchable){
-            list<State<T>> in_nodes;
-            set<State<T>> out_nodes;
-            State<T> cur_node;
+        list<State<T>*> open;  // will be treated as a stack
+        set<State<T>*> close;
+        State<T>* current;
 
-            in_nodes.push_back(searchable->getInitialState());
-            while (!in_nodes.empty()) {
-                cur_node = in_nodes.pop_back();
-                out_nodes.insert(cur_node);
+        open.push_back(searchable->getInitialState());
+        while (!open.empty()) {
+            current = open.back();
+            open.pop_back();
+            close.insert(current);
+            this->numberOfNodesEvaluated++;
 
-                if (cur_node == searchable->getGoalState()) {
-                    return cur_node;
-                }
+            if (current == searchable->getGoalState()) {
+                this->numberOfNodesEvaluated++;
+                return backTrace(current,searchable);
+            }
 
-                for (State<T>& s : searchable->getAllPossibleStates(cur_node)) {
-                    if (out_nodes.find(s)== out_nodes.end() && find(in_nodes.begin(), in_nodes.end(), s) == in_nodes.end()) {
-                        s.setFather(cur_node);
-                        in_nodes.push_back(s);
-                    }
+            for (State<T>*& s : searchable->getAllPossibleStates(current)) {
+                if (close.find(s) == close.end() && find(open.begin(), open.end(), s) == open.end()) {
+                    s->setFather(current);
+                    open.push_back(s);
                 }
             }
+        }
         }
     int getNumberOfNodesEvaluted();
 };
