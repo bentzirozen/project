@@ -11,6 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="created matrix searchable">
       <change afterPath="$PROJECT_DIR$/src/MatrixSolver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -25,6 +26,17 @@
       <change beforePath="$PROJECT_DIR$/src/Searcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searcher.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/State.h" afterDir="false" />
+=======
+    <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="added solutions table">
+      <change afterPath="$PROJECT_DIR$/src/BFS.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BFS.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DFS.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DFS.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GraphSearcher.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Searcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searcher.h" afterDir="false" />
+>>>>>>> origin/master
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -58,16 +70,26 @@
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.90" value="1" />
           <entry key="project.open.time.96" value="1" />
+<<<<<<< HEAD
           <entry key="project.opened" value="18" />
+=======
+          <entry key="project.opened" value="16" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="check" value="1" />
           <entry key="cmake" value="2" />
+<<<<<<< HEAD
           <entry key="cpp" value="322" />
           <entry key="functional" value="5" />
           <entry key="h" value="423" />
+=======
+          <entry key="cpp" value="314" />
+          <entry key="functional" value="5" />
+          <entry key="h" value="410" />
+>>>>>>> origin/master
           <entry key="makefile" value="2" />
           <entry key="mutex" value="1" />
           <entry key="new" value="1" />
@@ -82,25 +104,42 @@
         <counts>
           <entry key="CMakeCache.txt" value="1" />
           <entry key="CMakeLists.txt" value="11" />
+<<<<<<< HEAD
           <entry key="Disassembly" value="67" />
           <entry key="ObjectiveC" value="767" />
+=======
+          <entry key="Disassembly" value="66" />
+          <entry key="ObjectiveC" value="746" />
+>>>>>>> origin/master
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="cpp" value="17502" />
           <entry key="h" value="10203" />
           <entry key="mm" value="18" />
           <entry key="txt" value="1548" />
+=======
+          <entry key="cpp" value="16950" />
+          <entry key="h" value="8617" />
+          <entry key="mm" value="18" />
+          <entry key="txt" value="1494" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="169" />
           <entry key="Doxygen file" value="5" />
+<<<<<<< HEAD
           <entry key="ObjectiveC" value="27718" />
           <entry key="PLAIN_TEXT" value="1379" />
+=======
+          <entry key="ObjectiveC" value="25580" />
+          <entry key="PLAIN_TEXT" value="1325" />
+>>>>>>> origin/master
         </counts>
       </usages-collector>
     </session>
@@ -108,6 +147,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/BFS.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="101">
@@ -129,17 +169,30 @@
               </folding>
             </state>
           </provider>
+=======
+        <entry file="file://$PROJECT_DIR$/src/check">
+          <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> origin/master
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comparator.h">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="180">
               <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+=======
+            <state relative-caret-position="162">
+              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+              <folding>
+                <element signature="e#1#20#0" expanded="true" />
+              </folding>
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MatrixSolver.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,47 +201,84 @@
               <folding>
                 <element signature="e#107#126#0" expanded="true" />
                 <element signature="e#223#261#0" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              <folding>
+                <element signature="e#206#215#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Searcher.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding>
                 <element signature="e#99#117#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/BFS.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="8" selection-start-line="8" selection-end-line="14" />
+              <folding>
+                <element signature="e#155#164#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/State.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="123">
               <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding>
                 <element signature="e#101#110#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/BFS.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="e#69#78#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="249">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/DFS.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#165#174#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -197,25 +287,61 @@
               <folding>
                 <element signature="e#108#129#0" expanded="true" />
                 <element signature="e#206#215#0" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DFS.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <element signature="e#70#79#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
               <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/Searchable.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Searcher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+              <folding>
+                <element signature="e#99#117#0" expanded="true" />
+                <element signature="e#151#160#0" expanded="true" />
+              </folding>
+>>>>>>> origin/master
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/CacheManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
@@ -224,6 +350,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
+=======
+      <find>isdigit</find>
+      <find>words</find>
+      <find>assign</find>
+      <find>static</find>
+>>>>>>> origin/master
       <find>glo</find>
       <find>setMessage</find>
       <find>line</find>
@@ -250,10 +383,13 @@
       <find>Server and</find>
       <find>close</find>
       <find>searcher</find>
+<<<<<<< HEAD
       <find>vec.</find>
       <find>numofRows</find>
       <find>rowCount</find>
       <find>parent</find>
+=======
+>>>>>>> origin/master
     </findStrings>
     <replaceStrings>
       <replace>MAPDB_H</replace>
@@ -280,9 +416,13 @@
       <replace>BindTable</replace>
       <replace>start_index</replace>
       <replace>out_nodes</replace>
+<<<<<<< HEAD
       <replace>values.</replace>
       <replace>searchable</replace>
       <replace>numofRows</replace>
+=======
+      <replace>searchable</replace>
+>>>>>>> origin/master
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -291,6 +431,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/Expression.h" />
+        <option value="$PROJECT_DIR$/BinaryExpression.h" />
+        <option value="$PROJECT_DIR$/BinaryExpression.cpp" />
+        <option value="$PROJECT_DIR$/OpenServerCommand.cpp" />
+        <option value="$PROJECT_DIR$/PrintCommand.h" />
+        <option value="$PROJECT_DIR$/PrintCommand.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/doc.txt" />
+        <option value="$PROJECT_DIR$/Plus.cpp" />
+        <option value="$PROJECT_DIR$/Number.cpp" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/Mul.cpp" />
         <option value="$PROJECT_DIR$/Minus.cpp" />
         <option value="$PROJECT_DIR$/Div.cpp" />
@@ -323,6 +475,7 @@
         <option value="$PROJECT_DIR$/src/MySerialServer.cpp" />
         <option value="$PROJECT_DIR$/src/check" />
         <option value="$PROJECT_DIR$/src/cmake-build-debug/solutions.txt" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/State.cpp" />
         <option value="$PROJECT_DIR$/src/A_Star.cpp" />
         <option value="$PROJECT_DIR$/src/A_Star.h" />
@@ -342,6 +495,15 @@
         <option value="$PROJECT_DIR$/src/State.h" />
         <option value="$PROJECT_DIR$/src/MatrixSearchable.h" />
         <option value="$PROJECT_DIR$/src/BFS.h" />
+=======
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/Searcher.h" />
+        <option value="$PROJECT_DIR$/src/GraphSearcher.h" />
+        <option value="$PROJECT_DIR$/src/BFS.cpp" />
+        <option value="$PROJECT_DIR$/src/BFS.h" />
+        <option value="$PROJECT_DIR$/src/DFS.h" />
+        <option value="$PROJECT_DIR$/src/DFS.cpp" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -382,11 +544,14 @@
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="Interpeter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> origin/master
               <item name="Server_and_Client" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -465,9 +630,13 @@
       <workItem from="1546258074066" duration="1000" />
       <workItem from="1546258104719" duration="40538000" />
       <workItem from="1546423446220" duration="35495000" />
+<<<<<<< HEAD
       <workItem from="1546857386017" duration="8539000" />
       <workItem from="1547111283128" duration="6413000" />
       <workItem from="1547137518021" duration="8624000" />
+=======
+      <workItem from="1546857386017" duration="3139000" />
+>>>>>>> origin/master
     </task>
     <task id="LOCAL-00001" summary="final lexer">
       <created>1545551674541</created>
@@ -756,6 +925,7 @@
       <option name="project" value="LOCAL" />
       <updated>1546857592341</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00042" summary="created bfs , dfs">
       <created>1546861608647</created>
       <option name="number" value="00042" />
@@ -775,6 +945,13 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="304895000" />
+=======
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="284458000" />
+>>>>>>> origin/master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -788,13 +965,22 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28446215" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2749004" />
+>>>>>>> origin/master
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.47670808" />
       <window_info active="true" anchor="bottom" x="0" y="242" width="1366" height="243" id="Debug" order="3" sideWeight="0.689243" visible="true" weight="0.39906833" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47670808" />
+      <window_info anchor="bottom" x="0" y="242" width="1366" height="243" id="Debug" order="3" sideWeight="0.6900398" weight="0.39906833" />
+>>>>>>> origin/master
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
@@ -864,6 +1050,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+<<<<<<< HEAD
+=======
+    <MESSAGE value="change map database and define val command" />
+    <MESSAGE value="created data writer client" />
+    <MESSAGE value="change connect according to Data writer client" />
+>>>>>>> origin/master
     <MESSAGE value="update for check open server command" />
     <MESSAGE value="added all expresions to cMake" />
     <MESSAGE value="created symbol , path and bind tables as singelton" />
@@ -886,10 +1078,14 @@
     <MESSAGE value="remove problem and solution and make them templates" />
     <MESSAGE value="fix client hendler" />
     <MESSAGE value="added solutions table" />
+<<<<<<< HEAD
     <MESSAGE value="created bfs , dfs" />
     <MESSAGE value="created bfs and dfs" />
     <MESSAGE value="created matrix searchable" />
     <option name="LAST_COMMIT_MESSAGE" value="created matrix searchable" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="added solutions table" />
+>>>>>>> origin/master
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -923,6 +1119,18 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Expression/Div.h" />
+    <entry file="file://$PROJECT_DIR$/Expression/Mul.h" />
+    <entry file="file://$PROJECT_DIR$/Expression/Expression.h" />
+    <entry file="file://$PROJECT_DIR$/Expression/Number.h" />
+    <entry file="file://$PROJECT_DIR$/Expression/Shuntingyard.cpp" />
+    <entry file="file://$PROJECT_DIR$/Commands/LoopCommand.cpp" />
+    <entry file="file://$PROJECT_DIR$/Commands/OpenServerCommand.cpp" />
+    <entry file="file://$PROJECT_DIR$/Interpeter/Parser.cpp" />
+    <entry file="file://$PROJECT_DIR$/main.cpp" />
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/Commands/AssignCommand.cpp" />
     <entry file="file://$PROJECT_DIR$/Interpeter/Lexer.cpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
@@ -1052,10 +1260,29 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/MySerialServer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#43#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/src/Server_and_Client/DataReaderServer.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#46#64#0" expanded="true" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1070,6 +1297,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#119#145#0" expanded="true" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -1137,26 +1370,59 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/A_Star.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#72#81#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/check">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CacheManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cmake-build-debug/solutions.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/BestFirstSearch.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#149#158#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/Searcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <element signature="e#99#117#0" expanded="true" />
+            <element signature="e#151#160#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1223,22 +1489,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
-            <element signature="e#1#20#0" expanded="true" />
+            <element signature="e#206#215#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searchable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BFS.h">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="8" selection-start-line="8" selection-end-line="14" />
+>>>>>>> origin/master
+          <folding>
+            <element signature="e#155#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/BFS.h">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/DFS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+>>>>>>> origin/master
           <folding>
             <element signature="e#165#174#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/MatrixSolver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1246,6 +1543,24 @@
           <folding>
             <element signature="e#107#126#0" expanded="true" />
             <element signature="e#223#261#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/BFS.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#69#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DFS.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#70#79#0" expanded="true" />
+>>>>>>> origin/master
           </folding>
         </state>
       </provider>
