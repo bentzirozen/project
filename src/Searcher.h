@@ -17,8 +17,7 @@ template <class T>
     protected:
         int numberOfNodesEvaluated;
     public:
-
-        virtual State<T> search(Searchable<T>* searchable)=0;
+        virtual string search(Searchable<T>* searchable)=0;
         virtual int getNumberOfNodesEvaluted()=0;
 };
 

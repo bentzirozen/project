@@ -13,7 +13,7 @@ class GraphSearcher:public Searcher<T>{
 
 public:
 
-    virtual State<T> search(Searchable<T>* searchable)=0;
+    virtual string search(Searchable<T>* searchable)=0;
      int getNumberOfNodesEvaluted(){
          return this->numberOfNodesEvaluated;
      }

@@ -10,8 +10,6 @@
 template<class T>
 class DFS:public GraphSearcher<T>{
     State<T> search(Searchable<T>* searchable){
-        template<class T>
-        State<T> DFS<T>::search(Searchable<T> *searchable) {
             list<State<T>> in_nodes;
             set<State<T>> out_nodes;
             State<T> cur_node;
@@ -33,7 +31,6 @@ class DFS:public GraphSearcher<T>{
                 }
             }
         }
-    }
     int getNumberOfNodesEvaluted();
 };
 

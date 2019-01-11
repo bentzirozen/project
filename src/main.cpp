@@ -16,6 +16,10 @@
 #include "MySerialServer.h"
 #include "ClientHandler.h"
 #include "MyTestClientHandler.h"
+#include "MatrixSearchable.h"
+#include "Searcher.h"
+#include "MatrixSolver.h"
+#include "BFS.h"
 
 #include <iostream>
 using namespace std;
@@ -26,10 +30,19 @@ PathsTable *PathsTable::s_instance = 0;
 
 
 int main(int argc, char **argv) {
-    CacheManager <string,string> *fileCacheManager= new FileCacheManager<string,string>();
-    cout<<fileCacheManager->solution_exist("check1")<<endl;
-    fileCacheManager->save_solution("check1","check2");
-    cout<<fileCacheManager->solution_exist("check1")<<endl;
-    fileCacheManager->save_solution("bentzi","rozen");
+    int result;
+    string matrix = "";
+    Searcher<string>* searcher = new BFS<string>();
+    Solver<string, string>* solver = new
+            MatrixSolver<string, string, string>(searcher);
+
+    for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 9; i++){
+            matrix += to_string(i)+",";
+        }
+        matrix += "9;";
+    }
+    matrix +="end;0,0;9,9";
+    solver->solve(matrix);
     return 0;
 }

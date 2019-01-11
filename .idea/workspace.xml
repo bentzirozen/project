@@ -12,13 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf2158b3-fb2e-494d-b8d9-8b7b7aa92e8e" name="Default" comment="created matrix searchable">
+      <change afterPath="$PROJECT_DIR$/src/MatrixSolver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BFS.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BFS.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comparator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Comparator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DFS.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/DFS.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphSearcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphSearcher.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interpeter/Lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interpeter/Lexer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interpeter/Lexer.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interpeter/Lexer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MatrixSearchable.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MatrixSearchable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Searchable.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searchable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Searcher.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searcher.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/State.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/State.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
@@ -46,26 +51,27 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.82" value="1" />
           <entry key="project.open.time.90" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="check" value="1" />
           <entry key="cmake" value="2" />
-          <entry key="cpp" value="320" />
+          <entry key="cpp" value="322" />
           <entry key="functional" value="5" />
-          <entry key="h" value="418" />
+          <entry key="h" value="423" />
           <entry key="makefile" value="2" />
           <entry key="mutex" value="1" />
           <entry key="new" value="1" />
-          <entry key="project (disassembly)" value="66" />
+          <entry key="project (disassembly)" value="67" />
           <entry key="stack" value="1" />
           <entry key="tcc" value="4" />
           <entry key="thread" value="10" />
@@ -76,15 +82,15 @@
         <counts>
           <entry key="CMakeCache.txt" value="1" />
           <entry key="CMakeLists.txt" value="11" />
-          <entry key="Disassembly" value="66" />
-          <entry key="ObjectiveC" value="760" />
+          <entry key="Disassembly" value="67" />
+          <entry key="ObjectiveC" value="767" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="17347" />
-          <entry key="h" value="9304" />
+          <entry key="cpp" value="17502" />
+          <entry key="h" value="10203" />
           <entry key="mm" value="18" />
           <entry key="txt" value="1548" />
         </counts>
@@ -93,7 +99,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="169" />
           <entry key="Doxygen file" value="5" />
-          <entry key="ObjectiveC" value="26664" />
+          <entry key="ObjectiveC" value="27718" />
           <entry key="PLAIN_TEXT" value="1379" />
         </counts>
       </usages-collector>
@@ -101,11 +107,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DFS.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BFS.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="101">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#165#174#0" expanded="true" />
               </folding>
@@ -114,67 +120,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Searchable.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="e#103#121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DFS.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Searcher.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-              <folding>
-                <element signature="e#99#117#0" expanded="true" />
-                <element signature="e#151#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BestFirstSearch.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#149#158#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BFS.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" selection-start-line="8" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MatrixSearchable.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="95">
+              <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
               <folding>
-                <element signature="e#149#158#0" expanded="true" />
+                <element signature="e#187#196#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -183,10 +134,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Comparator.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MatrixSolver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#199#208#0" expanded="true" />
+                <element signature="e#107#126#0" expanded="true" />
+                <element signature="e#223#261#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Searcher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <element signature="e#99#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/State.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="e#101#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#1#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+              <folding>
+                <element signature="e#108#129#0" expanded="true" />
+                <element signature="e#206#215#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,7 +205,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="465">
               <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
             </state>
           </provider>
@@ -204,8 +214,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -214,9 +224,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>words</find>
-      <find>assign</find>
-      <find>static</find>
       <find>glo</find>
       <find>setMessage</find>
       <find>line</find>
@@ -244,6 +251,9 @@
       <find>close</find>
       <find>searcher</find>
       <find>vec.</find>
+      <find>numofRows</find>
+      <find>rowCount</find>
+      <find>parent</find>
     </findStrings>
     <replaceStrings>
       <replace>MAPDB_H</replace>
@@ -270,8 +280,9 @@
       <replace>BindTable</replace>
       <replace>start_index</replace>
       <replace>out_nodes</replace>
-      <replace>searchable</replace>
       <replace>values.</replace>
+      <replace>searchable</replace>
+      <replace>numofRows</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -280,7 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Number.cpp" />
         <option value="$PROJECT_DIR$/Mul.cpp" />
         <option value="$PROJECT_DIR$/Minus.cpp" />
         <option value="$PROJECT_DIR$/Div.cpp" />
@@ -313,24 +323,25 @@
         <option value="$PROJECT_DIR$/src/MySerialServer.cpp" />
         <option value="$PROJECT_DIR$/src/check" />
         <option value="$PROJECT_DIR$/src/cmake-build-debug/solutions.txt" />
-        <option value="$PROJECT_DIR$/src/Searcher.h" />
-        <option value="$PROJECT_DIR$/src/GraphSearcher.h" />
-        <option value="$PROJECT_DIR$/src/BFS.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/State.h" />
         <option value="$PROJECT_DIR$/src/State.cpp" />
         <option value="$PROJECT_DIR$/src/A_Star.cpp" />
         <option value="$PROJECT_DIR$/src/A_Star.h" />
         <option value="$PROJECT_DIR$/src/BestFirstSearch.h" />
         <option value="$PROJECT_DIR$/src/BestFirstSearch.cpp" />
         <option value="$PROJECT_DIR$/src/BFS.cpp" />
-        <option value="$PROJECT_DIR$/src/Comparator.h" />
         <option value="$PROJECT_DIR$/src/Interpeter/Lexer.h" />
         <option value="$PROJECT_DIR$/src/Interpeter/Lexer.cpp" />
         <option value="$PROJECT_DIR$/src/Searchable.h" />
-        <option value="$PROJECT_DIR$/src/MatrixSearchable.h" />
         <option value="$PROJECT_DIR$/src/DFS.cpp" />
         <option value="$PROJECT_DIR$/src/DFS.h" />
+        <option value="$PROJECT_DIR$/src/Searcher.h" />
+        <option value="$PROJECT_DIR$/src/GraphSearcher.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/MatrixSolver.h" />
+        <option value="$PROJECT_DIR$/src/Comparator.h" />
+        <option value="$PROJECT_DIR$/src/State.h" />
+        <option value="$PROJECT_DIR$/src/MatrixSearchable.h" />
+        <option value="$PROJECT_DIR$/src/BFS.h" />
       </list>
     </option>
   </component>
@@ -355,6 +366,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -381,7 +393,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,7 +428,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="project" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="doc.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="project" TARGET_NAME="project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="project" RUN_TARGET_NAME="project">
+    <configuration name="project" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="test.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="project" TARGET_NAME="project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="project" RUN_TARGET_NAME="project">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -455,7 +466,8 @@
       <workItem from="1546258104719" duration="40538000" />
       <workItem from="1546423446220" duration="35495000" />
       <workItem from="1546857386017" duration="8539000" />
-      <workItem from="1547111283128" duration="5382000" />
+      <workItem from="1547111283128" duration="6413000" />
+      <workItem from="1547137518021" duration="8624000" />
     </task>
     <task id="LOCAL-00001" summary="final lexer">
       <created>1545551674541</created>
@@ -751,11 +763,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546861608647</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="created matrix searchable">
+      <created>1547117696908</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1547117696908</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295240000" />
+    <option name="totallyTimeSpent" value="304895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,21 +788,21 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27968127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28446215" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47670808" />
-      <window_info anchor="bottom" x="0" y="242" width="1366" height="243" id="Debug" order="3" sideWeight="0.6900398" visible="true" weight="0.39906833" />
+      <window_info active="true" anchor="bottom" x="0" y="242" width="1366" height="243" id="Debug" order="3" sideWeight="0.689243" visible="true" weight="0.39906833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.30996016" side_tool="true" visible="true" weight="0.39906833" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49721116" weight="0.3416149" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5051793" side_tool="true" weight="0.3416149" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4948207" weight="0.3416149" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -885,11 +904,25 @@
           <line>66</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Interpeter/Lexer.cpp</url>
+          <line>123</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/main.cpp</url>
+          <line>45</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/BFS.h</url>
+          <line>26</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.cpp" />
     <entry file="file://$PROJECT_DIR$/Commands/AssignCommand.cpp" />
     <entry file="file://$PROJECT_DIR$/Interpeter/Lexer.cpp" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
@@ -1067,43 +1100,40 @@
     <entry file="file://$PROJECT_DIR$/src/cmake-build-debug/solutions.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="e#206#215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#101#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/A_Star.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/BestFirstSearch.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/BFS.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/DFS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
           <folding>
-            <element signature="e#129#138#0" expanded="true" />
+            <element signature="e#165#174#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searchable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#103#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DFS.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1113,65 +1143,6 @@
           <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#72#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/State.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#71#80#0" expanded="true" />
-            <element signature="e#144#153#0" expanded="true" />
-            <element signature="e#226#235#0" expanded="true" />
-            <element signature="e#355#364#0" expanded="true" />
-            <element signature="e#449#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Searcher.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="e#99#117#0" expanded="true" />
-            <element signature="e#151#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comparator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="e#199#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BestFirstSearch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#81#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,53 +1157,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BFS.h">
+    <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" selection-start-line="8" selection-end-line="14" />
+        <state relative-caret-position="465">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Searchable.h">
+    <entry file="file://$PROJECT_DIR$/src/Interpeter/Lexer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="240">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Comparator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Searcher.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding>
-            <element signature="e#103#121#0" expanded="true" />
+            <element signature="e#99#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BFS.cpp">
+    <entry file="file://$PROJECT_DIR$/src/GraphSearcher.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#108#129#0" expanded="true" />
+            <element signature="e#206#215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/State.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#101#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MatrixSearchable.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="95">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
           <folding>
-            <element signature="e#149#158#0" expanded="true" />
+            <element signature="e#187#196#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DFS.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="249">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DFS.h">
+    <entry file="file://$PROJECT_DIR$/src/BFS.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="101">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#165#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MatrixSolver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#107#126#0" expanded="true" />
+            <element signature="e#223#261#0" expanded="true" />
           </folding>
         </state>
       </provider>

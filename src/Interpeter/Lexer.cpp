@@ -5,6 +5,7 @@
 #include "Lexer.h"
 #include <regex>
 
+
 using namespace std;
 
 
@@ -126,8 +127,11 @@ vector<vector<int>> Lexer::convert_to_matrix(vector<string> values) {
     string delimiter=",";
     size_t pos=0;
     vector<int> row_vals;
+    //number of rows/columns
+    row_vals.push_back(stoi(values[0]));
+    matrix.push_back(row_vals);
     //adding vals row by row
-    for (int i = 0; i < values.size(); ++i) {
+    for (int i = 3; i < values.size(); ++i) {
         val = values.at(i);
         while ((pos = val.find(delimiter)) != string::npos) {
             token = val.substr(0, pos);
