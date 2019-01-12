@@ -19,14 +19,13 @@ public:
     string search(Searchable<T>* searchable){
        //first state
         priorityQueue.push(searchable->getInitialState());
-        // set for nodes that we finished to deal with
+        // nodes we take cared of
         set<State<T>> closed;
+        State<T>* current;
         while (!priorityQueue.empty()) {
-            // pop the min of all odes
-            State<T>* current = priorityQueue.popFropPriorityQueue();
+            current = priorityQueue.popFropPriorityQueue();
             closed.insert(current);
             this->numberOfNodesEvaluated++;
-            // goal state -> finish
             if (current == searchable->getGoalState()) {
                 this->numberOfNodesEvaluated++;
                 backTrace(searchable->getGoalState(),searchable);
@@ -35,21 +34,21 @@ public:
             for(State<T>*& s : searchable->getAllPossibleStates(current)) {
                 bool inOpenQueue = priorityQueue.atPriorityQueue(s);
                 bool inCloseQueue = find(closed.begin(), closed.end(), s) != closed.end();
-                // add to out queue
+                // add to final queue
                 if (!inOpenQueue && !inCloseQueue) {
                     priorityQueue.push(s);
-                    this->priorityQueue.heapify();
+                    this->priorityQueue.make_heaps();
                 } else {
-                    // if item in close, skip
+                    // if item in close queue , we dealt with it , skip
                     if (inCloseQueue) continue;
-                    State<T> tmp = priorityQueue.remove(s);
-                    // if item is better, means better path, update tmp
-                    if (s < tmp) {
-                        tmp.setCameFrom(s->getFather());
-                        tmp.setCost(s->getCost());
+                    State<T>* tmpState = priorityQueue.remove(s);
+                    //update if its better
+                    if (s < tmpState) {
+                        tmpState->setCameFrom(s->getFather());
+                        tmpState->setCost(s->getCost());
                     }
                     // reenter temp to queue
-                    priorityQueue.push(tmp);
+                    priorityQueue.push(tmpState);
                     priorityQueue.make_heaps();
 
                 }
