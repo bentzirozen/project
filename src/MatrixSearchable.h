@@ -78,8 +78,8 @@ public:
     State<T>* getStateByIndex(int row, int col){
         return this->matrix[row][col];
     }
-    vector<State<T>*> getAllPossibleStates(State<T>* state){
-        vector<State<T>*> succerssors;
+    list<State<T>*> getAllPossibleStates(State<T>* state){
+        list<State<T>*> succerssors;
         string name = state->getState();
         char* divide = const_cast<char *>(name.c_str());
         int i = stoi(strtok(divide, ","));
