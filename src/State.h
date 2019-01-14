@@ -10,6 +10,8 @@ template<class T>
     T state;
     double cost;
     State<T>* cameFrom;
+    double PathCost;
+    double HeuristicCost;
   public:
     //constructor with state
       State(T state) {
@@ -18,6 +20,8 @@ template<class T>
       //default constructor
       State(){
         this->cost = 0;
+        this->HeuristicCost = 0;
+        this->PathCost = 0;
     }
       void setCost(double cost) {
         this->cost = cost;
@@ -39,6 +43,25 @@ template<class T>
       }
       State<T>*getFather(){
           return this->cameFrom;
+    }
+      double getPathCost() const {
+          return PathCost;
+      }
+
+      void setPathCost(double PathCost) {
+          this->PathCost = PathCost;
+      }
+      int getRow(){
+          return this->state[0];
+      }
+      int getCol(){
+          return this->state[1];
+      }
+      double getHeuristicCost(){
+        return this->HeuristicCost;
+    }
+    void setHeuristicCost(double cost){
+        this->HeuristicCost = cost;
     }
 
 };

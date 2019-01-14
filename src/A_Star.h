@@ -4,32 +4,37 @@
 
 #ifndef PROJECT_A_STAR_H
 #define PROJECT_A_STAR_H
-#include "GraphSearcher.h"
+#include "HeuristicSearcher.h"
 #include "MyPriorityQueue.h"
 
 template<class T>
-class AStar:public GraphSearcher<T>{
-    MyPriorityQueue<State<T>*> priorityQueue;
+class AStar:public HeuristicSearcher<T>{
+    MyPriorityQueue<T,HeuristicComparator<T>>open;
 
 public:
     string search(Searchable<T>* searchable){
-        //first state
-        priorityQueue.push(searchable->getInitialState());
-        // nodes we take cared of
-        set<State<T>> closed;
+        State<T> *initialState = searchable->getInitialState();
+        this->open.push(initialState); // push the initial state
+        vector<State<T>*> closed;
+        State<T> *goalState = searchable->getGoalState();
         State<T>* current;
-        double cost;
-        while(!priorityQueue.empty()) {
-            current = priorityQueue.popFropPriorityQueue();
-            this->numberOfNodesEvaluated++;
-            if (current == searchable->getGoalState()) {
-                this->numberOfNodesEvaluated++;
+        while (!this->open.empty()) {
+            current  = this->open.popFropPriorityQueue();
+            if (current->equals(goalState)) {
+                return this->backTrace(current);
             }
-            priorityQueue.popFropPriorityQueue();
-            closed.insert(current);
-            for (State<T> *&s : searchable->getAllPossibleStates(current)) {
-                //TODO COMPLETE
+            if (closed.contains(current)) {
+                continue;
             }
+            for (State<T> *state : searchable->getAllPossibleStates(current)) {
+                if (!this->open.contains(state)) {
+                    state->setPathCost(current->getCost() + state->getPathCost());
+                    state->setFather(current);
+                    state->setHeuristicCost(heuristicFunc(state, goalState));
+                    this->open.push(state);
+                }
+            }
+            closed.insertState(current);
         }
     }
 };

@@ -1,21 +1,19 @@
 //
 // Created by bentzirozen on 1/2/19.
 //
-#include <thread>
 #include <fstream>
 #include "MySerialServer.h"
+#define WAIT_FOR_CONNECTION 10
 int MySerialServer::sockFd=0;
 bool MySerialServer::is_open=false;
 ClientHandler* MySerialServer::clientHandler= nullptr;
 //open for serial server
 void MySerialServer::open(int port, ClientHandler *clientHandler) {
     clientHandler = clientHandler;
-    thread t(&MySerialServer::connection,port);
+    this->myThread = thread(&MySerialServer::connection,port);
     while (!MySerialServer::isOpen()){
         //wait..
     }
-    //thread in backround while all other things occur
-    t.detach();
 
 
 
@@ -23,60 +21,45 @@ void MySerialServer::open(int port, ClientHandler *clientHandler) {
 
 void MySerialServer::closeServer() {
     is_open = false;
+    this->myThread.join();
     close(sockFd);
 }
 
 void MySerialServer::connection(int port) {
-    int  newsockfd, clilen;
-    struct sockaddr_in serv_addr, cli_addr;
-    int timeout = 15;
-    fd_set fd;
-    timeval tv;
-    /* First call to socket() function */
-    sockFd = socket(AF_INET, SOCK_STREAM, 0);
-
-    while (sockFd < 0) {
-        sockFd = socket(AF_INET, SOCK_STREAM, 0);
-        //try...
+    int s = socket(AF_INET, SOCK_STREAM, 0);
+    struct sockaddr_in serv;
+    serv.sin_addr.s_addr = INADDR_ANY;
+    serv.sin_port = htons(port);
+    serv.sin_family = AF_INET;
+    if (bind(s, (sockaddr *) &serv, sizeof(serv)) < 0) {
+        cerr << "Bad!" << endl;
     }
 
-    /* Initialize socket structure */
-    bzero((char *) &serv_addr, sizeof(serv_addr));
+    int new_sock;
+    listen(s, 1);
+    struct sockaddr_in client;
+    socklen_t clilen = sizeof(client);
 
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_addr.s_addr = INADDR_ANY;
-    serv_addr.sin_port = htons(port);
+    timeval timeout;
+    timeout.tv_sec = WAIT_FOR_CONNECTION;
+    timeout.tv_usec = 0;
 
-    /* Now bind the host address using bind() call.*/
-    if (bind(sockFd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
-        perror("ERROR on binding");
-        exit(1);
-    }
+    setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, sizeof(timeout));
 
-    /* Now start listening for the clients, here process will
-      * go in sleep mode and will wait for the incoming connection
-   */
-    //serial server , one by one
-    listen(sockFd, 1);
-    clilen = sizeof(cli_addr);
-    //timeout
-    FD_ZERO(&fd);
-    FD_SET(sockFd, &fd);
-    tv.tv_sec = timeout;
-    tv.tv_usec = 0;
-    while (is_open && select(0, &fd, nullptr, nullptr, &tv)) {
-        /* Accept actual connection from the client */
-        newsockfd = accept(sockFd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
-        sockFd = newsockfd;
-        if (newsockfd < 0) {
-            perror("ERROR on accept");
-            exit(1);
+    new_sock = accept(s, (struct sockaddr *) &client, &clilen);
+    if (new_sock < 0) {
+        if (errno == EWOULDBLOCK) {
+            cout << "timeout!" << endl;
+            exit(2);
+        } else {
+            perror("other error");
+            exit(3);
         }
-        is_open = true;
-        clientHandler->handleClient(sockFd);
     }
-
-
+    is_open = true;
+    cout << new_sock << endl;
+    cout << s << endl;
+    clientHandler->handleClient(sockFd);
 }
 
 

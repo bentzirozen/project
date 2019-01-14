@@ -1,17 +1,19 @@
 //
-// Created by bentzirozen on 1/2/19.
+// Created by bentzirozen on 1/13/19.
 //
 
-#ifndef PROJECT_MYSERIALSERVER_H
-#define PROJECT_MYSERIALSERVER_H
+#ifndef PROJECT_MYPARALLERSERVER_H
+#define PROJECT_MYPARALLERSERVER_H
 
 #include "Server.h"
+#include "vector"
+using namespace std;
 using namespace server_side;
 
-class MySerialServer:public Server{
+class MyParallerServer:public Server{
     static ClientHandler* clientHandler;
-    thread myThread;
     //stateful
+    vector<thread>threads_created;
     static int sockFd;
     static bool is_open;
 public:
@@ -22,6 +24,4 @@ public:
         return is_open;
     }
 };
-
-
-#endif //PROJECT_MYSERIALSERVER_H
+#endif //PROJECT_MYPARALLERSERVER_H

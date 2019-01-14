@@ -6,13 +6,13 @@
 #define PROJECT_BESTFIRSTSEARCH_H
 
 #include "GraphSearcher.h"
-#include <queue>;
+#include <queue>
 #include "MyPriorityQueue.h"
 
 
 template <class T>
 class BestFirstSearch:public GraphSearcher<T>{
-    MyPriorityQueue<State<T>*> priorityQueue;
+    MyPriorityQueue<State<T>*,Comparator<T>> priorityQueue;
 public:
 
 

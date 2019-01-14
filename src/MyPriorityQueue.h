@@ -11,12 +11,11 @@
 #include "Comparator.h"
 //extend of original priority queue,  adding functionallity
 using namespace std;
-template <class T>
-class MyPriorityQueue:public priority_queue<State<T>*,vector<State<T>*>,Comparator<T>>{
+template <class T,class compare>
+class MyPriorityQueue:public priority_queue<State<T>*,vector<State<T>*>,compare<T>>{
     MyPriorityQueue priorityQueue;
 public:
 
-    //remove value from queue
     T remove(const T &value) {
         auto it = find(this->c.begin(), this->c.end(), value);
         if (it != this->c.end()) {

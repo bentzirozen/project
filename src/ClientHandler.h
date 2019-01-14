@@ -8,6 +8,7 @@
 
 #include <istream>
 #include <ostream>
+#include <thread>
 #include <stdlib.h>
 #include <netdb.h>
 #include <unistd.h>
