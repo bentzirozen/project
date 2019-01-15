@@ -45,10 +45,9 @@ public:
                 result += "Left";
             }
 
-            result += ", ";
+            result += ",";
             goal = goal->getFather();
         }
-        result = result.substr(2);
 
         return result;
     }

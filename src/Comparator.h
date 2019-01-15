@@ -9,8 +9,11 @@
 
 template<class T>
 class Comparator{
+public:
+
+    Comparator(){};
     //object adapter
-    bool operator ()(const State<T>state1,const State<T>state2){
+    bool operator ()( State<T>state1, State<T>state2){
         return state1.getCost()< state2.getCost();
     }
 };

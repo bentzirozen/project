@@ -6,9 +6,10 @@
 #define PROJECT_HEURISTICSEARCHER_H
 #include "Searcher.h"
 #include "Searchable.h"
-#include "HeuristicComparator.h"
 template <class T>
 class HeuristicSearcher:public Searcher<T>{
+public:
+
     virtual string search(Searchable<T>* searchable)=0;
     string backTrace(State<T>* goal, Searchable<T>* toSearch) {
         int rowChild,rowFather,colChild,colFather;
@@ -38,11 +39,9 @@ class HeuristicSearcher:public Searcher<T>{
                 result += "Left";
             }
 
-            result += ", ";
+            result += ",";
             goal = goal->getFather();
         }
-        result = result.substr(2);
-
         return result;
     }
     int getNumberOfNodesEvaluted(){

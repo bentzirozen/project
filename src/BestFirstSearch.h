@@ -7,50 +7,69 @@
 
 #include "GraphSearcher.h"
 #include <queue>
+#include <unordered_set>
 #include "MyPriorityQueue.h"
 
 
 template <class T>
 class BestFirstSearch:public GraphSearcher<T>{
-    MyPriorityQueue<State<T>*,Comparator<T>> priorityQueue;
+    MyPriorityQueue<State<T>*> priorityQueue;
 public:
+    State<T>* popFromPriorityQueue(){
+        this->numberOfNodesEvaluated++;
+        State<T>* temp =  this->priorityQueue.top();
+        this->priorityQueue.pop();
+        return temp;
+        }
+    void updatePriority(State<T>*current ,State<T>*update){
+        double cost;
+        vector<State<T>*> temp;
+        while (!this->priorityQueue.empty()){
+            State<T>* top = this->popFromPriorityQueue();
+            temp.push_back(top);
+            if(current->equals(top)){
+                top->setFather(update);
+                cost = update->getPathCost()+current->getCost();
+                top->setPathCost(cost);
+                break;
+            }
+        }
 
+        for(int i = 0 ; i<temp.size();i++){
+            this->priorityQueue.push(temp[i]);
+        }
+    }
 
     string search(Searchable<T>* searchable){
-       //first state
-        priorityQueue.push(searchable->getInitialState());
-        // nodes we take cared of
-        set<State<T>> closed;
+        //first state
+        State<T>* first = searchable->getInitialState();
+        this->priorityQueue.push(first);
+        first->setPathCost(first->getCost());
         State<T>* current;
-        while (!priorityQueue.empty()) {
-            current = priorityQueue.popFropPriorityQueue();
+        unordered_set<State<T>*> closed;
+        typename unordered_set<State<T>*>::iterator onClosed;
+        while (!this->priorityQueue.empty()) {
+
+            current  = this->popFromPriorityQueue();
             closed.insert(current);
-            this->numberOfNodesEvaluated++;
             if (current == searchable->getGoalState()) {
                 this->numberOfNodesEvaluated++;
-                backTrace(searchable->getGoalState(),searchable);
-                
+                return this->backTrace(current,searchable);
             }
-            for(State<T>*& s : searchable->getAllPossibleStates(current)) {
-                bool inOpenQueue = priorityQueue.atPriorityQueue(s);
-                bool inCloseQueue = find(closed.begin(), closed.end(), s) != closed.end();
-                // add to final queue
-                if (!inOpenQueue && !inCloseQueue) {
-                    priorityQueue.push(s);
-                    this->priorityQueue.make_heaps();
-                } else {
-                    // if item in close queue , we dealt with it , skip
-                    if (inCloseQueue) continue;
-                    State<T>* tmpState = priorityQueue.remove(s);
-                    //update if its better
-                    if (s < tmpState) {
-                        tmpState->setCameFrom(s->getFather());
-                        tmpState->setCost(s->getCost());
+            this->numberOfNodesEvaluated++;
+            for (State<T>*& s : searchable->getAllPossibleStates(current) ) {
+                double currPath = current->getPathCost() + s->getCost();
+                onClosed = closed.find(s);
+                if (onClosed ==closed.end() && !this->priorityQueue.atPriorityQueue(s)) {
+                    s->setFather(current);
+                    s->setPathCost(currPath);
+                    this->priorityQueue.push(s);
+                } else if (currPath < s->getPathCost()) {
+                    if (!this->priorityQueue.atPriorityQueue(s)) {
+                        this->priorityQueue.push(s);
+                    } else {
+                        this->updatePriority(s,current);
                     }
-                    // reenter temp to queue
-                    priorityQueue.push(tmpState);
-                    priorityQueue.make_heaps();
-
                 }
             }
         }

@@ -52,11 +52,11 @@ public:
     void createMatrix(string matrix){
         list<string>strings;
         char* temp = const_cast<char *>(matrix.c_str());
-        temp = strtok(temp, ";");
+        temp = strtok(temp, "\n");
 
         while (temp != NULL){
             strings.push_back(temp);
-            temp = strtok(NULL, ";");
+            temp = strtok(NULL, "\n");
         }
 
         list<string>::iterator it;
@@ -80,22 +80,38 @@ public:
     }
     list<State<T>*> getAllPossibleStates(State<T>* state){
         list<State<T>*> succerssors;
+        State<T>* val;
         string name = state->getState();
         char* divide = const_cast<char *>(name.c_str());
         int i = stoi(strtok(divide, ","));
         int j = stoi(strtok(NULL, ","));
-
+        //down neighbor
         if ((i + 1) <= (this->numOfRows - 1)){
-            succerssors.push_back(matrix[i + 1][j]); //down
+            val = matrix[i+1][j];
+            if(val->getCost()!=-1) {
+                succerssors.push_back(matrix[i + 1][j]);
+            }
         }
+        //up neighbor
         if ((i - 1) >= 0){
-            succerssors.push_back(matrix[i - 1][j]); //up
+            val = matrix[i-1][j];
+            if(val->getCost()!=-1) {
+                succerssors.push_back(matrix[i - 1][j]);
+            }
         }
+        //right neighbor
         if ((j + 1) <= (matrix[0].size() - 1)){
-            succerssors.push_back(matrix[i][j + 1]); //right
+            val = matrix[i][j+1];
+            if(val->getCost()!=-1) {
+                succerssors.push_back(matrix[i][j + 1]);
+            }
         }
+        //left neighbor
         if ((j - 1) >= 0){
-            succerssors.push_back(matrix[i][j - 1]); //left
+            val = matrix[i][j-1];
+            if(val->getCost()!=-1) {
+                succerssors.push_back(matrix[i][j - 1]);
+            }
         }
 
         return succerssors;

@@ -4,8 +4,8 @@
 #include "MyParallerServer.h"
 int MyParallerServer::sockFd=0;
 bool MyParallerServer::is_open=false;
-void MyParallerServer::open(int port, ClientHandler *clientHandler) {
-    this->clientHandler = clientHandler;
+void MyParallerServer::open(int port, ClientHandler *Ch) {
+    clientHandler = Ch;
     struct sockaddr_in serv_addr;
     /* First call to socket() function */
     sockFd = socket(AF_INET, SOCK_STREAM, 0);
@@ -47,8 +47,12 @@ void MyParallerServer::open(int port, ClientHandler *clientHandler) {
                 exit(1);
             }
         }
-        thread t(MyParallerServer::connection,port);
-        this->threads_created.push_back(t);
+      //  thread t(MyParallerServer::connection,port);
+       // this->threads_created.push_back(t);
     }
 
+}
+
+void MyParallerServer::closeServer() {
+    cout<<"yes"<<endl;
 }

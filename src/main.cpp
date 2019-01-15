@@ -20,7 +20,9 @@
 #include "Searcher.h"
 #include "MatrixSolver.h"
 #include "BFS.h"
+#include "DFS.h"
 #include "BestFirstSearch.h"
+#include "A_Star.h"
 
 #include <iostream>
 using namespace std;
@@ -33,17 +35,17 @@ PathsTable *PathsTable::s_instance = 0;
 int main(int argc, char **argv) {
     int result;
     string matrix = "";
-    Searcher<string>* searcher = new BestFirstSearch<string>();
+    Searcher<string>* searcher = new AStar<string>();
     Solver<string, string>* solver = new
             MatrixSolver<string, string, string>(searcher);
 
-    for (int i = 0; i < 10; i++){
-        for (int i = 0; i < 9; i++){
+    for (int i = 1; i <= 5; i++){
+        for (int i = 1; i <= 4; i++){
             matrix += to_string(i)+",";
         }
-        matrix += "9;";
+        matrix += "5\n";
     }
-    matrix +="end;0,0;9,9";
+    matrix +="end\n 0,0\n 4,4";
     solver->solve(matrix);
     return 0;
 }

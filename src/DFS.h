@@ -9,10 +9,10 @@
 //dfs algorithm - type of graph searcher
 template<class T>
 class DFS:public GraphSearcher<T>{
-    State<T> search(Searchable<T>* searchable){
-        list<State<T>*> open;  // will be treated as a stack
-        set<State<T>*> close;
-        State<T>* current;
+    string search(Searchable<T>* searchable) {
+        list<State<T> *> open;  // will be treated as a stack
+        set<State<T> *> close;
+        State<T> *current;
 
         open.push_back(searchable->getInitialState());
         while (!open.empty()) {
@@ -23,18 +23,21 @@ class DFS:public GraphSearcher<T>{
 
             if (current == searchable->getGoalState()) {
                 this->numberOfNodesEvaluated++;
-                return backTrace(current,searchable);
+                return this->backTrace(current, searchable);
             }
 
-            for (State<T>*& s : searchable->getAllPossibleStates(current)) {
+            for (State<T> *&s : searchable->getAllPossibleStates(current)) {
                 if (close.find(s) == close.end() && find(open.begin(), open.end(), s) == open.end()) {
                     s->setFather(current);
                     open.push_back(s);
                 }
             }
         }
-        }
-    int getNumberOfNodesEvaluted();
+        return "-1";//no solution
+    }
+    int getNumberOfNodesEvaluted(){
+        return this->numberOfNodesEvaluated;
+    }
 };
 
 

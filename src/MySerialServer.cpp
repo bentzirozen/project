@@ -8,8 +8,8 @@ int MySerialServer::sockFd=0;
 bool MySerialServer::is_open=false;
 ClientHandler* MySerialServer::clientHandler= nullptr;
 //open for serial server
-void MySerialServer::open(int port, ClientHandler *clientHandler) {
-    clientHandler = clientHandler;
+void MySerialServer::open(int port, ClientHandler *Ch) {
+    clientHandler = Ch;
     this->myThread = thread(&MySerialServer::connection,port);
     while (!MySerialServer::isOpen()){
         //wait..

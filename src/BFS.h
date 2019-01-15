@@ -26,7 +26,7 @@ public:
 
             if (current == searchable->getGoalState()) {
                 this->numberOfNodesEvaluated++;
-                return backTrace(current,searchable);
+                return this->backTrace(current,searchable);
             }
 
             for (State<T>*& s : searchable->getAllPossibleStates(current)) {
@@ -36,6 +36,7 @@ public:
                 }
             }
         }
+        return "-1"; //no solution
     }
     int getNumberOfNodesEvaluted(){
         return this->numberOfNodesEvaluated;

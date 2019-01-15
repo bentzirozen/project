@@ -11,7 +11,7 @@ using namespace std;
 using namespace server_side;
 
 class MyParallerServer:public Server{
-    static ClientHandler* clientHandler;
+    ClientHandler* clientHandler;
     //stateful
     vector<thread>threads_created;
     static int sockFd;
