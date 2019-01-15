@@ -10,22 +10,6 @@ ClientHandler* MySerialServer::clientHandler= nullptr;
 //open for serial server
 void MySerialServer::open(int port, ClientHandler *Ch) {
     clientHandler = Ch;
-    this->myThread = thread(&MySerialServer::connection,port);
-    while (!MySerialServer::isOpen()){
-        //wait..
-    }
-
-
-
-}
-
-void MySerialServer::closeServer() {
-    is_open = false;
-    this->myThread.join();
-    close(sockFd);
-}
-
-void MySerialServer::connection(int port) {
     int s = socket(AF_INET, SOCK_STREAM, 0);
     struct sockaddr_in serv;
     serv.sin_addr.s_addr = INADDR_ANY;
@@ -34,7 +18,16 @@ void MySerialServer::connection(int port) {
     if (bind(s, (sockaddr *) &serv, sizeof(serv)) < 0) {
         cerr << "Bad!" << endl;
     }
+    this->myThread = thread(&MySerialServer::connection,port,s);
+    myThread.join();
+}
 
+void MySerialServer::closeServer(int sockFd) {
+    is_open = false;
+    close(sockFd);
+}
+
+void MySerialServer::connection(int port,int s) {
     int new_sock;
     listen(s, 1);
     struct sockaddr_in client;
@@ -57,9 +50,11 @@ void MySerialServer::connection(int port) {
         }
     }
     is_open = true;
+    sockFd = new_sock;
     cout << new_sock << endl;
     cout << s << endl;
     clientHandler->handleClient(sockFd);
+    close(sockFd);
 }
 
 

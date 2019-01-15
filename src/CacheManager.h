@@ -15,8 +15,7 @@ using namespace std;
 
 template <class Problem,class Solution>
 class CacheManager{
-protected:
-    map<string,string> sol_map;
+
 public:
 
     virtual bool solution_exist(Problem p)=0;

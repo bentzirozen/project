@@ -1,41 +1,56 @@
 //
-// Created by bentzirozen on 1/2/19.
+// Created by bentzirozen on 1/15/19.
 //
 
 #include "MyTestClientHandler.h"
 
-template <class Problem,class Solution>
-void MyTestClientHandler<Problem,Solution>::handleClient(int sockFd) {
-    string solution;
-    ssize_t n;
-    while(true) {
-        char buffer[BUFFER_SIZE];
-        // start comunicate
-        bzero(buffer, BUFFER_SIZE);
-        n = read(sockFd, buffer, BUFFER_SIZE);
-
-        //finish the conversetion.
-        if(strcmp(buffer,"end") == 0){
-            return;
-        }
+void MyTestClientHandler::handleClient(int sockFd) {
+    char buffer[1025];
+    int n;
+    string problem, solution;
+    //read from the socket
+    while (true) {
+        bzero(buffer, 1025);
+        n = read(sockFd, buffer, 1024);
+        //if there is a problem reading from the socket
         if (n < 0) {
             perror("ERROR reading from socket");
             exit(1);
         }
-        //if solution dont exist , so solve it
-        if(!this->cacheManager->solution_exist(buffer)){
-            solution = this->solver->solve(buffer);
-            this->cacheManager->save_solution(solution, buffer);
+        if(n==0){
+            return;
         }
-        //write the solution
-        solution = this->cacheManager->get_solution(buffer);
-        ssize_t n = write(sockFd, solution.c_str(), BUFFER_SIZE);
-        if (n < 0) {
+        problem = string(buffer);
+        if (strcmp(buffer, "end") == 0) {
+            return;
+        }
+
+        //check if problem in cache
+        if (this->cacheManager->solution_exist(problem)) {
+            //return the solutions
+            solution = this->cacheManager->get_solution(problem);
+        } else {
+            //solve the problem
+            solution = this->solver->solve(problem);
+            //add the problem and the solution to the cache manager
+            this->cacheManager->save_solution(problem, solution);
+        }
+
+        //write to the socket
+        char bufferWrite[1024];
+        bzero(bufferWrite, 1025);
+        strcpy(bufferWrite, solution.c_str());
+        ssize_t nBuffer = write(sockFd, bufferWrite, strlen(bufferWrite));
+
+        //if there is problem writing to the socket
+        if (nBuffer < 0) {
             perror("ERROR writing to socket");
             exit(1);
         }
     }
 }
 
-
-template class MyTestClientHandler<string,string>;
+MyTestClientHandler::MyTestClientHandler(CacheManager <string, string> *pManager, Solver <string, string> *pSolver) {
+    this->cacheManager = pManager;
+    this->solver = pSolver;
+}

@@ -59,20 +59,39 @@ public:
             temp = strtok(NULL, "\n");
         }
 
+        int size = strings.size();
+        int count = 0;
+
         list<string>::iterator it;
         it = strings.begin();
 
-        while ((*it) != "end") {
+        //add the string to the row of the matrix
+        while (count != size - 3) {
             string newRow = (*it);
             this->addLineToMatrix(newRow);
             it++;
+            count++;
         }
 
+        //the last values will be the initial state and the goal state
+        string start = (*it);
+
+        temp = const_cast<char*>(start.c_str());
+        int i = stoi(strtok(temp, ","));
+        int j = stoi(strtok(NULL, ","));
+
+        initialState = getStateByIndex(i,j);
+        it++;
+
+        start = *it;
+        temp = const_cast<char*>(start.c_str());
 
 
+        i = stoi(strtok(temp, ","));
+        j = stoi(strtok(NULL, ","));
 
-        initialState = getStateByIndex(0,0);
-        goalState = getStateByIndex(numOfRows-1, numOfRows-1);
+        //set the goal state
+        goalState = getStateByIndex(i,j);
     }
 
     State<T>* getStateByIndex(int row, int col){

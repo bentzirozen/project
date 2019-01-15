@@ -23,6 +23,7 @@
 #include "DFS.h"
 #include "BestFirstSearch.h"
 #include "A_Star.h"
+#include "MyParallerServer.h"
 
 #include <iostream>
 using namespace std;
@@ -33,19 +34,14 @@ PathsTable *PathsTable::s_instance = 0;
 
 
 int main(int argc, char **argv) {
-    int result;
-    string matrix = "";
-    Searcher<string>* searcher = new AStar<string>();
-    Solver<string, string>* solver = new
-            MatrixSolver<string, string, string>(searcher);
+    int port = stoi(argv[1]);
+    Server* myServer = new MyParallerServer();
+    //choose to use the cheapest algorithm according to the 'solutions' file
+    Searcher<string>* searcher = new BFS<string>();
+    Solver<string, string>* solver = new MatrixSolver<string, string, string>(searcher);
+    CacheManager<string, string>* cache = new FileCacheManager<string, string>();
+    ClientHandler* client = new MyTestClientHandler(cache, solver);
 
-    for (int i = 1; i <= 5; i++){
-        for (int i = 1; i <= 4; i++){
-            matrix += to_string(i)+",";
-        }
-        matrix += "5\n";
-    }
-    matrix +="end\n 0,0\n 4,4";
-    solver->solve(matrix);
-    return 0;
+    //open new server by the port and client
+    myServer->open(port, client);
 }

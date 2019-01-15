@@ -10,12 +10,27 @@
 using namespace std;
 //creating new namespace
 namespace server_side{
+    //Client struct
+    struct client{
+        ClientHandler *clientHandler;
+        int newSockFd;
+
+    };
+
+//Server struct
+    struct params {
+        int sockFd;
+        int newSockFd;
+        int client;
+        ClientHandler *clientHandler;
+        struct sockaddr_in client_addr;
+    };
 
     //server interface
     class Server{
     public:
         virtual void open(int port,ClientHandler* clientHandler)=0;
-        virtual void closeServer()=0;
+        virtual void closeServer(int sockFd)=0;
     };
 }
 
