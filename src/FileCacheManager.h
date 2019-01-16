@@ -49,21 +49,13 @@ public:
         //open the file
         if(table.is_open()){
             //get the text by lines
-            while (getline(table, line)){
-                s="";
-                while(line[0]!='$') {
-                for(int i=0;i<line.size();i++){
-                    p = line[i];
-                    if(isdigit(p)||isalpha(p)||p==','||p=='-'){
-                        s+=p;
-                    }else{
-                        cout<<"you were right"<<endl;
-                    }
-                }
-                problem += s;
-                problem+="\n";
-                s="";
-                getline(table,line);
+            while (getline(table, line)) {
+                while (line[0] != '$') {
+                    c = const_cast<char *>(line.c_str());
+                    problem += c;
+                    problem += "\n";
+                    s = "";
+                    getline(table, line);
                 }
                 c = const_cast<char *>(line.c_str());
                 c = strtok(c, "$");

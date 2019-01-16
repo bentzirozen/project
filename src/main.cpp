@@ -19,14 +19,15 @@
 #include "MatrixSearchable.h"
 #include "Searcher.h"
 #include "MatrixSolver.h"
-#include "BFS.h"
-#include "DFS.h"
 #include "BestFirstSearch.h"
 #include "A_Star.h"
 #include "MyParallerServer.h"
+#include "Main.h"
 
 #include <iostream>
 using namespace std;
+using namespace boot;
+using namespace algoritm;
 
 BindTable *BindTable::s_instance = 0;
 SymbolTable *SymbolTable::s_instance = 0;
@@ -34,14 +35,8 @@ PathsTable *PathsTable::s_instance = 0;
 
 
 int main(int argc, char **argv) {
-    int port = stoi(argv[1]);
-    Server* myServer = new MyParallerServer();
-    //choose to use the cheapest algorithm according to the 'solutions' file
-    Searcher<string>* searcher = new BFS<string>();
-    Solver<string, string>* solver = new MatrixSolver<string, string, string>(searcher);
-    CacheManager<string, string>* cache = new FileCacheManager<string, string>();
-    ClientHandler* client = new MyTestClientHandler(cache, solver);
-
-    //open new server by the port and client
-    myServer->open(port, client);
+    Main* run = new Main();
+    run->main(argc, argv);
+    delete (run);
+    GraphSearcher<string> s = new BFS<string>;
 }

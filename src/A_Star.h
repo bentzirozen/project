@@ -14,41 +14,36 @@ class AStar:public HeuristicSearcher<T>{
     vector<State<T>*> open;
 
 public:
-
     string search(Searchable<T>* searchable){
         vector<State<T>*> close;
         State<T>* goal = searchable->getGoalState();
         State<T>* start = searchable->getInitialState();
         map<State<T>*,bool> isVisited;
-
         double f = this->heuristicFunc(start,goal);
-
         this->open.push_back(start);
-
         while(!this->open.empty()){
-
-            State<T>* current = this->lowestVal(goal);
+            //get lowest value by heuristic and return its state
+            State<T>* current = this->getLowest(goal);
             isVisited[current]=true;
-
             close.push_back(current);
-
-
+            //final
             if(current->equals(goal)){
+                this->numberOfNodesEvaluated++;
                 return this->backTrace(current,searchable);
             }
             this->numberOfNodesEvaluated++;
-
-            list<State<T>*> adj = searchable->getAllPossibleStates(current);
-            while (!adj.empty()){
-                State<T>* temp = adj.back();
-                adj.pop_back();
+            //all neighbors
+            list<State<T>*> successors = searchable->getAllPossibleStates(current);
+            while (!successors.empty()){
+                State<T>* temp = successors.back();
+                successors.pop_back();
 
                 if(isVisited[temp]){
                     continue;
                 }
+                //update cost path
                 double pathFromCurrent = current->getPathCost()+temp->getCost();
-
-
+                //check if better
                 if(find(this->open.begin(),this->open.end(),temp)!=this->open.end()){
                     if(temp->getPathCost()<pathFromCurrent){
                         continue;
@@ -57,25 +52,23 @@ public:
                     if(temp->getPathCost()<pathFromCurrent) {
                         continue;
                     }
-                    // this->moveToOpen(close,temp);
 
                 }else{
                     this->open.push_back(temp);
                 }
-
                 temp->setPathCost(pathFromCurrent);
                 temp->setFather(current);
-
-
             }
         }
+        return "-1"; //no solution
     }
-    State<T>* lowestVal(State<T>* goal) {
+    /*
+     * get lowest state by heuristic function
+     */
+    State<T>* getLowest(State<T>* goal) {
         vector<State<T>*> temp;
         State<T>* lowest = open.back();
         open.pop_back();
-
-
         double huristic = this->heuristicFunc(lowest,goal);
         double first = huristic + lowest->getPathCost();
 
@@ -90,6 +83,7 @@ public:
                 first = newCost;
                 temp.push_back(lowest);
                 lowest = state;
+                //keep on trying get better
                 continue;
             }
             temp.push_back(state);

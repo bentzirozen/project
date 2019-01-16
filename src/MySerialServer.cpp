@@ -22,7 +22,7 @@ void MySerialServer::open(int port, ClientHandler *Ch) {
     myThread.join();
 }
 
-void MySerialServer::closeServer(int sockFd) {
+void MySerialServer::closeServer() {
     is_open = false;
     close(sockFd);
 }

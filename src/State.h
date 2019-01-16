@@ -63,6 +63,7 @@ template<class T>
     void setHeuristicCost(double cost){
         this->HeuristicCost = cost;
     }
+    ~State(){};
 
 };
 

@@ -9,14 +9,13 @@
 template <class T>
 class HeuristicSearcher:public Searcher<T>{
 public:
-
     virtual string search(Searchable<T>* searchable)=0;
-    string backTrace(State<T>* goal, Searchable<T>* toSearch) {
+    string backTrace(State<T>* goal, Searchable<T>* searchable) {
+        this->cost = 0;
         int rowChild,rowFather,colChild,colFather;
-        State<T> *start = toSearch->getInitialState();
+        State<T> *start = searchable->getInitialState();
         string result = "";
         list<State<T> *> backTraceList;
-
         while (!goal->equals(start)) {
             string name = goal->getState();
             string parentName = goal->getFather()->getState();
@@ -41,11 +40,15 @@ public:
 
             result += ",";
             goal = goal->getFather();
+            this->cost+=goal->getCost();
         }
         return result;
     }
     int getNumberOfNodesEvaluted(){
         return this->numberOfNodesEvaluated;
+    }
+    double getTotalCost(){
+        return this->cost;
     }
     double heuristicFunc(State<T>* state, State<T>* goalState) {
         return abs(state->getRow()-goalState->getRow()+ state->getCol()-goalState->getCol());

@@ -21,6 +21,7 @@ public:
     virtual bool solution_exist(Problem p)=0;
     virtual Solution get_solution(Problem p)=0;
     virtual void save_solution(Problem p,Solution S)=0;
+    ~CacheManager(){};
 
 
 };

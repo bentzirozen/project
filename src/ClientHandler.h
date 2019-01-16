@@ -23,8 +23,7 @@ class ClientHandler{
 public:
 
     virtual void handleClient(int sockFd)=0;
-    //virtual ClientHandler& operator<<(string& str)=0;
-    //virtual ClientHandler& operator>>(string& str)=0;
+    ~ClientHandler(){};
 };
 
 #endif //PROJECT_CLIENTHANDLER_H

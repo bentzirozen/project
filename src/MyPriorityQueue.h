@@ -32,6 +32,7 @@ public:
     inline void make_heaps(){
         make_heap(this->c.begin(), this->c.end(), this->comp);
     }
+    ~MyPriorityQueue(){};
 
 };
 

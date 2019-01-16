@@ -17,25 +17,20 @@ void MyTestClientHandler::handleClient(int sockFd) {
             perror("ERROR reading from socket");
             exit(1);
         }
-        if(n==0){
-            return;
-        }
         problem = string(buffer);
         if (strcmp(buffer, "end") == 0) {
             return;
         }
-
         //check if problem in cache
         if (this->cacheManager->solution_exist(problem)) {
-            //return the solutions
+            //get the solution
             solution = this->cacheManager->get_solution(problem);
         } else {
             //solve the problem
             solution = this->solver->solve(problem);
-            //add the problem and the solution to the cache manager
+            //save for next time
             this->cacheManager->save_solution(problem, solution);
         }
-
         //write to the socket
         char bufferWrite[1024];
         bzero(bufferWrite, 1025);

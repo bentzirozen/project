@@ -51,5 +51,8 @@ public:
 
         return result;
     }
+    double getTotalCost(){
+        return this->cost;
+    }
 };
 #endif //PROJECT_GRAPHSEARCHER_H

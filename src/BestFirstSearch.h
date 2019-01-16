@@ -41,6 +41,7 @@ public:
     }
 
     string search(Searchable<T>* searchable){
+        this->numberOfNodesEvaluated=0;
         //first state
         State<T>* first = searchable->getInitialState();
         this->priorityQueue.push(first);
@@ -49,7 +50,6 @@ public:
         unordered_set<State<T>*> closed;
         typename unordered_set<State<T>*>::iterator onClosed;
         while (!this->priorityQueue.empty()) {
-
             current  = this->popFromPriorityQueue();
             closed.insert(current);
             if (current == searchable->getGoalState()) {
@@ -73,6 +73,7 @@ public:
                 }
             }
         }
+        return "-1"; //no solution
     }
 };
 
