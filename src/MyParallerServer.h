@@ -6,8 +6,7 @@
 #define PROJECT_MYPARALLERSERVER_H
 #define WAIT_FOR_CLIENT 1
 #define WAIT_FOREVER 0
-
-define MAX_CLIENTS 5
+#define MAX_CLIENTS 5
 #include "Server.h"
 #include "vector"
 using namespace std;

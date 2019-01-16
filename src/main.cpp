@@ -27,7 +27,6 @@
 #include <iostream>
 using namespace std;
 using namespace boot;
-using namespace algoritm;
 
 BindTable *BindTable::s_instance = 0;
 SymbolTable *SymbolTable::s_instance = 0;
@@ -38,5 +37,4 @@ int main(int argc, char **argv) {
     Main* run = new Main();
     run->main(argc, argv);
     delete (run);
-    GraphSearcher<string> s = new BFS<string>;
 }

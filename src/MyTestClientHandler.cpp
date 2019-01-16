@@ -18,7 +18,7 @@ void MyTestClientHandler::handleClient(int sockFd) {
             exit(1);
         }
         problem = string(buffer);
-        if (strcmp(buffer, "end") == 0) {
+        if (strcmp(buffer, "end") == 0||strcmp(buffer,"end\n")==0) {
             return;
         }
         //check if problem in cache

@@ -53,6 +53,9 @@ void MyParallerServer::open(int port, ClientHandler *ch) {
         newSockFd = accept(sockfd, (struct sockaddr *) &cli_addr, (socklen_t *) &clilen);
         timeout.tv_usec = 0;
         timeout.tv_sec = 10;
+        timeval timeForever;
+        timeForever.tv_sec = WAIT_FOREVER;
+        timeForever.tv_usec = 0;
         setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeout, sizeof(timeout));
         clientStruct->newSockFd = newSockFd;
         sockFd = newSockFd;
@@ -74,9 +77,7 @@ void MyParallerServer::open(int port, ClientHandler *ch) {
         if (pthread_create(&pthread, nullptr, MyParallerServer::handle, clientStruct) != 0) {
             perror("failure in thread create");
         }
-        timeoutCli.tv_usec = 0;
-        timeoutCli.tv_sec = 0;
-        setsockopt(newSockFd, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeoutCli, sizeof(timeoutCli));
+        setsockopt(newSockFd, SOL_SOCKET, SO_RCVTIMEO, (char *) &timeForever, sizeof(timeForever));
         this->threads_created.push_back(pthread);
     }
 
